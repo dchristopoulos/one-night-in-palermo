@@ -116,13 +116,61 @@ learned from games that went wrong:
   your first read of people and you say it early. Being talked out of it and then proved right is what you hate most."
 - **Nothing is pushed during a game.** A turn prompt carries facts and one task. No hint is added when a player
   struggles or a game turns dull.
-- **A bad reply is never rewritten.** A line that repeats the speaker's earlier line is asked for once more and then
-  dropped: the player stays silent. A line over the word limit is asked for once more and then cut at the limit. The
-  one fallback: a vote that names no valid player counts for a random one.
+- **A bad reply is never rewritten.** The engine asks once more, then the player stays silent. The full list is under
+  [When a model misbehaves](#when-a-model-misbehaves).
 
 Every reply has the same labelled parts: `MONOLOGUE` (the private thought), `SAY`, `LEAN`, `NOTE` and `FORGET`.
 `python3 game.py --dry --fast --prompt Sonnet` prints the exact system prompt and every turn prompt one seat receives;
 [`palermo/docs/prompts.md`](palermo/docs/prompts.md) has the full text and what changed between versions.
+
+## Who speaks next
+
+A real table has no turn order: whoever is under pressure talks. The engine copies that. It decides who has the floor
+and tells the player why ("Luna just named you."), never what to say.
+
+- **The accused answers.** A player who is named gets the next line. They may pass, and the table is told that they
+  declined to answer.
+- **Pressure brings the vote.** When a strict majority leans on one player, the seats that have said little speak
+  first, the accused answers twice, and the vote is called. A day can end well before its line budget.
+- **Two voices cannot hold the table.** After an A, B, A exchange a third player is let in half the time. A player named three
+  times running hears "The table is tired of that thread. Bring something new."
+- **Nobody is left out.** A seat that has not spoken, or sits two lines behind the day's average, gets the floor.
+  Before this rule one seat had 5 lines in a game where the others had 8 to 12.
+- **Otherwise the floor is drawn.** The longer a player has been quiet, the likelier the draw, and on half of those
+  draws two players react at once, as at a real table.
+
+Why it matters: in an early version the floor sometimes went to a random seat who changed the subject, and an accused
+player could go a whole day without answering. [`palermo/docs/turn-taking.md`](palermo/docs/turn-taking.md) has the design and the research behind
+it.
+
+## The host
+
+The host is a model with a character of its own, and it is kept on a short lead.
+
+- **During the game it only announces.** Who is out and which card was shown are fixed sentences built from facts. An
+  earlier host written by a model got counts wrong and once told the audience the town "still hasn't looked at" a
+  player who was a hidden killer.
+- **At the end it speaks freely.** It writes a recap of four or five sentences and may add one closing remark. It is
+  given facts labelled by day and night, and anything a player only claimed is marked as a claim.
+- **Its remarks are checked.** One that reuses a phrase from an earlier remark, or speaks for the table, is tried once
+  more and then skipped. The host is colour: it is never allowed to stop a game.
+- **Players never read it.** The host's remarks go to the audience only, so they cannot steer the game.
+
+## When a model misbehaves
+
+| What goes wrong | What the engine does |
+|---|---|
+| A call fails, returns nothing or takes over 30 seconds | One retry, then the seat is silent for that turn. A timed-out prompt is saved to a file for debugging. |
+| A subscription runs out of quota | The evening stops, so no game is played with a silent seat. `--first N` resumes it. |
+| A line repeats the speaker's own earlier line | Asked once more, with the repeated line quoted. Then silence. |
+| A line is over the word limit | Asked once more, then cut at the limit. A role claim gets a longer limit. |
+| A player talks about itself by name | Asked once more, then silence. |
+| A vote names no valid player | It counts for the player the voter last leaned on aloud. If there is none, a random valid player. |
+| The two killers name different victims | One of their two choices, at random. |
+| A host remark fails its checks | Tried once more, then skipped. |
+
+Silence is recorded like everything else. In the 24 published games 9 turns ended in silence, against 1,601 spoken
+lines.
 
 ## What the games taught the rules
 

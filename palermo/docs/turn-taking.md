@@ -5,7 +5,7 @@
 with probability 0.85 and otherwise handed the floor to a random seat, who often opened an unrelated topic; the
 accused could go unanswered for a whole day.
 
-## What the prior work says (research/llm-agents-prior-work.md, research/turn-taking.md when it lands)
+## What the prior work says (research/llm-agents-prior-work.md, research/turn-taking.md)
 - Werewolf Arena: every living player bids 0–4 each line (4 = "I was addressed and must respond"); the paper
   never ablated it; 40% of bids of 4 come from players who were just named, i.e. the bids mostly re-encode
   "I was named", which code can infer for free. Cost: one extra model call per player per line (unaffordable
