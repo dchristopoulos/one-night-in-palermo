@@ -6,11 +6,13 @@
     /* the turned card and the fact sit side by side under the line */
     #s09-row { width: 952px; display: flex; align-items: center; gap: 40px; }
     #s09-row .tag { flex: 1; text-align: left; }
+    /* he is out of the game: the label says why he still speaks */
+    #s09-out { color: var(--coral); }
   </style>
   <div id="root" data-composition-id="s09" data-width="1080" data-height="1920">
     <div class="col below-hud" id="s09-col">
       <div class="say" id="s09-say">
-        <div class="who"><img class="face" src="assets/avatars/Opus.jpg" alt="" /><span class="name">Opus</span><span class="verb">says · last words</span></div>
+        <div class="who"><img class="face" src="assets/avatars/Opus.jpg" alt="" /><span class="name">Opus</span><span class="caps" id="s09-out">voted out · last words</span></div>
         <p class="q" data-event="212" data-cut="first-sentence">Fine, I'm the killer — and my partner is the one I never attacked: Terra.</p>
       </div>
       <div id="s09-row">

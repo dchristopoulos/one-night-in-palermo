@@ -1,10 +1,13 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; }
-    #s13-col { gap: 34px; }
+    #s13-col { gap: 28px; }
     #s13-title { font: 700 134px/0.98 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--moon); text-align: center; letter-spacing: -.01em; text-shadow: 0 4px 30px var(--text-halo); }
-    #s13-phone { width: 357px; padding: 12px; border-radius: 54px; background: var(--navy-950); box-shadow: 0 0 0 2px var(--hairline), var(--shadow-deep); }
-    #s13-phone img { display: block; width: 333px; height: 720px; border-radius: 44px; object-fit: cover; }
+    /* the viewer still, large: 660 px wide (61% of the frame); the screen shows the table and Luna's claim,
+       from the progress bar down (the still is 1170x2532, scaled to 636 px wide, shifted up past the buttons) */
+    #s13-phone { width: 660px; padding: 12px; border-radius: 64px; background: var(--navy-950); box-shadow: 0 0 0 2px var(--hairline), var(--shadow-deep); }
+    #s13-screen { position: relative; width: 636px; height: 776px; border-radius: 52px; overflow: hidden; }
+    #s13-screen img { position: absolute; left: 0; top: -176px; display: block; width: 636px; height: auto; }
     .s13-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; }
     .s13-cta p { font: 600 54px/1.15 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; text-align: center; text-wrap: balance; text-shadow: 0 2px 18px var(--text-halo); }
     #s13-watch { color: var(--gold); }
@@ -13,9 +16,9 @@
   <div id="root" data-composition-id="s13" data-width="1080" data-height="1920">
     <div class="col" id="s13-col">
       <h1 id="s13-title">One Night<br />in Palermo</h1>
-      <div id="s13-phone"><img src="assets/art/viewer.png" alt="" /></div>
+      <div id="s13-phone"><div id="s13-screen"><img src="assets/art/viewer.png" alt="" /></div></div>
       <div class="s13-cta">
-        <p id="s13-watch">Watch the full game — link in the post</p>
+        <p id="s13-watch">Watch the full game. Link in the comments.</p>
         <p id="s13-gh">Open source on GitHub</p>
       </div>
     </div>
