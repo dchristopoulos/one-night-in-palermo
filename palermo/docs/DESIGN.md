@@ -125,7 +125,7 @@ note is cream-dim with ink; a ghost line is navy with moon. `tokens.test.ts` che
   `whispers to`, `declines to answer`, tags `last words` (accent), `before the game` / `after the game` (muted). Variants:
   narrator (phase title in display, or `the host` label over a plain sans line; an aside is smaller and muted, `the host, aside`); note
   (cream-dim, ruled, rotated −0.8°, `A note from X · found in the morning`, italic sans in quotes); ghost (navy,
-  moon, `from beyond · only you can hear`); votes (targets side by side, 56 px face (40 on phone), count large in
+  moon, `out of the game · only you can hear`); votes (targets side by side, 56 px face (40 on phone), count large in
   Bodoni Moda, voters' faces stacked under each, then `X is out`; a **secret ballot** (engine default from 2026-11-15) is
   labelled `the vote · secret ballot`: Watch shows the voters with `The table saw only the counts. You see who voted for
   whom.`, Guess shows the counts alone, on the card, the seats and the log, until the game is over); death (**RoleCard**, a CSS 3D flip from the portrait back
@@ -135,7 +135,7 @@ note is cream-dim with ink; a ghost line is navy with moon. `tokens.test.ts` che
   only); thoughts with no line after them, memory notes and clocks left out. Sticky phase headers `Day 2 · 5 at the
   table`. Narration centred sans italic, asides smaller and muted. The vote grouped by target, the reasons one tap
   away (`<details>`). A death as a small card with the turned role. Notes as cream-dim slips; ghost lines indented, navy,
-  `X, from beyond`; last words tagged. Follows the live moment; scrolling up pauses following and shows `Back to live ↓`;
+  `X, out of the game`; last words tagged. Follows the live moment; scrolling up pauses following and shows `Back to live ↓`;
   clicking an entry jumps the replay there. The current entry is marked by an inset accent bar and shadow, never a
   background (notes and ghosts keep theirs).
 - **Header**: where you are, then the state. Where: a home button (house, `Games` from 1100 px), the title (≥ 1100 px),
@@ -254,7 +254,7 @@ Rules, from Apple HIG, Material and WCAG 2.2 as collected in the UI/UX guideline
 **The audit.** `games/lab/ui-audit.js` measures one page: for every text and image it asks the browser what is really
 painted at three points of it (`elementFromPoint`), and reports anything covered, clipped, unreachable, under 12 px, or
 a control under 40 px. `games/lab/ui-audit-run.js` opens Home and nine moments of a game (a line, a whisper, the vote in
-Watch and in Guess, last words, the card turn, a comment from beyond, a long line, the end card) in hidden frames at
+Watch and in Guess, last words, the card turn, a comment from a player who is out, a long line, the end card) in hidden frames at
 twelve sizes from 320×640 to 1920×1080, both phone orientations included. To run it: serve the viewer, open `/ui/`, and
 in the browser console run `eval(await (await fetch('/games/lab/ui-audit-run.js')).text()); await
 __audit([[1366,768],[375,812],[812,375]], __urls('fun9-1'))`. State on 2026-11-15: clean at 12 sizes × 10 screens. It
@@ -271,7 +271,7 @@ scrubber at 24–30 px and the evening arrows at 36 px.
 
 ## 9. Voice (copy)
 - Short, concrete, present tense. "Terra is out. Terra was the officer." Not "Player eliminated".
-- Labels state the fact, never explain the UI: "from beyond · only you can hear", "found in the morning".
+- Labels state the fact, never explain the UI: "out of the game · only you can hear", "found in the morning".
 - Model names shown as the product would: "Claude Haiku 5.5", "GPT-6 Sol", "Gemma 4 26B · local".
 
 ## 10. Don'ts

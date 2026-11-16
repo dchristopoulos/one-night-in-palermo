@@ -124,8 +124,8 @@ test('fixture: lean and claim at the seats', () => {
 test('fixture: last words, the death, the dead watch', () => {
   const l = find(e => e.type === 'say' && e.why === 'last words');
   let s = replay(fx, l + 1);
-  assert.equal(s.bubble?.kind === 'say' && s.bubble.out, true);
-  assert.ok(seat(s, 'Terra').dead && !seat(s, 'Terra').revealed, 'out while speaking, card not yet turned');
+  assert.ok(s.bubble?.kind === 'say' && s.bubble.why === 'last words' && !s.bubble.out);
+  assert.ok(!seat(s, 'Terra').dead && !seat(s, 'Terra').revealed, 'still lit while speaking, card not yet turned');
   s = replay(fx, l + 2);
   assert.deepEqual(s.bubble, { kind: 'death', name: 'Terra', role: 'officer', how: 'vote' });
   const g = find(e => e.type === 'ghost');
@@ -149,7 +149,7 @@ test('fixture: the log, one entry per turn', () => {
   assert.ok(!all.some(e => (e as { kind: string }).kind === 'memory'));
   assert.equal(all.filter(e => e.kind === 'note').length, 3);
   assert.equal(all.filter(e => e.kind === 'ghost').length, 5);
-  assert.ok(all.some(e => e.kind === 'line' && e.tag === 'last words'));
+  assert.ok(all.some(e => e.kind === 'line' && e.tag === 'voted out · last words'));
   assert.ok(all.some(e => e.kind === 'narration' && e.aside));
   assert.deepEqual(all.filter(e => e.kind === 'phase').map(e => e.kind === 'phase' && `${e.text} ${e.alive}`),
     ['Before the game 7', 'Night 1 7', 'Day 1 6', 'Night 2 5', 'Day 2 4', 'Night 3 3']);

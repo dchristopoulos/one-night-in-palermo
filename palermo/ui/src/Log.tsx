@@ -49,7 +49,7 @@ export function Log({ entries, seats, current, onJump, ballots = true }: { entri
           {e.role ? <span className={css.card} data-role={e.role}><Emblem role={e.role} />{e.role}</span> : <small>card face down</small>}
         </div>);
       case 'note': return <div key={e.i} className={css.note} {...jump}><span className={css.label}>A note from {e.name}</span><p>“{e.text}”</p></div>;
-      case 'ghost': return <div key={e.i} className={css.ghost} {...jump}><Face name={e.name} /><div><span className={css.label}>{e.name}, from beyond</span><p>{e.text}</p></div></div>;
+      case 'ghost': return <div key={e.i} className={css.ghost} {...jump}><Face name={e.name} /><div><span className={css.label}>{e.name}, out of the game</span><p>{e.text}</p></div></div>;
       case 'called': return <p key={e.i} className={css.narration} {...jump}>{e.name} called it on the day: “{e.text}”</p>;
     }
   };

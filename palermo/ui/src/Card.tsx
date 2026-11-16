@@ -7,7 +7,7 @@ import css from './Card.module.css';
 // The one reading place (DESIGN.md §5 Card): a cream card in the middle of the table. A spoken line with the speaker's
 // thought as a tinted strip on top; narration, notes, last words, the dead watching, the vote and the card reveal all land
 // here too. `tail`: where the speaker sits, so the card points at them.
-const TAG: Record<string, string> = { 'last words': 'last words', confession: 'after the game', 'before the game': 'before the game', 'defends before the vote': 'defends before the vote' };
+const TAG: Record<string, string> = { 'last words': 'voted out · last words', confession: 'after the game', 'before the game': 'before the game', 'defends before the vote': 'defends before the vote' };
 
 // `ballots`: show who cast which vote. False in Guess mode while a secret-ballot game is on: the table saw only the counts.
 export function Card({ bubble: b, thought, seats, tail, ballots = true }: {
@@ -52,7 +52,7 @@ export function Card({ bubble: b, thought, seats, tail, ballots = true }: {
       break;
     case 'ghost':
       body = <>
-        <div className={css.head}><img className={css.face} src={avatar(b.name)} alt="" data-out /><span className={css.who}>{b.name}</span><span className={css.tag}>from beyond · only you can hear</span></div>
+        <div className={css.head}><img className={css.face} src={avatar(b.name)} alt="" data-out /><span className={css.who}>{b.name}</span><span className={css.tag}>out of the game · only you can hear</span></div>
         <p className={css.line} aria-live="polite">{b.text}</p>
       </>;
       break;

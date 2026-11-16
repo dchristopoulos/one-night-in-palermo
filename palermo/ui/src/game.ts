@@ -112,12 +112,12 @@ export function reduce(s: TableState, ev: GameEvent): TableState {
     case 'say': {
       if (!seat) return s;
       const why = ev.reply_to && /^answers /.test(ev.why ?? '') ? undefined : ev.why;   // "answers X" is carried by replyTo
-      const last = ev.why === 'last words';   // already voted out: the seat is out while they speak; the card turns at the death
+      // last words: the speaker has been voted out but stays lit at the table until the card turns at the death
       const opening = ev.why === 'before the game' && !s.phase ? { phase: { text: 'Before the game', kind: 'day' as const } } : {};   // the opening beat, before night 1
       const seats = mark(mark(calm(s.seats), ev.name, 'speaking'), ev.reply_to, 'addressed').map(x => x.name !== ev.name ? x : {
-        ...x, ...(last && { dead: true }), ...('lean' in ev && { lean: ev.lean ?? null }), ...(ev.claim && { claim: ev.claim }) });
+        ...x, ...('lean' in ev && { lean: ev.lean ?? null }), ...(ev.claim && { claim: ev.claim }) });
       return { ...s, ...opening, seats, thought: keep(ev.name),
-        bubble: { kind: 'say', name: ev.name, text: ev.text, why, replyTo: ev.reply_to, ...((seat.dead || last) && { out: true as const }) } };
+        bubble: { kind: 'say', name: ev.name, text: ev.text, why, replyTo: ev.reply_to, ...(seat.dead && { out: true as const }) } };
     }
     case 'whisper':
       if (!seat) return s;
@@ -220,7 +220,7 @@ export function isHighlight(ev: GameEvent, next: GameEvent | undefined, players:
 
 // the log: one entry per turn, not per event. `thoughts`: fold each speaker's thought into their line (Watch mode).
 // Thoughts with no line after them, memory notes, clocks and night actions are left out.
-const TAGS: Record<string, string> = { 'last words': 'last words', confession: 'after the game', 'before the game': 'before the game' };
+const TAGS: Record<string, string> = { 'last words': 'voted out · last words', confession: 'after the game', 'before the game': 'before the game' };
 export type LogEntry = { i: number } & (
   | { kind: 'phase'; text: string; night: boolean; alive: number }
   | { kind: 'line'; name: string; text: string; to?: string; whisper?: boolean; tag?: string; thought?: string }
