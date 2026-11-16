@@ -98,6 +98,32 @@ you; the killers won"), for the last three games. Grudges and reputations carry 
 Two other memory modes exist for comparison: `--memory transcript` (everything said, no notes) and `--memory short`
 (notes plus only the last six lines).
 
+## Prompts: facts, never advice
+
+Nothing a player does is scripted. The engine never writes a player's line, thought, note, vote or night choice. In the
+24 published games the models produced 1,601 spoken lines, 2,175 private thoughts, 1,354 notes and 379 votes. The only
+fixed text is the host's announcements during a game ("Opus is out. Opus shows the card: killer.").
+
+Every player gets the same system prompt of about 480 words, then a short character. Five rules shaped it, each one
+learned from games that went wrong:
+
+- **Facts, not advice.** The prompt says what is true and stops there: "Wrong votes are expensive: with two killers at
+  a small table the town can lose after two of them." An earlier version had a strategy guide for each role. It was
+  removed, because its advice to the officer was wrong for a small table.
+- **No example lines.** Earlier prompts showed sample sentences, and the models said them back. No quoted example is
+  left anywhere in the system prompt.
+- **A character is what it wants, not how it behaves.** Sonnet's whole character: "You love being right. You trust
+  your first read of people and you say it early. Being talked out of it and then proved right is what you hate most."
+- **Nothing is pushed during a game.** A turn prompt carries facts and one task. No hint is added when a player
+  struggles or a game turns dull.
+- **A bad reply is never rewritten.** A line that repeats the speaker's earlier line is asked for once more and then
+  dropped: the player stays silent. A line over the word limit is asked for once more and then cut at the limit. The
+  one fallback: a vote that names no valid player counts for a random one.
+
+Every reply has the same labelled parts: `MONOLOGUE` (the private thought), `SAY`, `LEAN`, `NOTE` and `FORGET`.
+`python3 game.py --dry --fast --prompt Sonnet` prints the exact system prompt and every turn prompt one seat receives;
+[`palermo/docs/prompts.md`](palermo/docs/prompts.md) has the full text and what changed between versions.
+
 ## What the games taught the rules
 
 The rules changed many times, each time because recorded games showed a problem:
