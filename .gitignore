@@ -1,0 +1,35 @@
+# dependencies and caches
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# build output: `npm run build` in palermo/ui makes it; the hosted artifact is the folder `python3 view.py --export DIR` writes
+palermo/ui/dist/
+# static exports of the viewer
+site/
+palermo-site/
+
+# scratch
+*.tmp
+*.swp
+
+# engine and lab scratch: run logs, CLI timeout dumps (prompt + debug tail), the viewer's latest.json copy, dry runs
+palermo/games/**/*.log
+palermo/games/**/timeout-*.txt
+palermo/games/latest.json
+palermo/games/*-dry.json
+palermo/games/_test_*.json
+palermo/games/test-*.json
+
+# editor settings
+.vscode/
+.idea/
+
+# the video short: renders and frames are build output (video/README.md says how to render); the poster is kept
+video/out/*
+!video/out/poster.jpg
+video/.hyperframes/
+
+# local copy of the published site (python3 view.py --export)
+.site-preview/
