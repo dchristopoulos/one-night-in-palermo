@@ -128,6 +128,7 @@ An unknown flag prints the flag list and exits with code 2 before any model is c
 ## Docs
 
 - `docs/engine-rules.md`: what the engine enforces, flags, event format (current).
+- `docs/engine-history.md`: why each rule and check was added, by date.
 - `docs/prompts.md`: the prompts every seat gets (current).
 - `docs/DESIGN.md`: the viewer's look, layout and controls.
 - `docs/turn-taking.md`: who speaks next.
