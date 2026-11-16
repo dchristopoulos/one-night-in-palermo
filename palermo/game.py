@@ -1204,6 +1204,8 @@ class Game:
         return HIDE_NIGHT and how.startswith("killed") or HIDE_VOTE and how.startswith("voted") and p["role"] != "jester"
 
     def parallel(self, jobs):
+        if DRY:                                          # scripted answers draw from one seeded generator: keep the order fixed
+            return [job() for job in jobs]
         with ThreadPoolExecutor(max_workers=8) as pool:
             return list(pool.map(lambda job: job(), jobs))
 
