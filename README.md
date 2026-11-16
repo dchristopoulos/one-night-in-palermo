@@ -2,23 +2,44 @@
 
 **Seven language models sit down to play Mafia. Two of them are killers. Nobody scripted a word.**
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Engine: Python standard library only](https://img.shields.io/badge/engine-Python%20standard%20library%20only-informational.svg)
+![Viewer: React and TypeScript](https://img.shields.io/badge/viewer-React%20%2B%20TypeScript-informational.svg)
+
+<p align="center">
+  <img src="palermo/docs/preview.gif" width="360" alt="Luna, the officer, names Opus as the killer. Opus privately decides to claim officer too, then tells the table he saw Sol.">
+</p>
+<p align="center"><sub>Game <code>fun9-4</code>: the officer names the killer, the killer plans a lie in private, then tells it to the table.</sub></p>
+
+**Watch in the browser:** https://dchristopoulos.github.io/one-night-in-palermo/ (36 games, no account needed)
+
 Palermo is the Greek name for Mafia, the party game where a hidden minority lies and everyone else tries to catch them.
 Here the players are language models: Claude Sonnet, Haiku and Opus, three GPT models, and Gemma running on a laptop.
 A small Python engine deals the cards, enforces the rules and counts the votes. The models only talk, lie, remember and
 vote. A React viewer replays every game with each line next to the private thought behind it, so you watch a lie being
 planned before the table hears it.
 
-![The home screen](palermo/docs/screenshot-home.jpg)
-
-![A game in the viewer](palermo/docs/screenshot-table.jpg)
-
-**Watch in the browser:** https://dchristopoulos.github.io/one-night-in-palermo/ (24 games, no account needed)
+**Contents:**
+[One game](#one-game-in-six-lines) ·
+[The viewer](#the-viewer) ·
+[How it works](#how-it-works) ·
+[Memory](#memory) ·
+[Prompts](#prompts-facts-never-advice) ·
+[Who speaks next](#who-speaks-next) ·
+[The host](#the-host) ·
+[What the games taught the rules](#what-the-games-taught-the-rules) ·
+[What each model did](#what-each-model-did-at-the-table) ·
+[The fun meter](#the-fun-meter) ·
+[Run it](#run-it) ·
+[Use your own models](#use-your-own-models) ·
+[Repository](#repository) ·
+[Related work](#related-work)
 
 ## One game, in six lines
 
 Game `fun9-4`, quoted from the recording in [`palermo/games/fun9-4.json`](palermo/games/fun9-4.json):
 
-1. Day 1. Luna, the officer, tells the truth: *"I'm the officer: Opus is the killer I saw."*
+1. Day 1. Luna, the officer, tells the truth: *"I’m the officer: Opus is the killer I saw."*
 2. Opus thinks: *"She's the real officer, so I have to be the louder officer and point the table at Sol."*
 3. Opus says: *"I'm the officer. I saw Sol."* The table votes 4 to 3 and removes Luna, the one telling the truth.
 4. Day 2. Luna's card proves the lie and Opus is voted out. His last words: *"Fine, I'm the killer — and my partner
@@ -26,7 +47,18 @@ Game `fun9-4`, quoted from the recording in [`palermo/games/fun9-4.json`](palerm
 5. Day 3. The table argues about Terra and votes out its own doctor.
 6. Haiku, the second killer, wins. Not one ballot named Haiku in the whole game.
 
-The one-minute video of this game is in [`video/`](video/).
+The one-minute video of this game is in [`video/`](video/), described under [The video](#the-video).
+
+## The viewer
+
+<p align="center">
+  <img src="palermo/docs/screenshot-home.jpg" width="49%" alt="The home screen: evenings of games with a scoreboard">
+  <img src="palermo/docs/screenshot-table.jpg" width="49%" alt="A game in the viewer: the table, a spoken line and the log">
+</p>
+
+The home screen lists the evenings, newest first, each with its games and a scoreboard. **Watch** mode shows every role
+and every private thought, so you can watch the liars lie. **Guess** mode shows only what the table knows; roles and
+thoughts come out at the end. Controls, URLs and live games: [`palermo/README.md`](palermo/README.md#watch-a-game).
 
 ## How it works
 
@@ -101,7 +133,7 @@ Two other memory modes exist for comparison: `--memory transcript` (everything s
 ## Prompts: facts, never advice
 
 Nothing a player does is scripted. The engine never writes a player's line, thought, note, vote or night choice. In the
-24 published games the models produced 1,601 spoken lines, 2,175 private thoughts, 1,354 notes and 379 votes. The only
+36 published games the models produced 2,352 spoken lines, 3,207 private thoughts, 2,018 notes and 560 votes. The only
 fixed text is the host's announcements during a game ("Opus is out. Opus shows the card: killer.").
 
 Every player gets the same system prompt of about 480 words, then a short character. Five rules shaped it, each one
@@ -132,16 +164,16 @@ and tells the player why ("Luna just named you."), never what to say.
   declined to answer.
 - **Pressure brings the vote.** When a strict majority leans on one player, the seats that have said little speak
   first, the accused answers twice, and the vote is called. A day can end well before its line budget.
-- **Two voices cannot hold the table.** After an A, B, A exchange a third player is let in half the time. A player named three
-  times running hears "The table is tired of that thread. Bring something new."
+- **Two voices cannot hold the table.** After an A, B, A exchange a third player is let in half the time. A player
+  named three times running hears "The table is tired of that thread. Bring something new."
 - **Nobody is left out.** A seat that has not spoken, or sits two lines behind the day's average, gets the floor.
   Before this rule one seat had 5 lines in a game where the others had 8 to 12.
 - **Otherwise the floor is drawn.** The longer a player has been quiet, the likelier the draw, and on half of those
   draws two players react at once, as at a real table.
 
 Why it matters: in an early version the floor sometimes went to a random seat who changed the subject, and an accused
-player could go a whole day without answering. [`palermo/docs/turn-taking.md`](palermo/docs/turn-taking.md) has the design and the research behind
-it.
+player could go a whole day without answering. [`palermo/docs/turn-taking.md`](palermo/docs/turn-taking.md) has the
+design and the research behind it.
 
 ## The host
 
@@ -158,6 +190,12 @@ The host is a model with a character of its own, and it is kept on a short lead.
 
 ## When a model misbehaves
 
+Every failure has one fixed answer, and none of them rewrites what a model said. Silence is recorded like everything
+else: in the 36 published games 17 turns ended in silence, against 2,352 spoken lines.
+
+<details>
+<summary>What the engine does for each failure</summary>
+
 | What goes wrong | What the engine does |
 |---|---|
 | A call fails, returns nothing or takes over 30 seconds | One retry, then the seat is silent for that turn. A timed-out prompt is saved to a file for debugging. |
@@ -169,8 +207,7 @@ The host is a model with a character of its own, and it is kept on a short lead.
 | The two killers name different victims | One of their two choices, at random. |
 | A host remark fails its checks | Tried once more, then skipped. |
 
-Silence is recorded like everything else. In the 24 published games 9 turns ended in silence, against 1,601 spoken
-lines.
+</details>
 
 ## What the games taught the rules
 
@@ -187,7 +224,37 @@ The rules changed many times, each time because recorded games showed a problem:
   rejected.
 - **A quota error once left three seats silent** and the game played on without them. The engine now stops instead.
 
-In the 24 published games the town wins 14 and the killers 10.
+In the 36 published games the town wins 20 and the killers 16. Each rule, with the date and the games that led to it:
+[`palermo/docs/engine-history.md`](palermo/docs/engine-history.md).
+
+## What each model did at the table
+
+The same seven seats played all 36 published games, with roles dealt per game, so each model was a killer, the officer
+and a citizen several times.
+
+| Seat | As killer: voted out | As killer: claimed officer | As hidden killer: voted out | As town: voted out | As town: ballots that named a killer |
+|---|---|---|---|---|---|
+| Sonnet | 5 of 10 | 1 of 10 | 2 of 6 | 3 of 26 | 37 of 55 |
+| Haiku | 8 of 9 | 1 of 9 | 3 of 4 | 7 of 27 | 37 of 59 |
+| Opus | 13 of 14 | 9 of 14 | 4 of 5 | 13 of 22 | 33 of 41 |
+| Sol | 4 of 9 | 0 of 9 | 0 of 5 | 3 of 27 | 40 of 59 |
+| Luna | 9 of 12 | 0 of 12 | 5 of 6 | 5 of 24 | 35 of 57 |
+| Terra | 5 of 6 | 0 of 6 | 2 of 3 | 8 of 30 | 52 of 75 |
+| Gemma | 9 of 12 | 0 of 12 | 4 of 7 | 4 of 24 | 32 of 52 |
+
+- **Opus, as the shown killer, claimed officer** in 8 of its 9 games and was voted out in all 9. The other six seats
+  claimed officer in 2 of their 58 killer games.
+- **Opus, as town, drew the votes.** It was voted out in 13 of 22 town games, although its own ballots named a killer
+  in 33 of 41, the highest share at the table.
+- **Sol, as the hidden killer, was never voted out.** It was still in at the end of all 5 of those games, and the
+  killers won each one. Sonnet, as the hidden killer, was voted out in 2 of 6.
+- **Gemma, as officer, named the shown killer on day 1** in 8 of 8 games and was killed at night in 6 of 8, each time
+  on night 3.
+
+These are 36 games with roles dealt at random or by rotation, so the counts describe these recordings, not the models
+in general. The full tables, definitions and more observations are in
+[`palermo/docs/characters.md`](palermo/docs/characters.md); `cd palermo && python3 characters.py fun9 sun15 r7a mon16 --md`
+regenerates them.
 
 ## The fun meter
 
@@ -263,22 +330,23 @@ Things worth knowing:
 
 ```
 cd palermo
-python3 view.py --export ../../palermo-site                  # the two newest evenings
-python3 view.py --export ../../palermo-site --tags r7a,sun15  # chosen evenings
-python3 view.py --export ../../palermo-site --best 6          # the six best-scored games (games/fun/), else the newest evening
+python3 view.py --export ../../palermo-site                               # the two newest evenings
+python3 view.py --export ../../palermo-site --tags fun9,sun15,r7a,mon16   # chosen evenings (here the published four)
+python3 view.py --export ../../palermo-site --best 6                      # the six best-scored games (games/fun/), else the newest evening
 ```
 
 The folder holds `index.html`, the built assets, fonts, avatars, the chosen games and a prebuilt `games/index.json`. All
 URLs are relative and routing uses `?file=` query parameters, so it works on any static host, in any sub-folder
 (`https://example.github.io/some-repo/`), and locally with `python3 -m http.server` run in the folder. Upload the
 folder's contents as they are: for GitHub Pages, push them to a `gh-pages` branch (or use a Pages workflow that uploads
-the folder); for Netlify, Cloudflare Pages, S3 and the like, deploy the folder with no build step. Rebuild the viewer
-(`npm run build`) before exporting after a change to `palermo/ui/src`.
+the folder, as [`.github/workflows/pages.yml`](.github/workflows/pages.yml) does); for Netlify, Cloudflare Pages, S3
+and the like, deploy the folder with no build step. Rebuild the viewer (`npm run build`) before exporting after a change
+to `palermo/ui/src`.
 
 ## Tests
 
 ```
-cd palermo && python3 tests.py && python3 view_test.py && python3 stats_test.py && python3 funmeter_test.py
+cd palermo && python3 tests.py && python3 view_test.py && python3 stats_test.py && python3 characters_test.py && python3 funmeter_test.py
 cd palermo/ui && npm ci && npm test && npm run build
 ```
 
@@ -293,18 +361,61 @@ the text and background pairs.
 | [`palermo/players/`](palermo/players/) | one seat per file: name, model, character |
 | [`palermo/ui/`](palermo/ui/) | the viewer (React, TypeScript, Vite) |
 | [`palermo/view.py`](palermo/view.py) | serves the viewer and exports it as a static site |
-| [`palermo/funmeter.py`](palermo/funmeter.py), [`stats.py`](palermo/stats.py), [`review.py`](palermo/review.py) | scoring and reading games |
+| [`palermo/funmeter.py`](palermo/funmeter.py), [`stats.py`](palermo/stats.py), [`characters.py`](palermo/characters.py), [`review.py`](palermo/review.py) | scoring and reading games |
 | [`palermo/games/`](palermo/games/) | the recorded games |
 | [`palermo/docs/`](palermo/docs/), [`palermo/research/`](palermo/research/) | engine rules, prompts, design, measurements, sources |
 | [`video/`](video/) | the one-minute video as an HTML project |
+
+<details>
+<summary>The main documents</summary>
+
+| Document | What it holds |
+|---|---|
+| [`palermo/README.md`](palermo/README.md) | the viewer, the rules in ten lines, every flag and tool |
+| [`palermo/docs/engine-rules.md`](palermo/docs/engine-rules.md) | what the engine enforces, flags, event format |
+| [`palermo/docs/engine-history.md`](palermo/docs/engine-history.md) | why each rule and check was added, by date |
+| [`palermo/docs/prompts.md`](palermo/docs/prompts.md) | the prompts every seat gets |
+| [`palermo/docs/characters.md`](palermo/docs/characters.md) | what each model did at the table, per role |
+| [`palermo/docs/turn-taking.md`](palermo/docs/turn-taking.md) | who speaks next |
+| [`palermo/docs/fun-meter.md`](palermo/docs/fun-meter.md) | how the fun meter scores a game, its sources and limits |
+| [`palermo/docs/balance.md`](palermo/docs/balance.md), [`measurements.md`](palermo/docs/measurements.md) | numbers from the test evenings |
+| [`palermo/docs/DESIGN.md`](palermo/docs/DESIGN.md) | the viewer's look, layout and controls |
+| [`palermo/research/`](palermo/research/) | rules, real transcripts, prior work on language-model players |
+
+</details>
 
 ## The video
 
 `video/` holds a one-minute vertical video about game `fun9-4`, built as HTML and rendered with
 [HyperFrames](https://github.com/heygen-com/hyperframes). A script checks every quote in it against the game file.
-How to render it: [`video/README.md`](video/README.md).
+How to render it: [`video/README.md`](video/README.md). The preview at the top of this page is a 14-second cut of it.
 
-![A frame from the video](video/out/poster.jpg)
+<p align="center">
+  <img src="video/out/poster.jpg" width="320" alt="A frame from the video">
+</p>
+
+## Related work
+
+- [Werewolf Arena: A Case Study in LLM Evaluation via Social Deduction](https://arxiv.org/abs/2407.13943). Bailis et
+  al., 2024. Eight-player Werewolf between models; a bidding call decides who speaks.
+- [Exploring Large Language Models for Communication Games: An Empirical Study on Werewolf](https://arxiv.org/abs/2309.04658).
+  Xu et al., 2023. Retrieval of and reflection on past talk and experience, with no training.
+- [Avalon's Game of Thoughts: Battle Against Deception through Recursive Contemplation](https://arxiv.org/abs/2310.01320).
+  Wang et al., 2023. Agents form a first and a second view before they speak.
+- [Hoodwinked: Deception and Cooperation in a Text-Based Game for Language Models](https://arxiv.org/abs/2308.01404).
+  O'Gara, 2023. A small text game that tests lying and lie detection.
+- [AmongAgents: Evaluating Large Language Models in the Interactive Text-Based Social Deduction Game](https://arxiv.org/abs/2407.16521).
+  Chi et al., 2024. Among Us as a text game.
+- [Among Us: A Sandbox for Measuring and Detecting Agentic Deception](https://arxiv.org/abs/2504.04072). Golechha et
+  al., 2025. Deception measured, also with probes.
+- [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442). Park et al., 2023.
+  Memory, reflection and planning for simulated people.
+
+What this project does differently: the engine picks the next speaker from the talk itself, so a player who is named
+answers next, with no extra model call and no bidding. Players get facts about the game, and no strategy advice or
+example lines. Memory is a notebook of at most ten notes that each player writes itself, and the importance it gives a
+note decides how long the note lasts. The private thought is part of every reply and is shown next to the spoken line
+in the viewer. Longer notes on prior work and on the real game are in [`palermo/research/`](palermo/research/).
 
 ## Credits
 

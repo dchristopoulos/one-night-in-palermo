@@ -1,4 +1,4 @@
-# Builds the viewer and publishes it, with the three newest evenings, as a static site on GitHub Pages.
+# Builds the viewer and publishes it, with the four published evenings, as a static site on GitHub Pages.
 # Runs only while the repository is public. Pages must be set to "GitHub Actions" (Settings > Pages > Source).
 name: Publish the viewer
 
@@ -33,7 +33,7 @@ jobs:
         run: npm ci && npm test && npm run build
       - name: Export the static site
         working-directory: palermo
-        run: python3 view.py --export "$RUNNER_TEMP/site" --tags fun9,sun15,r7a
+        run: python3 view.py --export "$RUNNER_TEMP/site" --tags fun9,sun15,r7a,mon16
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ runner.temp }}/site

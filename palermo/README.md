@@ -102,10 +102,11 @@ An unknown flag prints the flag list and exits with code 2 before any model is c
 | Command | What it does |
 |---|---|
 | `python3 stats.py mynight [more tags]`, `--all` | judge evenings: wins, how games ended, days, officer, doctor, hidden killer, talk, per seat |
+| `python3 characters.py fun9 sun15 r7a mon16 [--md]` | per-model tables by role: what each seat did as killer, town, officer and doctor (`docs/characters.md`) |
 | `python3 games/lab/digest.py games/x.json` | one game in short: roles (`*` = shown killer), claims, votes, deaths, recap |
 | `python3 review.py games/x.json [--day N]` | one game as a full transcript with secrets and notes |
 | `python3 tests.py` | engine checks plus four dry games, a few seconds |
-| `python3 stats_test.py`, `python3 view_test.py` | unit tests for `stats.py` and `view.py` |
+| `python3 stats_test.py`, `python3 characters_test.py`, `python3 view_test.py` | unit tests for `stats.py`, `characters.py` and `view.py` |
 | `cd ui && npm test` | viewer unit tests |
 | `cd ui && npm run build` | type-check and build the viewer into `ui/dist` (what `view.py` serves and `--export` copies) |
 
@@ -120,7 +121,7 @@ An unknown flag prints the flag list and exits with code 2 before any model is c
 | `ui/` | the React viewer (`src/`, built to `dist/`) |
 | `index.html` | forwards `/` to `/ui/` |
 | `games/` | the evenings on the current engine (`tag-N.json`), viewer fixtures, `games/fun/` scores (funmeter.py), `games/lab/` small tools, `games/archive/` older games (not comparable, not listed) |
-| `stats.py`, `review.py`, `games/lab/digest.py` | reading games |
+| `stats.py`, `characters.py`, `review.py`, `games/lab/digest.py` | reading games |
 | `lab.py`, `lab_sim.py`, `sim.py`, `probe.py`, `check_roles.py`, `bake.py`, `gates.py` | experiments and older checks |
 | `art/`, `avatars/` | table backgrounds and seat portraits |
 | `docs/`, `research/` | notes, below |
@@ -132,6 +133,7 @@ An unknown flag prints the flag list and exits with code 2 before any model is c
 - `docs/prompts.md`: the prompts every seat gets (current).
 - `docs/DESIGN.md`: the viewer's look, layout and controls.
 - `docs/turn-taking.md`: who speaks next.
+- `docs/characters.md`: what each model did at the table, per role, in the 36 published games (`fun9`, `sun15`, `r7a`, `mon16`).
 - `docs/balance.md`, `docs/measurements.md`: numbers from the test evenings.
 - `docs/fun-meter.md`: how the fun meter scores a game, its sources and limits.
 - `research/`: rules, real transcripts, prior work on LLM agents.
