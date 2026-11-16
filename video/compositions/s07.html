@@ -1,0 +1,28 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s07-col { gap: 44px; }
+  </style>
+  <div id="root" data-composition-id="s07" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s07-col">
+      <p class="narr" id="s07-n1">Next day the lie falls apart.</p>
+      <div class="tally" id="s07-tally">
+        <div class="bar lead" style="--seat: var(--seat-6)"><img src="assets/avatars/Opus.jpg" alt="" /><span class="nm">Opus</span><span class="track"><i class="fill" id="s07-f1" style="width: 100%"></i></span><b class="cnt">3</b></div>
+        <div class="bar" style="--seat: var(--seat-2)"><img src="assets/avatars/Gemma.jpg" alt="" /><span class="nm">Gemma</span><span class="track"><i class="fill" id="s07-f2" style="width: 66.7%"></i></span><b class="cnt">2</b></div>
+      </div>
+      <p class="narr" id="s07-n2"><span class="hot">Opus</span> is voted out.</p>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s07-n1", 0.0);
+      fx.in(tl, "#s07-tally", 0.15);
+      tl.fromTo("#s07-f1", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0.25);
+      tl.fromTo("#s07-f2", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0.35);
+      fx.in(tl, "#s07-n2", 0.5);
+      fx.out(tl, "#s07-col", 2.77);
+      window.__timelines["s07"] = tl;
+    })();
+  </script>
+</template>

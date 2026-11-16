@@ -1,0 +1,28 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: var(--navy-950); }
+  </style>
+  <div id="root" data-composition-id="backdrop" data-width="1080" data-height="1920">
+    <!-- one navy room for the whole film, lit by one glow per scene: warm from above by day, cold for night and death -->
+    <div class="room" id="bd-room"></div>
+    <div class="glow night" id="bd-night"></div>
+    <div class="glow day" id="bd-day" style="opacity: 0"></div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      // warm day light: Day 1 (6.95-27.1), a short night at the Day 2 label, Day 2 to Opus's last thought (28.1-36.55), Day 3 (41.75-45.85);
+      // the hook, last words, the ghost, the end and the end card stay in cold light
+      const day = [[6.95, 27.1], [28.1, 36.55], [41.75, 45.85]];
+      for (const [a, b] of day) {
+        tl.fromTo("#bd-day", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "sine.inOut", immediateRender: false }, a - 0.4);
+        tl.fromTo("#bd-night", { opacity: 1 }, { opacity: 0, duration: 0.8, ease: "sine.inOut", immediateRender: false }, a - 0.4);
+        tl.fromTo("#bd-day", { opacity: 1 }, { opacity: 0, duration: 0.8, ease: "sine.inOut", immediateRender: false }, b - 0.4);
+        tl.fromTo("#bd-night", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "sine.inOut", immediateRender: false }, b - 0.4);
+      }
+      // the room breathes in slowly across the film
+      tl.fromTo("#bd-room", { scale: 1 }, { scale: 1.08, duration: 62.05, ease: "sine.inOut" }, 0);
+      window.__timelines["backdrop"] = tl;
+    })();
+  </script>
+</template>

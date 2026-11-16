@@ -1,0 +1,26 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s05-say { --seat: var(--seat-6); --seat-deep: var(--seat-deep-6); --tail: 884px; }
+    #s05-col { gap: 36px; }
+    #s05-tagwrap { width: 952px; display: flex; justify-content: flex-end; padding-right: 24px; }
+  </style>
+  <div id="root" data-composition-id="s05" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s05-col">
+      <div class="say" id="s05-say">
+        <div class="who"><img class="face" src="assets/avatars/Opus.jpg" alt="" /><span class="name">Opus</span><span class="verb">says</span></div>
+        <p class="q" data-event="57" data-cut="full">I'm the officer. I saw Sol. Luna's claim is cover for her partner—turn Sol's card first.</p>
+      </div>
+      <div id="s05-tagwrap"><span class="tag lie" id="s05-tag">A lie. Sol is innocent.</span></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s05-say", 0.0);
+      fx.stamp(tl, "#s05-tag", 1.4);
+      fx.out(tl, "#s05-col", 5.82);
+      window.__timelines["s05"] = tl;
+    })();
+  </script>
+</template>

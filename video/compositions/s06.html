@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s06-col { gap: 30px; }
+    #s06-n1, #s06-n2 { max-width: 900px; }
+  </style>
+  <div id="root" data-composition-id="s06" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s06-col">
+      <div class="tally" id="s06-tally">
+        <div class="label">The vote · <em>secret ballot</em></div>
+        <div class="bar lead" style="--seat: var(--seat-4)"><img src="assets/avatars/Luna.jpg" alt="" /><span class="nm">Luna</span><span class="track"><i class="fill" id="s06-f1" style="width: 100%"></i></span><b class="cnt" id="s06-c1">4</b></div>
+        <div class="bar" style="--seat: var(--seat-6)"><img src="assets/avatars/Opus.jpg" alt="" /><span class="nm">Opus</span><span class="track"><i class="fill" id="s06-f2" style="width: 75%"></i></span><b class="cnt" id="s06-c2">3</b></div>
+      </div>
+      <p class="narr" id="s06-n1">The table votes out <span class="hot">Luna</span>.</p>
+      <div class="flip" id="s06-flip"><div class="flip-in" id="s06-flipin">
+        <img class="back" src="assets/avatars/Luna-out.jpg" alt="" />
+        <div class="front" data-role="officer"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 L41 9 V23 C41 34 33.5 41.5 24 45 C14.5 41.5 7 34 7 23 V9 Z M24 13 L26.6 20.4 L34.5 20.6 L28.2 25.3 L30.5 32.9 L24 28.4 L17.5 32.9 L19.8 25.3 L13.5 20.6 L21.4 20.4 Z"/></svg>Officer</div>
+      </div></div>
+      <p class="narr" id="s06-n2">They removed the one telling <span class="hl">the truth</span>.</p>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s06-tally", 0.0);
+      tl.fromTo("#s06-f1", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0.1);
+      tl.fromTo("#s06-f2", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0.2);
+      tl.fromTo(["#s06-c1", "#s06-c2"], { opacity: 0 }, { opacity: 1, duration: 0.25, ease: fx.ENTER }, 0.5);
+      fx.in(tl, "#s06-n1", 0.6);
+      fx.in(tl, "#s06-flip", 0.85);
+      fx.flip(tl, "#s06-flipin", 1.15);
+      fx.in(tl, "#s06-n2", 1.4);
+      fx.out(tl, "#s06-col", 4.42);
+      window.__timelines["s06"] = tl;
+    })();
+  </script>
+</template>

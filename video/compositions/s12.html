@@ -1,0 +1,47 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s12-col { gap: 36px; }
+    /* Haiku's card, large: his portrait on the back, the killer on the face */
+    #s12-flip { width: 280px; height: 392px; --seat: var(--seat-1); }
+    #s12-flip .front { font-size: 42px; gap: 28px; }
+    /* the words, then "Killers win." in the same place */
+    #s12-slot { position: relative; width: 952px; display: flex; justify-content: center; }
+    #s12-words { width: 952px; display: flex; flex-direction: column; align-items: center; gap: 36px; }
+    #s12-t1 { --seat: var(--seat-1); --seat-deep: var(--seat-deep-1); }
+    #s12-t1 .dot { display: none; }
+    #s12-win { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 700 160px/1 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--coral); text-shadow: 0 4px 30px var(--text-halo); }
+  </style>
+  <div id="root" data-composition-id="s12" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s12-col">
+      <div class="flip" id="s12-flip"><div class="flip-in" id="s12-flipin">
+        <img class="back" src="assets/avatars/Haiku-hero.jpg" alt="" />
+        <div class="front" data-role="killer"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 L29.5 30 H18.5 Z M11 30 H37 A2 2 0 0 1 37 35 H11 A2 2 0 0 1 11 30 Z M21 35 H27 V41 H21 Z M24 41 A3.5 3.5 0 1 1 24 48 A3.5 3.5 0 1 1 24 41 Z"/></svg> Killer</div>
+      </div></div>
+      <div id="s12-slot">
+        <div id="s12-words">
+          <p class="narr" id="s12-n1">Nobody voted for Haiku. <span class="hl">Not once.</span></p>
+          <div class="think" id="s12-t1">
+            <i class="dot d1"></i><i class="dot d2"></i>
+            <div class="who"><img class="face" src="assets/avatars/Haiku.jpg" alt="" /><span class="caps">Haiku thinks · only you see this</span></div>
+            <p class="q" data-event="337" data-cut="first-clause">I'm the killer who got away with it…</p>
+          </div>
+        </div>
+        <p id="s12-win">Killers win.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#s12-flip", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.35, ease: fx.ENTER }, 0.0);
+      fx.in(tl, "#s12-n1", 0.3);
+      fx.in(tl, "#s12-t1", 0.8);
+      fx.out(tl, "#s12-words", 4.1);
+      fx.flip(tl, "#s12-flipin", 4.2);
+      fx.in(tl, "#s12-win", 4.3, 0.25, 20);
+      fx.out(tl, "#s12-col", 5.92);
+      window.__timelines["s12"] = tl;
+    })();
+  </script>
+</template>

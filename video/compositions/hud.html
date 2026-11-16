@@ -1,0 +1,136 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #hud-wrap { position: absolute; inset: 0; }
+    /* day label: glyphs y ~300..350 */
+    .hud-day { position: absolute; left: 64px; right: 64px; top: 304px; height: 48px; }
+    .hud-day span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 26px;
+      font: 600 54px/1 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--gold); letter-spacing: .01em; opacity: 0; }
+    .hud-day span::before, .hud-day span::after { content: ""; width: 120px; height: 2px; background: var(--rule); }
+    /* the seven seats: centres at x = 132 + 136 i, discs y 364..476, names to ~520 */
+    .hud-row { position: absolute; left: 64px; top: 364px; width: 952px; display: grid; grid-template-columns: repeat(7, 136px); }
+    .seat { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .disc { position: relative; width: 112px; height: 112px; }
+    .disc img { position: absolute; inset: 0; width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 5px solid var(--seat); box-shadow: var(--shadow-face); }
+    .disc img.dead { opacity: 0; border-color: var(--dead-edge); }
+    .ring { position: absolute; inset: -10px; border-radius: 50%; opacity: 0; }
+    .ring.r-say { border: 8px solid var(--coral); box-shadow: 0 0 34px 6px var(--glow-say); }
+    .ring.r-think { border: 8px solid var(--lilac); box-shadow: 0 0 34px 6px var(--glow-think); }
+    .ring.r-ghost { border: 5px dashed var(--moon-soft); }
+    .badge { position: absolute; right: -10px; bottom: -8px; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      border: 3px solid var(--navy-900); opacity: 0; }
+    .badge svg { width: 28px; height: 28px; }
+    .badge.killer { background: var(--coral); color: var(--ink); }
+    .badge.officer { background: var(--sky); color: var(--ink); }
+    .badge.doctor { background: var(--mint); color: var(--ink); }
+    .seat b { font: 600 34px/1 var(--sans); color: var(--moon); }
+    /* a death in the night: a small plate under the name for a second */
+    .kn { position: absolute; top: 162px; left: 50%; width: 340px; margin-left: -170px; text-align: center; white-space: nowrap; padding: 6px 0 8px; border-radius: 10px;
+      background: var(--navy-600); box-shadow: 0 0 0 2px var(--hairline), var(--shadow-chip); font: 600 34px/1 var(--sans); color: var(--moon); opacity: 0; }
+    /* progress through the game */
+    .hud-prog { position: absolute; left: 64px; top: 1614px; width: 952px; height: 6px; border-radius: 3px; background: var(--track); overflow: hidden; }
+    .hud-prog i { display: block; width: 100%; height: 100%; background: var(--gold); transform-origin: 0 50%; }
+  </style>
+  <div id="root" data-composition-id="hud" data-width="1080" data-height="1920">
+    <div id="hud-wrap">
+      <div class="hud-day">
+        <span id="hud-d1">Day 1</span>
+        <span id="hud-d2">Day 2</span>
+        <span id="hud-d3">Day 3</span>
+      </div>
+      <div class="hud-row">
+        <div class="seat" style="--seat: var(--seat-0)"><div class="disc" id="hud-Sonnet">
+          <img class="alive" src="assets/avatars/Sonnet.jpg" alt="" /><img class="dead" src="assets/avatars/Sonnet-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i></div><b>Sonnet</b></div>
+        <div class="seat" style="--seat: var(--seat-1)"><div class="disc" id="hud-Haiku">
+          <img class="alive" src="assets/avatars/Haiku.jpg" alt="" /><img class="dead" src="assets/avatars/Haiku-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i>
+          <span class="badge killer"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 L29.5 30 H18.5 Z M11 30 H37 A2 2 0 0 1 37 35 H11 A2 2 0 0 1 11 30 Z M21 35 H27 V41 H21 Z M24 41 A3.5 3.5 0 1 1 24 48 A3.5 3.5 0 1 1 24 41 Z"/></svg></span></div><b>Haiku</b></div>
+        <div class="seat" style="--seat: var(--seat-2)"><div class="disc" id="hud-Gemma">
+          <img class="alive" src="assets/avatars/Gemma.jpg" alt="" /><img class="dead" src="assets/avatars/Gemma-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i>
+          <span class="badge doctor"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 A21 21 0 1 1 24 45 A21 21 0 1 1 24 3 Z M24 7 A17 17 0 1 0 24 41 A17 17 0 1 0 24 7 Z M20.5 12 H27.5 V20.5 H36 V27.5 H27.5 V36 H20.5 V27.5 H12 V20.5 H20.5 Z"/></svg></span></div><b>Gemma</b></div>
+        <div class="seat" style="--seat: var(--seat-3)"><div class="disc" id="hud-Sol">
+          <img class="alive" src="assets/avatars/Sol.jpg" alt="" /><img class="dead" src="assets/avatars/Sol-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i></div><b>Sol</b><span class="kn" id="kn-Sol">killed in the night</span></div>
+        <div class="seat" style="--seat: var(--seat-4)"><div class="disc" id="hud-Luna">
+          <img class="alive" src="assets/avatars/Luna.jpg" alt="" /><img class="dead" src="assets/avatars/Luna-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i>
+          <span class="badge officer"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 L41 9 V23 C41 34 33.5 41.5 24 45 C14.5 41.5 7 34 7 23 V9 Z M24 13 L26.6 20.4 L34.5 20.6 L28.2 25.3 L30.5 32.9 L24 28.4 L17.5 32.9 L19.8 25.3 L13.5 20.6 L21.4 20.4 Z"/></svg></span></div><b>Luna</b></div>
+        <div class="seat" style="--seat: var(--seat-5)"><div class="disc" id="hud-Terra">
+          <img class="alive" src="assets/avatars/Terra.jpg" alt="" /><img class="dead" src="assets/avatars/Terra-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i></div><b>Terra</b><span class="kn" id="kn-Terra">killed in the night</span></div>
+        <div class="seat" style="--seat: var(--seat-6)"><div class="disc" id="hud-Opus">
+          <img class="alive" src="assets/avatars/Opus.jpg" alt="" /><img class="dead" src="assets/avatars/Opus-out.jpg" alt="" />
+          <i class="ring r-say"></i><i class="ring r-think"></i><i class="ring r-ghost"></i>
+          <span class="badge killer"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 L29.5 30 H18.5 Z M11 30 H37 A2 2 0 0 1 37 35 H11 A2 2 0 0 1 11 30 Z M21 35 H27 V41 H21 Z M24 41 A3.5 3.5 0 1 1 24 48 A3.5 3.5 0 1 1 24 41 Z"/></svg></span></div><b>Opus</b></div>
+      </div>
+      <div class="hud-prog"><i id="hud-bar"></i></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      const T0 = 6.95, END = 51.6;             // this host starts at 7.0 s of the film and leaves as the end card arrives
+      const T = (abs) => +(abs - T0).toFixed(3);
+      const E = fx.ENTER, X = fx.EXIT;
+
+      // the whole table rises in with Day 1 and leaves before the end card
+      tl.fromTo("#hud-wrap", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.3, ease: E }, 0);
+      tl.fromTo("#hud-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: X, immediateRender: false }, END - 0.32);
+      // progress: from Day 1 to the end of the game
+      tl.fromTo("#hud-bar", { scaleX: 0 }, { scaleX: 1, duration: END, ease: "none" }, 0);
+
+      // day labels
+      const label = (id, from, to) => {
+        tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: E }, T(from));
+        if (to) tl.fromTo(id, { opacity: 1 }, { opacity: 0, duration: 0.3, ease: X, immediateRender: false }, T(to) - 0.3);
+      };
+      label("#hud-d1", T0, 27.6);
+      label("#hud-d2", 27.6, 41.75);
+      label("#hud-d3", 41.75, null);
+
+      // rings: who is talking (say) or thinking (think) on screen right now; scenes overlap 0.25 s, so a ring ends as the next begins
+      const ring = (who, kind, from, to) => {
+        const r = `#hud-${who} .ring.r-${kind}`;
+        tl.fromTo(r, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: E }, T(from));
+        tl.fromTo(r, { opacity: 1 }, { opacity: 0, duration: 0.25, ease: X, immediateRender: false }, T(to) - 0.25);
+      };
+      // the disc grows while its owner holds the screen (one span per run of rings, so scale tweens never overlap)
+      const lift = (who, from, to) => {
+        tl.fromTo(`#hud-${who}`, { scale: 1 }, { scale: 1.08, duration: 0.25, ease: E }, T(from));
+        tl.fromTo(`#hud-${who}`, { scale: 1.08 }, { scale: 1, duration: 0.25, ease: X, immediateRender: false }, T(to) - 0.25);
+      };
+      ring("Luna", "say", 6.95, 10.6);         lift("Luna", 6.95, 10.6);
+      ring("Opus", "think", 10.7, 17.0);
+      ring("Opus", "say", 17.0, 23.0);         lift("Opus", 10.7, 23.0);
+      ring("Opus", "think", 30.55, 36.55);
+      ring("Opus", "say", 36.55, 41.75);       lift("Opus", 30.55, 41.75);
+      ring("Opus", "ghost", 45.85, 52.45);
+      ring("Haiku", "think", 53.25, 56.55);    lift("Haiku", 53.25, 56.55);
+
+      // out of the game: the portrait goes grey; a turned card shows its role badge
+      const out = (who, at, badge) => {
+        tl.fromTo(`#hud-${who} img.dead`, { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "sine.inOut" }, T(at));
+        tl.fromTo(`#hud-${who} img`, { scale: 1 }, { scale: 0.92, duration: 0.9, ease: "sine.inOut" }, T(at));
+        tl.fromTo(`#hud-${who} ~ b`, { opacity: 1 }, { opacity: 0.45, duration: 0.9, ease: "sine.inOut" }, T(at));
+        if (badge) tl.fromTo(`#hud-${who} .badge`, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: E }, T(at) + 0.5);
+      };
+      // a night kill: grey face and a plate under the name for about a second and a half
+      const night = (who, at) => {
+        out(who, at, false);
+        tl.fromTo(`#kn-${who}`, { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, ease: E }, T(at));
+        tl.fromTo(`#kn-${who}`, { opacity: 1 }, { opacity: 0, duration: 0.25, ease: X, immediateRender: false }, T(at) + 1.6);
+      };
+      out("Luna", 24.1, true);     // voted out, card turned: officer
+      night("Sol", 27.6);          // killed in the night before Day 2, card stays face down
+      out("Opus", 37.7, true);     // voted out, card turned: killer
+      out("Gemma", 42.8, true);    // voted out after the tie, card turned: doctor
+      night("Terra", 52.45);       // killed in the night before the end
+      // the quiet partner: his role shows only when the game is over
+      tl.fromTo("#hud-Haiku .badge", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: E }, T(56.8));
+
+      window.__timelines["hud"] = tl;
+    })();
+  </script>
+</template>

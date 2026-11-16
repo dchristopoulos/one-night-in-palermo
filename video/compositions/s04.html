@@ -1,0 +1,23 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s04-think { --seat: var(--seat-6); --seat-deep: var(--seat-deep-6); --tail: 884px; }
+  </style>
+  <div id="root" data-composition-id="s04" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s04-col">
+      <div class="think" id="s04-think">
+        <i class="dot d1"></i><i class="dot d2"></i>
+        <div class="who"><img class="face" src="assets/avatars/Opus.jpg" alt="" /><span class="caps">Opus thinks · only you see this</span></div>
+        <p class="q" data-event="55" data-cut="full">She's the real officer, so I have to be the louder officer and point the table at Sol.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s04-think", 0.0);
+      fx.out(tl, "#s04-col", 6.12);
+      window.__timelines["s04"] = tl;
+    })();
+  </script>
+</template>

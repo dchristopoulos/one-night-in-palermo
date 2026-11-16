@@ -1,0 +1,119 @@
+/* The one file that holds every colour and font of the short. Values follow palermo/ui/src/tokens.css
+   ("Palermo at night": navy rooms, cream paper for what is said, indigo for what is only thought).
+   Frame 1080x1920. Safe zone for text and faces: x 64..1016, y 285..1635. */
+
+@font-face { font-family: 'Bodoni Moda'; src: url('fonts/bodoni-moda-latin-opsz-normal.woff2') format('woff2'); font-weight: 400 900; font-style: normal; font-display: block; }
+@font-face { font-family: 'Bodoni Moda'; src: url('fonts/bodoni-moda-latin-opsz-italic.woff2') format('woff2'); font-weight: 400 900; font-style: italic; font-display: block; }
+@font-face { font-family: 'Instrument Sans'; src: url('fonts/instrument-sans-latin-standard-normal.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: block; }
+@font-face { font-family: 'Instrument Sans'; src: url('fonts/instrument-sans-latin-standard-italic.woff2') format('woff2'); font-weight: 400 700; font-style: italic; font-display: block; }
+
+:root {
+  /* palette */
+  --navy-950: #05070F; --navy-900: #0A0E1F; --navy-800: #10162F; --navy-700: #171E40; --navy-600: #1F2852;
+  --cream: #FBF6EA; --ink: #14172B; --ink-soft: #565B78;
+  --moon: #F4EFE4; --moon-soft: #A9B0CE;
+  --coral: #FF6A4D; --gold: #FFD166; --mint: #5FD39A; --sky: #6FB6FF; --indigo: #262E63; --lilac: #DCD6FF;
+  --hairline: rgba(244,239,228,.14);
+  /* seats: bright rings on the dark, deep set for names on the cream card */
+  --seat-0: #FF8073; --seat-1: #6FB1FF; --seat-2: #5FD39A; --seat-3: #F2B25C; --seat-4: #B39BFF; --seat-5: #FF85C8; --seat-6: #4FD6D6;
+  --seat-deep-0: #B5331F; --seat-deep-1: #2459A8; --seat-deep-2: #1F6B45; --seat-deep-3: #8A5210; --seat-deep-4: #6B46C1; --seat-deep-5: #A82A72; --seat-deep-6: #1F6F70;
+  /* light: one soft glow per scene, warm from above by day, cold for night and death */
+  --glow-day: radial-gradient(ellipse 85% 34% at 50% -4%, rgba(255,190,120,.26), transparent 72%);
+  --glow-night: radial-gradient(ellipse 75% 30% at 72% -6%, rgba(130,155,255,.20), transparent 72%);
+  --room: radial-gradient(ellipse at 50% 42%, #111938 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+  --vignette: inset 0 0 220px rgba(0,0,0,.6);
+  /* depth */
+  --shadow-deep: 0 28px 70px rgba(0,0,0,.6); --shadow-chip: 0 12px 30px rgba(0,0,0,.5); --shadow-face: 0 10px 28px rgba(0,0,0,.55);
+  --text-halo: rgba(5,7,15,.85);
+  --glow-say: rgba(255,106,77,.55); --glow-think: rgba(220,214,255,.45); --edge-think: rgba(220,214,255,.45);
+  --dead-edge: #4A5170; --rule: rgba(255,209,102,.45); --track: rgba(244,239,228,.14);
+  /* type: Bodoni Moda for titles, numbers and narration (56 px and up), always at opsz 18 so the hairlines survive a phone screen; Instrument Sans for everything read at size */
+  --display: 'Bodoni Moda', serif;
+  --sans: 'Instrument Sans', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* backgrounds (compositions/backdrop.html) */
+.room { position: absolute; inset: 0; background: var(--room); box-shadow: var(--vignette); }
+.glow { position: absolute; inset: 0; }
+.glow.day { background: var(--glow-day); }
+.glow.night { background: var(--glow-night); }
+
+/* a content column inside the safe zone; scenes with the face row start below it */
+.col { position: absolute; left: 64px; right: 64px; top: 285px; bottom: 285px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+.col.below-hud { top: 540px; bottom: 330px; }   /* between the face row (to ~520) and the progress bar (1614) */
+
+/* narration: the film's own words. Bodoni upright 600 (italic hairlines vanish on a phone), bare on the night, never in a card */
+.narr { font: 600 74px/1.14 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--moon); text-align: center; text-wrap: balance; text-shadow: 0 2px 18px var(--text-halo); }
+.narr .hl, .narr.hl { color: var(--gold); }
+.narr .hot, .narr.hot { color: var(--coral); }
+.narr.big { font-size: 80px; }
+.note { font: 600 44px/1.25 var(--sans); color: var(--moon-soft); text-align: center; text-shadow: 0 2px 14px var(--text-halo); }
+.title { font: 700 112px/1.0 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--moon); text-align: center; }
+
+/* a portrait on the navy: seat ring and a soft dark shadow */
+.portrait { border-radius: 50%; object-fit: cover; border: 5px solid var(--seat); box-shadow: var(--shadow-face); }
+
+/* the speaker's label inside a card */
+.who { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
+.who .face { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 4px solid var(--seat); flex: none; }
+.who .name { font: 700 40px/1 var(--sans); color: var(--seat-deep); }
+.who .verb { font: 600 38px/1 var(--sans); color: var(--ink-soft); }
+.who .caps { font: 700 37px/1.05 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+
+/* SAID: the cream paper card, the one light object on screen; ring and tail in the speaker's seat colour */
+.say { position: relative; width: 952px; padding: 40px 46px 46px; background: var(--cream); color: var(--ink); border-radius: 28px;
+  box-shadow: 0 0 0 6px var(--seat), var(--shadow-deep); }
+.say::before, .say::after { content: ""; position: absolute; left: var(--tail); transform: translateX(-50%) rotate(45deg); border-radius: 4px; }
+.say::before { top: -31px; width: 46px; height: 46px; background: var(--seat); }
+.say::after { top: -22px; width: 36px; height: 36px; background: var(--cream); }
+.say .q { font: 600 80px/1.17 var(--sans); letter-spacing: -.012em; text-wrap: pretty; }
+
+/* THOUGHT: indigo card, lilac italic, little thought bubbles rising to the seat */
+.think { position: relative; width: 952px; padding: 40px 46px 46px; background: var(--indigo); color: var(--lilac); border-radius: 28px;
+  box-shadow: 0 0 0 3px var(--edge-think), 0 0 60px rgba(220,214,255,.14), var(--shadow-deep); }
+.think .who .face { border-color: var(--lilac); }
+.think .who .caps { color: var(--lilac); }
+.think .q { font: italic 500 78px/1.18 var(--sans); text-wrap: pretty; }
+.think .dot { position: absolute; left: var(--tail); border-radius: 50%; background: var(--indigo); box-shadow: 0 0 0 3px var(--edge-think); transform: translateX(-50%); }
+.think .dot.d1 { top: -50px; width: 34px; height: 34px; }
+.think .dot.d2 { top: -88px; width: 22px; height: 22px; }
+
+/* GHOST: a comment from outside the game; mid navy with a pale halo, upright, grey face */
+.ghost { position: relative; width: 952px; padding: 40px 46px 46px; background: var(--navy-600); color: var(--moon); border-radius: 28px;
+  box-shadow: 0 0 0 2px var(--moon-soft), 0 0 0 12px rgba(169,176,206,.14), var(--shadow-deep); }
+.ghost .who .face { border-color: var(--moon-soft); }
+.ghost .who .caps { color: var(--moon-soft); }
+.ghost .q { font: 500 76px/1.18 var(--sans); text-wrap: pretty; }
+
+/* a fact stamp under a line */
+.tag { display: inline-block; padding: 18px 30px; border-radius: 14px; font: 700 46px/1.15 var(--sans); color: var(--ink); box-shadow: var(--shadow-chip); }
+.tag.true { background: var(--gold); }
+.tag.lie { background: var(--coral); }
+
+/* the turned card, as in the viewer: portrait on the back, emblem and role on the face */
+.flip { width: 216px; height: 302px; perspective: 1600px; flex: none; }
+.flip-in { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
+.flip .back, .flip .front { position: absolute; inset: 0; border-radius: 16px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip .back { width: 100%; height: 100%; object-fit: cover; border: 6px solid var(--seat, var(--moon-soft)); box-shadow: var(--shadow-deep); }
+.flip .front { transform: rotateY(180deg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px;
+  background: var(--navy-600); border: 6px solid var(--role); box-shadow: inset 0 0 0 10px var(--navy-600), inset 0 0 0 12px var(--role), var(--shadow-deep);
+  font: 700 34px/1 var(--sans); letter-spacing: .05em; text-transform: uppercase; color: var(--role); }
+.flip .front svg { width: 54%; height: auto; color: var(--role); }
+.flip .front[data-role="killer"] { --role: var(--coral); }
+.flip .front[data-role="officer"] { --role: var(--sky); }
+.flip .front[data-role="doctor"] { --role: var(--mint); }
+
+/* the vote: one bar per target */
+.tally { width: 952px; display: flex; flex-direction: column; gap: 26px; }
+.tally .label { font: 700 38px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--moon-soft); text-align: center; margin-bottom: 6px; }
+.tally .label em { font-style: normal; color: var(--gold); }
+.bar { display: grid; grid-template-columns: 110px 170px 1fr 96px; align-items: center; gap: 22px; }
+.bar img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 5px solid var(--seat); box-shadow: var(--shadow-face); }
+.bar .nm { font: 700 48px/1 var(--sans); color: var(--moon); }
+.bar .track { height: 52px; border-radius: 10px; background: var(--track); overflow: hidden; }
+.bar .fill { display: block; height: 100%; border-radius: 10px; background: var(--moon-soft); transform-origin: 0 50%; }
+.bar.lead .fill { background: var(--coral); }
+.bar .cnt { font: 800 108px/1 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; font-variant-numeric: tabular-nums; color: var(--moon); text-align: right; }
+.bar.lead .cnt { color: var(--coral); }

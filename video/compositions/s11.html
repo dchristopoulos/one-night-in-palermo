@@ -1,0 +1,23 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s11-ghost .q { font-size: 76px; }
+    #s11-ghost .who .face { opacity: .9; }
+  </style>
+  <div id="root" data-composition-id="s11" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s11-col">
+      <div class="ghost" id="s11-ghost">
+        <div class="who"><img class="face" src="assets/avatars/Opus-out.jpg" alt="" /><span class="caps">Opus, out of the game</span></div>
+        <p class="q" data-event="319" data-cut="first-sentence">They turned the doctor's card instead of a killer's, on the word of a man they'd already caught lying.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s11-ghost", 0.0);
+      fx.out(tl, "#s11-col", 6.42);
+      window.__timelines["s11"] = tl;
+    })();
+  </script>
+</template>

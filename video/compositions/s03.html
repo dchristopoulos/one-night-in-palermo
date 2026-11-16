@@ -1,0 +1,27 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s03-col { gap: 36px; }
+    #s03-say { --seat: var(--seat-4); --seat-deep: var(--seat-deep-4); --tail: 612px; }
+    #s03-say .q { font-size: 84px; }
+    .tagwrap { width: 952px; display: flex; justify-content: flex-end; padding-right: 24px; }
+  </style>
+  <div id="root" data-composition-id="s03" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s03-col">
+      <div class="say" id="s03-say">
+        <div class="who"><img class="face" src="assets/avatars/Luna.jpg" alt="" /><span class="name">Luna</span><span class="verb">says</span></div>
+        <p class="q" data-event="53" data-cut="first-sentence">I’m the officer: Opus is the killer I saw.</p>
+      </div>
+      <div class="tagwrap"><span class="tag true" id="s03-tag">True. Luna is the officer.</span></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s03-say", 0.0);
+      fx.stamp(tl, "#s03-tag", 0.7);
+      fx.out(tl, "#s03-col", 3.57);
+      window.__timelines["s03"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,36 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s09-col { gap: 40px; }
+    #s09-say { --seat: var(--seat-6); --seat-deep: var(--seat-deep-6); --tail: 884px; }
+    /* the turned card and the fact sit side by side under the line */
+    #s09-row { width: 952px; display: flex; align-items: center; gap: 40px; }
+    #s09-row .tag { flex: 1; text-align: left; }
+  </style>
+  <div id="root" data-composition-id="s09" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s09-col">
+      <div class="say" id="s09-say">
+        <div class="who"><img class="face" src="assets/avatars/Opus.jpg" alt="" /><span class="name">Opus</span><span class="verb">says · last words</span></div>
+        <p class="q" data-event="212" data-cut="first-sentence">Fine, I'm the killer — and my partner is the one I never attacked: Terra.</p>
+      </div>
+      <div id="s09-row">
+        <div class="flip" id="s09-flip"><div class="flip-in" id="s09-flipin">
+          <img class="back" src="assets/avatars/Opus-out.jpg" alt="" />
+          <div class="front" data-role="killer"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 L29.5 30 H18.5 Z M11 30 H37 A2 2 0 0 1 37 35 H11 A2 2 0 0 1 11 30 Z M21 35 H27 V41 H21 Z M24 41 A3.5 3.5 0 1 1 24 48 A3.5 3.5 0 1 1 24 41 Z"/></svg> Killer</div>
+        </div></div>
+        <span class="tag lie" id="s09-tag">Terra is innocent. The real partner is Haiku.</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s09-say", 0.0);
+      fx.in(tl, "#s09-flip", 0.9);
+      fx.flip(tl, "#s09-flipin", 1.2);
+      fx.stamp(tl, "#s09-tag", 2.1, -1.5);
+      fx.out(tl, "#s09-col", 5.02);
+      window.__timelines["s09"] = tl;
+    })();
+  </script>
+</template>

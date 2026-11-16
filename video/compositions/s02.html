@@ -1,0 +1,46 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s02-col { gap: 34px; }
+    .s02-top { display: flex; flex-direction: column; gap: 18px; }
+    .s02-fam { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .s02-fam h3 { font: 700 36px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--moon-soft); }
+    .s02-faces { display: flex; gap: 44px; }
+    .s02-p { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .s02-p img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 6px solid var(--seat); box-shadow: var(--shadow-face); }
+    .s02-p b { font: 700 42px/1 var(--sans); color: var(--moon); }
+  </style>
+  <div id="root" data-composition-id="s02" data-width="1080" data-height="1920">
+    <div class="col" id="s02-col">
+      <div class="s02-top">
+        <p class="narr" id="s02-a">Seven AI models play Mafia.</p>
+        <p class="narr" id="s02-b">Two are secret <span class="hot">killers</span>. Nobody scripted a word.</p>
+      </div>
+      <div class="s02-fam" id="s02-f1"><h3>Claude</h3><div class="s02-faces">
+        <div class="s02-p" style="--seat: var(--seat-6)"><img src="assets/avatars/Opus.jpg" alt="" /><b>Opus</b></div>
+        <div class="s02-p" style="--seat: var(--seat-0)"><img src="assets/avatars/Sonnet.jpg" alt="" /><b>Sonnet</b></div>
+        <div class="s02-p" style="--seat: var(--seat-1)"><img src="assets/avatars/Haiku.jpg" alt="" /><b>Haiku</b></div>
+      </div></div>
+      <div class="s02-fam" id="s02-f2"><h3>GPT</h3><div class="s02-faces">
+        <div class="s02-p" style="--seat: var(--seat-3)"><img src="assets/avatars/Sol.jpg" alt="" /><b>Sol</b></div>
+        <div class="s02-p" style="--seat: var(--seat-4)"><img src="assets/avatars/Luna.jpg" alt="" /><b>Luna</b></div>
+        <div class="s02-p" style="--seat: var(--seat-5)"><img src="assets/avatars/Terra.jpg" alt="" /><b>Terra</b></div>
+      </div></div>
+      <div class="s02-fam" id="s02-f3"><h3>Gemma · running locally</h3><div class="s02-faces">
+        <div class="s02-p" style="--seat: var(--seat-2)"><img src="assets/avatars/Gemma.jpg" alt="" /><b>Gemma</b></div>
+      </div></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s02-a", 0.0);
+      fx.in(tl, "#s02-f1", 0.05);
+      fx.in(tl, "#s02-f2", 0.15);
+      fx.in(tl, "#s02-f3", 0.25);
+      fx.in(tl, "#s02-b", 0.25);
+      fx.out(tl, "#s02-col", 3.57);
+      window.__timelines["s02"] = tl;
+    })();
+  </script>
+</template>

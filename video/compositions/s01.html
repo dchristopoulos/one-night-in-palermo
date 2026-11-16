@@ -1,0 +1,33 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s01-col { gap: 34px; }
+    #s01-portrait { width: 440px; height: 440px; border-radius: 50%; overflow: hidden; border: 8px solid var(--seat-6); box-shadow: var(--shadow-face), var(--shadow-deep); }
+    #s01-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    #s01-name { font: 700 48px/1 var(--sans); color: var(--moon); margin-top: -8px; }
+    .s01-beats { display: flex; flex-direction: column; gap: 30px; }
+    /* the thumbnail: two big upright lines, readable at a glance */
+    .s01-beats p { font: 700 118px/1.04 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--moon); text-align: center; text-wrap: balance; text-shadow: 0 4px 30px var(--text-halo); }
+    #s01-b2 { color: var(--coral); }
+  </style>
+  <div id="root" data-composition-id="s01" data-width="1080" data-height="1920">
+    <div class="col" id="s01-col">
+      <div id="s01-portrait"><img id="s01-img" src="assets/avatars/Opus-hero.jpg" alt="" /></div>
+      <div id="s01-name">Opus</div>
+      <div class="s01-beats">
+        <p id="s01-b1">An AI got caught lying.</p>
+        <p id="s01-b2">Its lie won the game anyway.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      // frame 0 already carries the face and the first line (the thumbnail is the hook)
+      tl.fromTo("#s01-img", { scale: 1.0 }, { scale: 1.06, duration: 3.2, ease: "sine.inOut" }, 0);
+      fx.in(tl, "#s01-b2", 0.25);
+      fx.out(tl, "#s01-col", 3.02);
+      window.__timelines["s01"] = tl;
+    })();
+  </script>
+</template>

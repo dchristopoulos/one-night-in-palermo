@@ -1,0 +1,33 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s13-col { gap: 34px; }
+    #s13-title { font: 700 134px/0.98 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; color: var(--moon); text-align: center; letter-spacing: -.01em; text-shadow: 0 4px 30px var(--text-halo); }
+    #s13-phone { width: 357px; padding: 12px; border-radius: 54px; background: var(--navy-950); box-shadow: 0 0 0 2px var(--hairline), var(--shadow-deep); }
+    #s13-phone img { display: block; width: 333px; height: 720px; border-radius: 44px; object-fit: cover; }
+    .s13-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .s13-cta p { font: 600 54px/1.15 var(--display); font-optical-sizing: none; font-variation-settings: 'opsz' 18; text-align: center; text-wrap: balance; text-shadow: 0 2px 18px var(--text-halo); }
+    #s13-watch { color: var(--gold); }
+    #s13-gh { color: var(--moon); font-size: 50px; }
+  </style>
+  <div id="root" data-composition-id="s13" data-width="1080" data-height="1920">
+    <div class="col" id="s13-col">
+      <h1 id="s13-title">One Night<br />in Palermo</h1>
+      <div id="s13-phone"><img src="assets/art/viewer.png" alt="" /></div>
+      <div class="s13-cta">
+        <p id="s13-watch">Watch the full game — link in the post</p>
+        <p id="s13-gh">Open source on GitHub</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s13-title", 0.0, 0.4, 20);
+      fx.in(tl, "#s13-phone", 0.1, 0.5, 30);
+      fx.in(tl, "#s13-watch", 0.2);
+      fx.in(tl, "#s13-gh", 0.3);
+      window.__timelines["s13"] = tl;
+    })();
+  </script>
+</template>

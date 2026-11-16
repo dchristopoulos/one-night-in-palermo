@@ -1,0 +1,30 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s10-col { gap: 40px; }
+    #s10-n3 { color: var(--gold); font-size: 80px; }
+  </style>
+  <div id="root" data-composition-id="s10" data-width="1080" data-height="1920">
+    <div class="col below-hud" id="s10-col">
+      <p class="narr" id="s10-n1">The table hunts for the partner.</p>
+      <p class="narr" id="s10-n2">It ties, votes again, and sends out <span class="hot">Gemma</span>.</p>
+      <div class="flip" id="s10-flip"><div class="flip-in" id="s10-flipin">
+        <img class="back" src="assets/avatars/Gemma-out.jpg" alt="" />
+        <div class="front" data-role="doctor"><svg viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24 3 A21 21 0 1 1 24 45 A21 21 0 1 1 24 3 Z M24 7 A17 17 0 1 0 24 41 A17 17 0 1 0 24 7 Z M20.5 12 H27.5 V20.5 H36 V27.5 H27.5 V36 H20.5 V27.5 H12 V20.5 H20.5 Z"/></svg> Doctor</div>
+      </div></div>
+      <p class="narr" id="s10-n3">Their own doctor.</p>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      fx.in(tl, "#s10-n1", 0.0);
+      fx.in(tl, "#s10-n2", 0.3);
+      fx.in(tl, "#s10-flip", 0.8);
+      fx.flip(tl, "#s10-flipin", 1.1);
+      fx.in(tl, "#s10-n3", 2.0);
+      fx.out(tl, "#s10-col", 3.92);
+      window.__timelines["s10"] = tl;
+    })();
+  </script>
+</template>
