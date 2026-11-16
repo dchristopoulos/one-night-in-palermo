@@ -1,0 +1,110 @@
+/* --portrait is set by the composition; everything else follows it */
+.seat {
+  --size: var(--portrait, 80px);
+  margin: 0; min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--seat-gap, var(--s3));
+}
+.seat[data-row="top"] { flex-direction: column-reverse; }
+.head { flex: none; display: flex; flex-direction: column; align-items: center; }
+/* the slot under the portrait: always reserved, tucked 4 px into the cream ring so it reads as the seat's */
+.slot { position: relative; z-index: 1; height: 22px; margin-top: -4px; display: flex; justify-content: center; }
+/* at the table (wide) the pile hangs toward the table, over the gap and the wooden rim, so it costs the seat no height */
+.seat[data-row="top"] .slot { margin-bottom: -18px; }
+.seat[data-row="bottom"] .slot { order: -1; margin: 0 0 -4px; margin-top: -18px; }
+
+.portrait {
+  position: relative; flex: none; width: var(--size); height: var(--size); border-radius: 50%;
+  border: 3px solid var(--surface); background: var(--surface-2);
+  box-shadow: 0 0 0 1px var(--line), 0 8px 18px rgba(0,0,0,.28);
+  transition: transform var(--t-content) var(--ease-enter), box-shadow var(--t-content) var(--ease-enter);
+}
+.portrait > img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; transition: filter var(--t-drama) ease-in, opacity var(--t-drama) ease-in; }
+
+/* state rings: one glow at a time, and only the speaker has it */
+[data-ring="speaking"] .portrait { transform: scale(1.08); box-shadow: 0 0 0 4px var(--ring-speaker), 0 0 36px 8px var(--glow), 0 8px 18px rgba(0,0,0,.28); }
+[data-ring="addressed"] .portrait { box-shadow: 0 0 0 4px var(--ring-addressed), 0 8px 18px rgba(0,0,0,.28); }
+[data-ring="ghost"] .portrait { outline: 3px dotted var(--ring-dead); outline-offset: 4px; }
+[data-killer] .portrait { border-color: var(--role-killer); }
+
+/* out: the face fades to grey; the turned card under the name says what they were */
+[data-dead] .portrait > img { filter: grayscale(1); opacity: .5; }
+[data-dead][data-ring="ghost"] .portrait > img { opacity: .8; }
+[data-dead] .name { color: var(--text-muted); }
+
+/* who leans on this seat: small faces on the bottom of the portrait; light while they talk, solid with a count at the vote */
+.pile {
+  height: 26px; display: inline-flex; align-items: center;
+  padding: 2px; border-radius: var(--r-chip); background: var(--surface); box-shadow: var(--shadow-1); white-space: nowrap; opacity: .82;
+}
+.pile img { width: 22px; height: 22px; margin: 0; }
+.pile img + img { margin-left: -8px; }
+.pile[data-vote] { opacity: 1; background: var(--accent-strong); padding-right: 8px; }
+.pile[data-vote] img { border-color: var(--accent-strong); animation: rise 200ms var(--ease-enter) both; }
+.pile b { margin-left: 5px; color: var(--on-accent); font: 700 1rem / 1 var(--sans); font-variant-numeric: tabular-nums; }
+.pile img:nth-child(2) { animation-delay: 100ms; } .pile img:nth-child(3) { animation-delay: 200ms; } .pile img:nth-child(4) { animation-delay: 300ms; }
+.pile img:nth-child(5) { animation-delay: 400ms; } .pile img:nth-child(6) { animation-delay: 500ms; } .pile img:nth-child(7) { animation-delay: 600ms; }
+
+figcaption { min-width: 0; max-width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.name { font: 650 var(--fs-seat) / 1.1 var(--sans); color: var(--seat-text, var(--text)); }
+.meta { display: var(--seat-meta, block); font-size: var(--fs-meta); font-weight: 500; color: var(--text-muted); line-height: 1.2; text-wrap: balance; }
+.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s1); margin-top: 2px; }
+.tags:empty { display: none; }
+.tags > * { font-size: var(--fs-meta); line-height: 1; white-space: nowrap; }
+
+/* the role the viewer knows (Watch mode): a quiet uppercase tag; the killer's in the accent */
+.role { padding: 4px 8px; border-radius: 4px; border: 1px solid var(--line); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text); }
+[data-killer] .role { border-color: var(--accent-strong); color: var(--accent-strong); }
+/* the turned card: a little playing card in the role colour, the same in both themes, and it stays */
+.turned {
+  padding: 5px 8px 4px; border-radius: 4px; border: 1px solid var(--role, var(--text-muted)); border-top-width: 5px;
+  background: var(--surface); color: var(--text); box-shadow: var(--shadow-1); font: 700 var(--fs-meta) / 1 var(--sans);
+  letter-spacing: .05em; text-transform: uppercase; animation: turn var(--t-drama) var(--ease-enter) both;
+}
+.turned[data-role="killer"], .turned[data-role="accomplice"] { --role: var(--role-killer); color: var(--accent-strong); }
+.turned[data-role="officer"], .turned[data-role="police"] { --role: var(--role-officer); }
+.turned[data-role="doctor"] { --role: var(--role-doctor); }
+.turned[data-role="mayor"] { --role: var(--role-mayor); }
+.down { color: var(--text-muted); font-style: italic; }
+.claim { padding: 3px 8px; border-radius: 4px; border: 1px dashed var(--text-muted); color: var(--text); font-style: italic; }
+/* the claim as a small mark on the portrait's shoulder (phone only, where there is no room for the words) */
+.mark { display: none; position: absolute; right: -9px; top: -5px; width: 24px; height: 24px; padding: 3px; border-radius: 50%;
+  background: var(--surface); border: 1.5px dashed var(--text-muted); color: var(--text); box-shadow: var(--shadow-1); }
+.mark svg { display: block; width: 100%; height: 100%; }
+.turned svg { width: 1.05em; height: 1.05em; margin: -2px 4px -2px 0; vertical-align: -2px; color: var(--role, var(--text-muted)); }
+.turned { display: inline-flex; align-items: center; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+@keyframes turn { from { transform: perspective(300px) rotateY(90deg); opacity: 0; } }
+
+/* a short wide frame (≤ 720 px tall, e.g. 800×600): the label sits beside the portrait, so the table keeps its height */
+@media (max-height: 720px) {
+  .seat[data-row], .seat[data-row="top"] { flex-direction: row; align-items: center; gap: var(--s3); text-align: left; }
+  .seat[data-row] figcaption { align-items: flex-start; }
+  .seat[data-row] .tags { justify-content: flex-start; }
+}
+
+/* phone, upright or on its side: the model caption goes (the name already says which model it is; the end card lists them) */
+@media (max-width: 519px), (max-height: 439px) {
+  .seat { gap: 2px; }
+  .meta, .claim { display: none; }
+  .mark { display: block; width: 22px; height: 22px; right: -10px; top: -6px; }
+  .slot { height: 16px; margin-top: -3px; }
+  .pile { height: 20px; padding: 1px; }
+  .pile img { width: 16px; height: 16px; border-width: 1px; }
+  .pile img + img { margin-left: -6px; }
+  .pile[data-vote] { padding-right: 6px; }
+  .pile b { margin-left: 3px; font-size: .875rem; }
+  .name { font-size: 17px; }
+  .tags { margin-top: 0; }
+  .role, .turned { padding: 2px 5px; letter-spacing: .03em; }
+  .turned { border-top-width: 3px; }
+}
+
+/* a phone on its side: each seat is one line, face then name and card, so seven fit in two columns without touching */
+@media (max-height: 439px) and (min-width: 520px) {
+  .seat { flex-direction: row; align-items: center; gap: var(--s2); text-align: left; }
+  figcaption { align-items: flex-start; }
+  .tags { justify-content: flex-start; }
+  .mark { right: auto; left: -8px; }   /* the claim badge on the outer side, clear of the name */
+  .turned svg { display: none; }       /* the turned card as a word only: the column is narrow */
+  .slot { height: 14px; }
+}

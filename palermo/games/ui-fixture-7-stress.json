@@ -1,0 +1,189 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": true,
+  "hide_night": false,
+  "hide_vote": false,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "killer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "citizen",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "doctor",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": true
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "officer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   },
+   {
+    "name": "Opus",
+    "model": "claude:opus",
+    "role": "citizen",
+    "seat": 6,
+    "tagline": "The Veteran",
+    "shown": false
+   }
+  ],
+  "t": 0
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day"
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is the real officer and she just named me. If I attack her claim head-on I look guilty, so I will sound reasonable and steer the table toward Gemma instead."
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Terra, I hear you, but naming two killers on the first morning sounds like a guess dressed up as a check, and I would rather hear Gemma explain her night.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "lean": "Gemma"
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I am the officer. I was shown Sol at the start and I checked Sonnet last night, and both of them are killers, so please vote Sol today.",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "lean": "Sol",
+  "claim": "officer"
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Two names at once is too neat for me.",
+  "why": "takes the floor",
+  "lean": "Terra"
+ },
+ {
+  "type": "votes",
+  "votes": [
+   [
+    "Sonnet",
+    "Gemma",
+    "quiet all day"
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "too neat"
+   ],
+   [
+    "Gemma",
+    "Terra",
+    "two names is a bluff"
+   ],
+   [
+    "Sol",
+    "Gemma",
+    "never answers"
+   ],
+   [
+    "Luna",
+    "Terra",
+    "too neat"
+   ],
+   [
+    "Terra",
+    "Sol",
+    "shown to me as a killer"
+   ],
+   [
+    "Opus",
+    "Sol",
+    "the officer named him"
+   ]
+  ]
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "You are voting out the only person who knows anything. Sol and Sonnet are the killers, and tomorrow morning you will find out the hard way.",
+  "why": "last words"
+ },
+ {
+  "type": "death",
+  "name": "Terra",
+  "role": "officer",
+  "how": "vote"
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Terra is out. Terra shows the card: officer."
+ },
+ {
+  "type": "gm",
+  "text": "Somewhere, a killer exhales.",
+  "aside": true
+ },
+ {
+  "type": "ghost",
+  "name": "Terra",
+  "text": "Three votes on the officer. I would laugh if I still had lungs."
+ },
+ {
+  "type": "phase",
+  "text": "Night 2",
+  "kind": "night"
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "citizen",
+  "how": "night"
+ },
+ {
+  "type": "note",
+  "name": "Haiku",
+  "text": "If you are reading this, Terra was right about Sol and you all let it slide. Check who pushed Gemma hardest on day one, then vote them."
+ },
+ {
+  "type": "end",
+  "winner": "killer"
+ }
+]

@@ -1,0 +1,20 @@
+/* the evening so far: a small paper scorecard, ink on cream in both themes */
+.board { color: var(--text); text-align: left; }
+.board h3 { margin: 0 0 var(--s2); font: 700 var(--fs-label) var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+.none { margin: 0; color: var(--text-muted); }
+.sides { display: flex; align-items: baseline; gap: var(--s2); margin: 0 0 var(--s3); font: 600 var(--fs-ui) var(--sans); }
+.sides b { font: 700 2rem / 1 var(--display); font-variation-settings: var(--display-cut); font-variant-numeric: tabular-nums; margin-right: 4px; }
+.sides [data-side="town"] b { color: var(--ok); }
+.sides [data-side="killer"] b { color: var(--accent-strong); }
+.sides small { color: var(--text-muted); font-size: var(--fs-meta); }
+.dash { color: var(--text-muted); }
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-ui); font-variant-numeric: tabular-nums; }
+thead th { font: 700 var(--fs-meta) var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); text-align: right; padding: 0 0 4px; }
+thead th:first-child { text-align: left; }
+tbody th { text-align: left; font: 650 var(--fs-ui) var(--sans); white-space: nowrap; }
+tbody th img { width: 26px; height: 26px; margin-right: 6px; vertical-align: -7px; }
+tbody td { text-align: right; color: var(--text-muted); white-space: nowrap; }
+tbody td b { color: var(--text); font-size: 1.0625rem; }
+tbody tr { border-top: 1px solid rgba(244,239,228,.12); }
+tbody th, tbody td { padding: 5px 0; }
+td + td, th + th { padding-left: var(--s3); }

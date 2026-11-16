@@ -1,0 +1,212 @@
+/* the Table screen (DESIGN.md §7): header across the top; wide = stage (seats, table, card) + log column; stack = cast, card, log */
+.root {
+  position: fixed; inset: 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: "bar" "stage"; color: var(--text); background: var(--bg); transition: color 600ms;
+}
+.root[data-log] { grid-template-columns: minmax(0, 1fr) minmax(340px, 32%); grid-template-areas: "bar bar" "stage side"; }
+
+/* day and night are two layers; the night fades in over 1.2 s */
+.backdrop, .backdrop > div { position: absolute; inset: 0; z-index: -1; }
+.backdrop > div { background: var(--backdrop); box-shadow: var(--vignette); transition: opacity 1.2s ease-in-out; }
+
+/* header: the state in words, then the controls; every target 44 px */
+.bar { grid-area: bar; display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s4); padding: var(--s3) var(--s5) var(--s2); border-bottom: 1px solid var(--line); }
+.title { margin: 0; font: 700 var(--fs-seat) / 1.1 var(--sans); white-space: nowrap; }
+.status { margin: 0 auto 0 0; display: inline-flex; align-items: center; gap: var(--s2); font: 600 var(--fs-ui) / 1.3 var(--sans); color: var(--text); }
+.moon { flex: none; width: 14px; height: 14px; border-radius: 50%; box-shadow: inset -4px 2px 0 0 var(--highlight); transform: rotate(-25deg); }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); }
+.btn, .seg button {
+  min-height: 44px; min-width: 44px; padding: 0 14px; display: inline-grid; place-items: center; border-radius: var(--r-button);
+  border: 1px solid var(--line); background: var(--surface); color: var(--text); font: 650 var(--fs-meta) var(--sans); cursor: pointer;
+  transition: transform var(--t-feedback) var(--ease-enter), background var(--t-feedback);
+}
+.btn svg { width: 16px; height: 16px; fill: currentColor; }
+.btn:active, .seg button:active { transform: scale(.95); }
+.play { background: var(--accent-strong); color: var(--on-accent); border-color: transparent; box-shadow: var(--shadow-1); }
+.btn[aria-pressed="true"] { background: var(--hover); }
+.seg { display: inline-flex; border-radius: var(--r-button); box-shadow: var(--shadow-1); }
+.seg button { border-radius: 0; }
+.seg button:first-child { border-radius: var(--r-button) 0 0 var(--r-button); }
+.seg button:last-child { border-radius: 0 var(--r-button) var(--r-button) 0; border-left: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-strong); color: var(--on-accent); border-color: transparent; }
+/* 44 px tall: the whole strip is the touch target (Apple HIG 44 pt), the track sits in its middle */
+.scrub { position: relative; flex: 1 0 100%; height: 44px; margin: -6px 0; }
+.scrub input { width: 100%; height: 44px; margin: 0; accent-color: var(--accent-strong); cursor: pointer; }
+.marks { position: absolute; left: 8px; right: 8px; bottom: 6px; height: 8px; pointer-events: none; }
+.marks i { position: absolute; bottom: 0; width: 2px; height: 8px; transform: translateX(-1px); background: var(--text-muted); }
+.marks i[data-kind="night"] { background: var(--info); }
+.marks i[data-kind="death"] { width: 7px; height: 7px; border-radius: 50%; transform: translateX(-3px); background: var(--accent-strong); }
+
+/* stage */
+.stage { grid-area: stage; position: relative; min-width: 0; min-height: 0; }
+.place { min-width: 0; }
+.empty { position: absolute; inset: 0; display: grid; place-content: center; gap: 6px; text-align: center; color: var(--text-muted); }
+
+/* wide: seats above and below a horizontal table; the card lies in its middle */
+.root[data-compo="wide"] .stage {
+  --portrait: clamp(52px, 8.5vh, 88px);
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: var(--s3); padding: var(--s3) var(--s5) var(--s4);
+}
+.row { display: flex; justify-content: space-evenly; align-items: flex-end; gap: var(--s3); }
+.row + .table + .row { align-items: flex-start; }
+.row .place { flex: 0 1 200px; }
+.table {
+  min-height: 0; padding: 14px; border-radius: 34px; box-shadow: 0 18px 44px rgba(0,0,0,.35);
+  background: repeating-linear-gradient(90deg, rgba(0,0,0,.07) 0 2px, transparent 2px 11px), linear-gradient(180deg, var(--wood), var(--wood-deep));
+}
+.felt {
+  position: relative; height: 100%; display: grid; place-items: center; padding: var(--s3) var(--s4); border-radius: 22px;
+  background: radial-gradient(ellipse at 50% 45%, var(--felt-light), transparent 70%), var(--felt);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.3), inset 0 6px 30px rgba(0,0,0,.35);
+}
+.cardSlot { width: 100%; height: 100%; min-height: 0; display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 1099px) { .title { display: none; } }
+@media (max-height: 720px) {
+  .root[data-compo="wide"] .stage { gap: var(--s2); padding-block: var(--s2); }
+  .felt { padding: var(--s2) var(--s4); }
+  .table { padding: 10px; }
+}
+
+/* stack (portrait, phone): the cast grid, the card at full width, the log below like a chat */
+.root[data-compo="stack"] .stage { --portrait: 72px; display: grid; grid-template-rows: auto auto minmax(120px, 1fr); }
+.cast { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--s4) var(--s2); padding: var(--s4) var(--s3) var(--s3); }
+.cast .place { grid-column: span 2; }
+.cast[data-n="7"] .place:nth-child(5) { grid-column: 2 / span 2; }
+.cast[data-n="6"] { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.stackCard { min-height: 0; max-height: 48vh; display: flex; padding: var(--s2) var(--s4) var(--s3); }
+.stackCard > div { width: 100%; }
+.stackCard .cardSlot { height: auto; max-height: 100%; }
+.stackCard [data-card] > div { width: min(100%, 760px); }
+.stackLog { min-height: 0; padding-top: var(--s2); background: var(--surface); border-radius: var(--r-sheet) var(--r-sheet) 0 0; box-shadow: 0 -6px 20px rgba(0,0,0,.12); }
+
+@media (max-width: 519px) {
+  .root { --fs-log: .9375rem; }
+  .title { display: none; }
+  .bar { padding: var(--s2) var(--s3); gap: var(--s2); }
+  .status { flex: 1 0 100%; font-size: var(--fs-meta); }
+  .controls { flex: 1 0 100%; justify-content: space-between; }
+  .btn, .seg button { padding: 0 10px; }
+  .root[data-compo="stack"] .stage { --portrait: 44px; grid-template-rows: auto minmax(0, max-content) minmax(96px, 1fr); }
+  .cast { gap: 6px var(--s1); padding: var(--s2) var(--s2) 4px; }
+  .stackCard { max-height: none; padding: var(--s1) var(--s3) var(--s2); --flip-w: 84px; }
+}
+
+/* stack in a frame that is wide but not tall (a split pane, a small tablet): smaller faces and no model caption,
+   so the two rows of seats leave the card its room */
+@media (min-width: 520px) and (min-height: 440px) and (max-height: 900px) {
+  .root[data-compo="stack"] .stage { --portrait: 52px; --seat-meta: none; --seat-gap: var(--s1); grid-template-rows: auto minmax(0, max-content) minmax(96px, 1fr); }
+  .root[data-compo="stack"] .cast { gap: var(--s2); padding: var(--s3) var(--s3) var(--s1); }
+}
+
+/* the log column (landscape) */
+.side { grid-area: side; min-height: 0; border-left: 1px solid var(--line); background: var(--surface); padding-top: var(--s2); }
+
+/* the end: who won, the cast with roles and when they went out, the recap, watch again */
+.end { position: absolute; inset: 0; z-index: 20; display: flex; align-items: center; justify-content: center; padding: var(--s4); background: rgba(6,8,18,.55); animation: fade 600ms ease-out both; }
+.endCard {
+
+  width: min(620px, 100%); max-height: 100%; display: flex; flex-direction: column; padding: var(--s5) var(--s5) var(--s4); text-align: center;
+  background: var(--surface); color: var(--text); border-radius: var(--r-sheet); box-shadow: var(--shadow-2); animation: pop 400ms var(--ease-enter) both;
+}
+/* the host's one remark on the game: under the title, in the host's voice (italic display, a small label) */
+.closing { margin: 0 auto var(--s3); max-width: 34em; font: italic 500 1.0625rem / 1.45 var(--sans); color: var(--text); }
+.closing span { display: block; margin-bottom: 2px; font: 700 var(--fs-label) var(--sans); letter-spacing: .08em; text-transform: uppercase; font-style: normal; color: var(--text-muted); }
+.endCard h2 { margin: 0 0 var(--s1); font: 700 var(--fs-title) / 1.05 var(--display); font-variation-settings: var(--display-cut); }
+.endCard ul { list-style: none; margin: 0; padding: 0; text-align: left; }
+.endCard li { display: flex; align-items: center; gap: var(--s3); padding: var(--s2) 0; border-top: 1px solid var(--line); font-size: var(--fs-ui); }
+.endCard li > img { width: 36px; height: 36px; }
+.endCard li[data-dead] > img { filter: grayscale(1); opacity: .7; }
+.endWho, .endRole { display: flex; flex-direction: column; }
+.endWho b { font: 650 var(--fs-seat) / 1.1 var(--sans); color: var(--seat-color); }
+.endWho small, .endRole small { font-size: var(--fs-meta); font-weight: 500; color: var(--text-muted); text-transform: none; }
+.endRole { margin-left: auto; text-align: right; font-weight: 700; text-transform: capitalize; }
+.endRole em { font-style: normal; color: var(--ok); }
+.endCard li[data-killer] .endRole { color: var(--accent-strong); }
+.recap { margin: var(--s4) 0; font-size: var(--fs-ui); line-height: 1.55; text-align: left; }
+.again { background: var(--accent-strong); color: var(--on-accent); border-color: transparent; font-size: var(--fs-ui); padding: 0 var(--s5); }
+
+@keyframes fade { from { opacity: 0; } }
+@keyframes pop { from { opacity: 0; transform: scale(.96); } }
+
+/* wide: the card spans about 80 % of the table, so the felt is not mostly empty around a narrow card */
+.root[data-compo="wide"] .felt [data-card] > div { width: 90%; }
+
+/* a short frame (800×600): the end card's rows tighten so the recap and "watch again" stay in view */
+@media (max-height: 720px) {
+  .end { padding: var(--s2); }
+  .endCard { padding: var(--s3) var(--s4); }
+  .endCard h2 { margin-bottom: var(--s2); }
+  .endCard li { padding: 3px 0; }
+  .endCard li > img { width: 30px; height: 30px; }
+  .endWho { flex-direction: row; align-items: baseline; gap: var(--s2); }
+  .recap { margin: var(--s2) 0; }
+}
+
+/* where you are: home, the title, "Game 3 of 12" with the games either side, live */
+.where { display: flex; align-items: center; gap: var(--s3); min-width: 0; }
+.home { display: inline-flex; gap: 6px; padding: 0 12px; }
+.home svg { width: 16px; height: 16px; fill: currentColor; }
+.evening { display: inline-flex; align-items: center; gap: 2px; white-space: nowrap; font-size: var(--fs-ui); }
+.evening span { padding: 0 6px; }
+.evening b { font-family: var(--sans); }
+.evening i { font-style: normal; }
+.evening .btn { min-width: 40px; padding: 0; font-size: 1.25rem; line-height: 1; }
+.jump { min-height: 32px; padding: 0 12px; font-size: var(--fs-meta); font-weight: 700; }
+.btn:disabled { opacity: .4; cursor: default; }
+.liveTag { padding: 3px 9px; border-radius: var(--r-chip); background: var(--accent-strong); color: var(--on-accent); font: 700 var(--fs-meta) var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+
+/* the end card's evening line and actions */
+.endOf { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0 var(--s3); margin: 0 0 var(--s2); color: var(--text-muted); font-size: var(--fs-ui); }
+.link { min-height: 44px; padding: 0 var(--s2); border: 0; background: none; color: var(--accent-strong); font: 700 var(--fs-ui) var(--sans); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.endActions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--s3); }
+.endActions .btn { font-size: var(--fs-ui); padding: 0 var(--s4); }
+.soon { color: var(--text-muted); font-style: italic; }
+.endCard section { margin-bottom: var(--s3); }
+
+@media (max-width: 1099px) { .where .home span { display: none; } }
+@media (max-width: 519px) {
+  /* one row: home · status · ‹ Game 2 of 3 ›; the log's own head says how many are at the table */
+  .where { display: contents; }
+  .home { order: 0; }
+  .status { order: 1; flex: 1 1 0; min-width: 0; line-height: 1.25; }
+  .atTable { display: none; }
+  .evening { order: 2; }
+  .evening span { padding: 0 2px; }
+  .evening .wide { display: none; }
+  .evening .btn { min-width: 44px; }
+  .controls { order: 4; }
+  /* live: no replay controls, so Watch / Guess and the LIVE chip share the second row */
+  .bar[data-live] .controls { flex: 1 0 60%; }
+  .liveTag { order: 5; margin-left: auto; }
+  .jump { order: 6; }
+  .scrub { order: 5; }
+}
+
+/* the list and the recap scroll; the title and the actions stay in view */
+.endBody { min-height: 0; overflow-y: auto; margin: 0 calc(-1 * var(--s2)); padding: 0 var(--s2); }
+.endActions { flex: none; padding-top: var(--s3); border-top: 1px solid var(--line); }
+
+/* short (a phone on its side, under 440 px tall): one header row, the cast at the left, the card at the right, each
+   scrolling inside itself if it must. The scrubber and the log are left out: previous / next do the seeking. */
+@media (max-height: 439px) and (min-width: 520px) {
+  .bar { flex-wrap: nowrap; padding: var(--s1) var(--s3); gap: var(--s2); }
+  .title, .atTable, .evening .wide, .scrub { display: none; }
+  .where { display: contents; }
+  .status { flex: 1 1 0; min-width: 0; margin: 0; font-size: var(--fs-meta); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .controls { flex: none; flex-wrap: nowrap; }
+  .btn, .seg button { padding: 0 10px; }
+  .root[data-compo="stack"] .stage { --portrait: 40px; grid-template-rows: minmax(0, 1fr); grid-template-columns: minmax(0, 42%) minmax(0, 1fr); }
+  .cast, .cast[data-n="6"] { grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: center; gap: var(--s1) var(--s2); padding: var(--s2) var(--s3); overflow-y: auto; }
+  .cast .place, .cast[data-n="7"] .place:nth-child(5) { grid-column: auto; }
+  .stackCard { max-height: none; align-items: safe center; padding: var(--s2) var(--s3) var(--s2) var(--s1); overflow-y: auto; --flip-w: 84px; }
+  .stackCard .cardSlot { align-items: safe center; }
+  .root[data-compo="stack"] .stage { overflow: hidden; }
+  .stackLog { display: none; }
+}
+@media (max-height: 439px) and (min-width: 520px) and (max-width: 699px) {
+  .status { display: none; }   /* no room in the one header row; the card announces each night and day */
+  .controls { margin-left: auto; }
+  .root[data-compo="stack"] .stage { grid-template-columns: minmax(0, 52%) minmax(0, 1fr); }
+  .cast, .cast[data-n="6"] { padding: var(--s2); gap: var(--s2) var(--s1); }
+}
