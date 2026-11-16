@@ -390,6 +390,26 @@ With hidden votes no claim can be checked; officers rarely claimed (2/12) and bo
 officers who never claimed hid by their own choice ("push the vote her way without revealing how I know"); the town probed them
 with questions rather than `accuses()`-level accusations, so the "claim now" task never fired, and 4-5 ballots landed at once.
 
+## 6e. Shown cards against hidden cards (2026-11-16, `mon16` and `mon16h`)
+
+Two evenings of 12 games on the same engine, the same seats and the same night. `mon16` used the default: a voted-out
+player shows the card. `mon16h` used `--hide-vote`: the card stays face down. `python3 stats.py mon16 mon16h` prints
+both.
+
+| | `mon16`, card shown | `mon16h`, card hidden |
+|---|---|---|
+| town wins / killer wins | 6 / 6 | 8 / 4 |
+| days per game | 2.8 | 2.8 |
+| voted out on day 1 | shown killer 9, officer 3 | shown killer 5, officer 6, hidden killer 1 |
+| hidden killer still in at the end | 6 of 12 | 4 of 12 |
+| tied votes | 0 | 4 (5 runoffs, one day with nobody out) |
+| minutes per game | 9.2 | 10.9 |
+
+With 12 games a side, 6 against 8 town wins is within chance, so this does not show that either rule favours a side.
+It does show that hiding the card did not help the killers here, and that a shown card does not end the game early:
+both evenings ran 2.8 days per game. The card stays shown by default because it gives the table one hard fact to argue
+from after each vote, and the votes were cleaner with it (no ties against four).
+
 ## 7. Text metrics
 
 | metric | value |

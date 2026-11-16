@@ -217,6 +217,10 @@ The rules changed many times, each time because recorded games showed a problem:
   Ballots became secret, as in the Greek house rule.
 - **Turning every card made the town unbeatable** (four wins out of four in one evening). Now a voted-out player shows
   the card; a player killed at night does not.
+- **Does a shown card decide the game on day 1? Not in these games.** Two evenings of 12 games on the same night, one
+  with the voted-out card shown and one with it hidden (`--hide-vote`): the town won 6 with the card shown and 8 with
+  it hidden, and both ran 2.8 days per game. The difference is within chance; the card stays shown because the votes
+  were cleaner (no ties, against four). Numbers: [`palermo/docs/measurements.md`](palermo/docs/measurements.md), 6e.
 - **A mayor with a double vote lasted one night.** The first tally exposed the double vote and the killers removed the
   mayor at once. The role is off by default.
 - **Players misremembered their own past games.** The between-games memory is now written per player, as plain facts.
