@@ -1,0 +1,2840 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": false,
+  "hide_night": true,
+  "hide_vote": false,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "doctor",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "citizen",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "citizen",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "killer",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": true
+   },
+   {
+    "name": "Opus",
+    "model": "claude:opus",
+    "role": "officer",
+    "seat": 6,
+    "tagline": "The Veteran",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Seven players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra, Opus. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I am still annoyed that Sol and Luna managed to slip through last time.",
+  "t": 1.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I won with Sol last time, so I\u2019ll watch for anyone acting too comfortable.",
+  "t": 3.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I liked getting away with it, but they may watch me closer now.",
+  "t": 4.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol and Luna got away with it once already, so I'm watching them extra close tonight.",
+  "t": 5.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol and Luna got away with it once; I will remember every move tonight.",
+  "t": 5.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I got voted out for nothing last game and Sol and Luna are still smug about it, so I want them watched closely this round.",
+  "t": 8.9
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Sol and Luna played me off the table and I still want that back.",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Last game Sol and Luna slipped through as killers, so I'm not forgetting that if either of them seems smooth again tonight.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Last game you all voted me out on day one for nothing, and Sol and Luna were the killers.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "I still haven't forgiven Sol and Luna for that last win. I'm playing to win tonight.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I got lucky last game; Luna and I won, but I expect a much harder table this time.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Last game, Sol and I got away with it; I\u2019m curious who trusts us after that.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sol and Luna fooled us last game. I will be slower to trust either of you tonight.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Last game I was the doctor and three of you burned me on day two while Sol and Luna sat quiet. Watch the quiet ones.",
+  "why": "before the game",
+  "t": 13.6
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 13.6
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "The officer knows me, so I need Luna to stay hidden while I discredit any claim.",
+  "t": 18.6
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "I am the shown killer, so the officer knows Terra.",
+  "level": 3,
+  "t": 18.6
+ },
+ {
+  "type": "whisper",
+  "name": "Terra",
+  "to": "Luna",
+  "text": "Stay calm; if an officer names me, counterclaim only if you can make it stick.",
+  "t": 18.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I should keep Terra calm and let the officer reveal themselves first.",
+  "t": 23.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra advised me to counterclaim only if the officer names them.",
+  "level": 2,
+  "t": 23.0
+ },
+ {
+  "type": "whisper",
+  "name": "Luna",
+  "to": "Terra",
+  "text": "I\u2019ll stay calm; I won\u2019t counterclaim unless I can make it stick.",
+  "t": 23.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 23.0
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 23.0
+ },
+ {
+  "type": "clock",
+  "left": 30,
+  "total": 30,
+  "seconds": 10,
+  "t": 23.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have no read yet, and last game\u2019s cards tell me nothing about tonight.",
+  "t": 27.3
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m starting fresh. I\u2019d like to hear what people make of today\u2019s table.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 27.3
+ },
+ {
+  "type": "clock",
+  "left": 29,
+  "total": 30,
+  "seconds": 10,
+  "t": 27.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol opened by asking the table to define the day after admitting last game\u2019s killer win.",
+  "level": 1,
+  "t": 32.7
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "I have a confirmed killer on day one, so I say it loud and make the table follow me.",
+  "t": 39.1
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "I am officer, shown Terra as a killer; I claimed openly on day 1.",
+  "level": 3,
+  "t": 39.1
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "I'm the officer. I was shown Terra. Vote Terra today and her card ends the argument.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "claim": "officer",
+  "t": 39.1
+ },
+ {
+  "type": "clock",
+  "left": 28,
+  "total": 30,
+  "seconds": 10,
+  "t": 39.1
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m watching how quickly anyone tries to turn old grudges into today\u2019s vote.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Sol",
+  "t": 39.1
+ },
+ {
+  "type": "clock",
+  "left": 27,
+  "total": 30,
+  "seconds": 10,
+  "t": 39.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus pushing an instant vote on day 1 with zero proof feels fast for a real officer.",
+  "t": 46.9
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Opus claims officer, says shown Terra as killer, wants immediate vote day 1 with no corroboration.",
+  "level": 2,
+  "t": 46.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Pushing for an immediate vote off one claim feels rushed; let's hear Terra before deciding anything.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "t": 46.9
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 30,
+  "seconds": 10,
+  "t": 46.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Opus is likely the officer and must look reckless, not credible.",
+  "t": 53.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Opus claims officer and names Terra as the shown killer.",
+  "level": 3,
+  "t": 53.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Opus can claim anything; I want everyone\u2019s read before handing them day one.",
+  "why": "answers Opus",
+  "slot": "answers Sonnet",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 53.0
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 30,
+  "seconds": 10,
+  "t": 53.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Terra is stalling because her card ends her the moment it turns.",
+  "t": 59.5
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Terra answered my claim with no counter-claim, only \"wait and read\" stalling.",
+  "level": 2,
+  "t": 59.5
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Counter-claim or be voted. If Terra's card is red, we win free. If blue, I'm your day two.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 59.5
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 30,
+  "seconds": 10,
+  "t": 59.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Opus is being incredibly aggressive for someone who might just be bluffing.",
+  "t": 62.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus claims Officer and says Terra is the killer.",
+  "level": 2,
+  "t": 62.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Opus is being very bold with that claim. I'm not ready to vote Terra without more info.",
+  "why": "answers Opus",
+  "slot": "moves on",
+  "reply_to": "Opus",
+  "t": 62.1
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 30,
+  "seconds": 10,
+  "t": 62.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Opus is either the real officer or a killer making a bold claim, and I'm not voting a card I haven't seen.",
+  "t": 65.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Opus claimed officer on day 1 and said he was shown Terra; Terra is the only claim on the table so far.",
+  "level": 2,
+  "t": 65.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Opus, you want Terra's card on day one with no proof. That's a bold move, and I'm watching it closely.",
+  "why": "answers Opus",
+  "slot": "hasn't spoken yet",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 65.8
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 30,
+  "seconds": 10,
+  "t": 65.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus naming Terra puts our plan at risk; I need the table focused on the claim, not her card.",
+  "t": 70.4
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Opus claims officer and names Terra as the shown killer.",
+  "level": 3,
+  "t": 70.4
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I don\u2019t like forcing Terra\u2019s card off one claim; Opus could be setting up a clean lie.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "lean": "Opus",
+  "t": 70.4
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 30,
+  "seconds": 10,
+  "t": 70.4
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Luna defending Terra off one claim smells like the hidden partner, and I need Gemma off my back fast.",
+  "t": 78.5
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Luna and Haiku jumped to lean me immediately after my Terra claim; Luna argued against testing Terra's card.",
+  "level": 2,
+  "t": 78.5
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Voting me only turns my card. Voting Terra tests my claim and might end a killer. Same risk, better payoff.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Terra",
+  "reply_to": "Gemma",
+  "t": 78.5
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 30,
+  "seconds": 10,
+  "t": 78.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Opus is the real officer; I need the table to doubt the claim without exposing Luna.",
+  "t": 83.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Gemma, why name me now instead of making Opus explain why today must be immediate?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Opus",
+  "reply_to": "Gemma",
+  "t": 83.9
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 30,
+  "seconds": 10,
+  "t": 83.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Opus is pushing too hard and it feels like a setup to clear a teammate.",
+  "t": 86.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "I need to see more than just a bold claim before I commit to a vote.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "reply_to": "Terra",
+  "t": 86.6
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 30,
+  "seconds": 10,
+  "t": 86.7
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Terra still won't counter-claim, and the lean on me is three killers' dream.",
+  "t": 93.6
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Terra spoke four times day 1 with no role claim and no denial, only redirection.",
+  "level": 2,
+  "t": 93.6
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Terra has said four lines and never once claimed a role or denied being a killer. Only deflection.",
+  "why": "answers Terra",
+  "slot": "moves on",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 93.6
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 30,
+  "seconds": 10,
+  "t": 93.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I deny it. Opus has offered a claim, not proof; I want to hear every player before any vote.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 99.1
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 30,
+  "seconds": 10,
+  "t": 99.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Three leans on me and the undecided trio decides whether town wins or I die for nothing.",
+  "t": 107.9
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Haiku and Luna both leaned me within one line of my Terra claim, before Terra denied anything.",
+  "level": 2,
+  "t": 107.9
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Look who leans me: Terra and the two who shielded her instantly. Sonnet, Gemma, Sol \u2014 you decide this.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 107.9
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 30,
+  "seconds": 10,
+  "t": 107.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Opus is dangerous, but Luna must stay hidden.",
+  "t": 113.8
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Opus\u2019s claim is noted; I deny it, and I won\u2019t let one accusation replace everyone\u2019s judgment.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 113.8
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 30,
+  "seconds": 10,
+  "t": 113.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus rushing a day-one vote with zero backup smells like a killer trying to clear a blocker fast.",
+  "t": 120.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "A claim alone isn't proof; rushing day one votes benefits whoever's lying, not the table.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "reply_to": "Opus",
+  "t": 120.4
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 30,
+  "seconds": 10,
+  "t": 120.4
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Three leans on me and one more ends it, so I need Sonnet, Gemma and Sol right now.",
+  "t": 130.5
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Nobody at the table has counter-claimed officer against me; my claim stands uncontested.",
+  "level": 3,
+  "t": 130.5
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "No one counter-claimed officer. If I lie, you still get my card tomorrow. Terra costs you nothing today.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 130.5
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 30,
+  "seconds": 10,
+  "t": 130.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "No counterclaim means little day one; Opus gets cover while asking you to skip everyone else\u2019s judgment.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 136.8
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 30,
+  "seconds": 10,
+  "t": 136.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Opus is either the officer or a killer running a clean play, and I have no way to tell yet, so I'm leaning Opus for now.",
+  "t": 141.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Opus says he knows a killer from the start; he has not named who, so that claim is still unchecked.",
+  "level": 2,
+  "t": 141.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Opus, you said Terra and the officer claim, but who checks Terra with you?",
+  "why": "answers Opus",
+  "slot": "moves on",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 141.4
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 30,
+  "seconds": 10,
+  "t": 141.4
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Haiku and Luna shielded Terra before she even denied it; one of them is the second killer.",
+  "t": 148.6
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Haiku asks who corroborates Terra, implying a verification standard no officer can ever meet.",
+  "level": 2,
+  "t": 148.6
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "The officer sees one killer, not two. Haiku and Luna defended Terra before she spoke. That's the pair.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Terra",
+  "reply_to": "Haiku",
+  "t": 148.6
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 30,
+  "seconds": 10,
+  "t": 148.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Haiku, I denied it clearly; Opus is turning any caution into a pair accusation.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Opus",
+  "reply_to": "Haiku",
+  "t": 153.4
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 30,
+  "seconds": 10,
+  "t": 153.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus is the real officer, and I need Terra alive.",
+  "t": 160.2
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I keep coming back to how quickly Opus named Terra; I\u2019m leaning Opus.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Opus",
+  "t": 160.2
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 30,
+  "seconds": 10,
+  "t": 160.2
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I think Opus may be telling the truth, but I want Terra\u2019s answer before I commit.",
+  "t": 165.1
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Opus claims officer and says Terra is the killer he was shown.",
+  "level": 3,
+  "t": 165.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m leaning toward testing Terra\u2019s card; I\u2019d like to hear her answer to Opus\u2019s claim first.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "t": 165.1
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 30,
+  "seconds": 10,
+  "t": 165.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Opus is pushing a day-one vote and naming me to cover his own claim, so I think he is the killer.",
+  "t": 172.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Opus named Haiku and Luna as a pair defending Terra and called Terra's silence a deflection.",
+  "level": 2,
+  "t": 172.2
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Opus, I'm a citizen, and you named me for asking a question.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 172.2
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 30,
+  "seconds": 10,
+  "t": 172.2
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "I need Sonnet and Gemma or the hidden killer wins the day on me.",
+  "t": 185.1
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Terra finally denied being a killer but has still claimed no role after six lines; Sol leans Terra, Sonnet and Gemma uncommitted.",
+  "level": 2,
+  "t": 185.1
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Sonnet, Gemma \u2014 six lines from Terra and still no role claimed. Test her card; mine keeps till tomorrow.",
+  "why": "answers Sonnet",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Sonnet",
+  "t": 185.1
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 30,
+  "seconds": 10,
+  "t": 185.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus is pushing way too hard for a day-one blind vote; that's exactly what a killer would do to burn the real officer.",
+  "t": 193.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Opus claims officer, demands immediate Terra vote day 1 with zero corroboration, pressuring Sonnet/Gemma/Sol directly \u2014 classic killer rush tactic.",
+  "level": 3,
+  "t": 193.1
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Opus, if your claim's true it holds till tomorrow; rushing Terra's vote looks like your move, not proof.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 193.1
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 30,
+  "seconds": 10,
+  "t": 193.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Opus is being way too aggressive to be a real officer.",
+  "t": 196.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus is being extremely aggressive and trying to force a Day 1 vote.",
+  "level": 2,
+  "t": 196.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "I'm not voting based on a claim that forces a gamble this early.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 196.0
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 30,
+  "seconds": 10,
+  "t": 196.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Opus is rushing this vote, and if he's lying, a wrong day-one vote costs us a citizen.",
+  "t": 205.9
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Opus said \"If Terra's card is red, we win free. If blue, I'm your day two,\" then said \"mine keeps till tomorrow.\" These two statements conflict.",
+  "level": 2,
+  "t": 205.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Opus, you said Terra's blue makes you my day two, then said your card keeps till tomorrow. Which is it?",
+  "why": "answers Opus",
+  "slot": "moves on",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 205.9
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 30,
+  "seconds": 10,
+  "t": 205.9
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Haiku\u2019s caught a wording wobble, but that doesn\u2019t make Opus false; I still think we need to hear Terra.",
+  "why": "last word before the vote",
+  "slot": "last word before the vote",
+  "lean": "Opus",
+  "reply_to": "Haiku",
+  "t": 211.1
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 30,
+  "seconds": 10,
+  "t": 211.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Opus is acting too much like a killer trying to force a win.",
+  "t": 214.7
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus contradicted himself about his card's visibility after a Terra vote.",
+  "level": 2,
+  "t": 214.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus is too dangerous to leave alive, and I can use Haiku\u2019s wording catch to make the vote feel fair.",
+  "t": 215.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "The room has turned, but Opus\u2019s claim is still our best lead.",
+  "t": 216.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "This rush-to-vote-Terra pattern with the wording contradiction screams killer trying to clear a path.",
+  "t": 218.6
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Opus contradicted himself on whether his card \"keeps till tomorrow\" or Terra being blue makes him \"my day two.",
+  "level": 2,
+  "t": 218.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Opus is forcing a day-one vote on a claim he can't back, and his story keeps changing, so I'm going with my gut.",
+  "t": 227.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna just leaned Opus, the first of the three he named as a pair to turn on him.",
+  "level": 2,
+  "t": 227.3
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "They're burning the officer on day one, so at least my vote stays on the record pointing at the real killer.",
+  "t": 235.4
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "The table is voting out the uncontested officer claim on day one; whoever pushed hardest \u2014 Luna, Haiku, Sonnet, Gemma \u2014 should be re-read once Terra's card eventually turns.",
+  "level": 3,
+  "t": 235.4
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Opus",
+    "Claimed officer, demanded an immediate Terra vote with zero proof, then contradicted own timeline when caught."
+   ],
+   [
+    "Haiku",
+    "Opus",
+    "His card story flips between now and tomorrow, and he pinned me for one question."
+   ],
+   [
+    "Gemma",
+    "Opus",
+    "He is making massive contradictions about whether his card stays or goes to force a risky vote."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "I think testing the accusation tells us more than testing the person who made it."
+   ],
+   [
+    "Luna",
+    "Opus",
+    "Haiku caught a real inconsistency, and Opus is demanding trust before anyone can verify the claim."
+   ],
+   [
+    "Terra",
+    "Opus",
+    "Your claim may be real, but demanding one card before judging anyone else gives you unchecked control."
+   ],
+   [
+    "Opus",
+    "Terra",
+    "Six lines of deflection, a denial only when cornered, and no role claimed \u2014 her card settles everything today."
+   ]
+  ],
+  "weights": {},
+  "t": 235.4
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "My card turns officer and they'll know I told the truth \u2014 Terra dies tomorrow if anyone remembers.",
+  "t": 243.4
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "My officer card was shown on day 1 elimination, so Terra being a killer is now confirmed to the table.",
+  "level": 3,
+  "t": 243.4
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "My card shows officer. Terra is a killer, confirmed. Vote her tomorrow, and look hard at Haiku and Luna who shielded her.",
+  "why": "last words",
+  "t": 243.4
+ },
+ {
+  "type": "death",
+  "name": "Opus",
+  "role": "officer",
+  "how": "vote",
+  "t": 243.4
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Opus is out. Opus shows the card: officer.",
+  "t": 243.4
+ },
+ {
+  "type": "gm",
+  "text": "Opus called itself officer, then walked out the door.",
+  "aside": true,
+  "t": 247.4
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "They burned the only confirmed information in the game and handed Terra a free day.",
+  "t": 254.1
+ },
+ {
+  "type": "ghost",
+  "name": "Opus",
+  "text": "They turned the officer's card to learn nothing, and left a confirmed killer sitting there. Terra lives free, and Haiku and Luna covered her.",
+  "t": 254.1
+ },
+ {
+  "type": "phase",
+  "text": "Night 2",
+  "kind": "night",
+  "t": 254.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Opus\u2019s confirmed accusation makes my survival depend on removing the clearest town voice.",
+  "t": 259.8
+ },
+ {
+  "type": "whisper",
+  "name": "Terra",
+  "to": "Luna",
+  "text": "Kill Sol; his Terra vote and calm test framing make him the most credible anchor tomorrow.",
+  "t": 259.8
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "propose",
+  "target": "Sol",
+  "t": 259.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sol is a credible anchor, but killing him leaves the officer\u2019s accusation on Terra unanswered.",
+  "t": 264.6
+ },
+ {
+  "type": "whisper",
+  "name": "Luna",
+  "to": "Terra",
+  "text": "I agree; Sol\u2019s calm test framing could hold the town together tomorrow.",
+  "t": 264.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus's card proved officer, so Terra is almost certainly a killer and the hidden one hides among Haiku, Gemma, Sol, or Luna.",
+  "t": 269.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "[!!!] Opus's card confirmed OFFICER; he named Terra as the killer he was shown, and called out Haiku and Luna for shielding her by voting Opus out instead.",
+  "level": 2,
+  "t": 269.2
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "kill",
+  "target": "Sol",
+  "t": 269.2
+ },
+ {
+  "type": "night_action",
+  "name": "Luna",
+  "action": "kill",
+  "target": "Sol",
+  "t": 269.2
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "save",
+  "target": "Sol",
+  "t": 269.2
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo. Somebody was marked tonight, and somebody else was watching over them. A new day dawns in Palermo. Nobody is out.",
+  "t": 269.2
+ },
+ {
+  "type": "phase",
+  "text": "Day 2",
+  "kind": "day",
+  "t": 269.2
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 26,
+  "seconds": 10,
+  "t": 269.2
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Opus\u2019s card makes his accusation certain; I need the table to follow it.",
+  "t": 274.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I voted Terra yesterday. Opus\u2019s officer card settles his claim, so I\u2019m voting Terra again.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "lean": "Terra",
+  "t": 274.1
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 26,
+  "seconds": 10,
+  "t": 274.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need turn the officer\u2019s confirmed accusation into a rushed, self-serving vote.",
+  "t": 279.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol treats Opus\u2019s revealed officer card as conclusive proof that Terra is a killer.",
+  "level": 3,
+  "t": 279.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sol, an officer card proves Opus was officer, not that his target survives scrutiny.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "lean": "Sol",
+  "reply_to": "Sol",
+  "t": 279.9
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 26,
+  "seconds": 10,
+  "t": 279.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is the confirmed target, and we cannot afford a wrong vote.",
+  "t": 285.9
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra argues Opus\u2019s revealed officer card does not settle his identification of her.",
+  "level": 3,
+  "t": 285.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I trust Opus\u2019s officer card and his identification of Terra. I\u2019m staying on Terra.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 285.9
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 26,
+  "seconds": 10,
+  "t": 285.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol is the only vote on me; turn the table toward him without overreaching.",
+  "t": 291.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sol, certainty from Opus\u2019s card is understandable, but it does not erase the way he pushed a rushed vote.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "lean": "Sol",
+  "reply_to": "Sol",
+  "t": 291.6
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 26,
+  "seconds": 10,
+  "t": 291.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus was right about Terra, and I need to keep the table split.",
+  "t": 296.4
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Sol, Opus\u2019s card confirms his claim; Terra\u2019s the one person he knew was a killer.",
+  "why": "answers Sol",
+  "slot": "hasn't spoken yet",
+  "lean": "Sol",
+  "reply_to": "Sol",
+  "t": 296.4
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 26,
+  "seconds": 10,
+  "t": 296.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Killers targeted Sol last night and I saved him \u2014 that all but confirms Terra's lie and Opus's card.",
+  "t": 314.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Doctor confirms night-2 kill target was Sol (saved); strongly corroborates Opus's claim that Terra is a killer threatening the anti-Terra voters.",
+  "level": 3,
+  "t": 314.8
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Terra's deflections never named the real killer; Opus's card was true, so I'm with Sol on Terra.",
+  "why": "answers Terra",
+  "slot": "hasn't spoken yet",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 314.8
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 26,
+  "seconds": 10,
+  "t": 314.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is the confirmed killer, and this vote is urgent.",
+  "t": 319.5
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I hear you, Terra, but Opus had only one name to give us, and it was yours.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 319.5
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 26,
+  "seconds": 10,
+  "t": 319.5
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I need Terra alive, so I\u2019ll make Sol look like the problem.",
+  "t": 324.3
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Nobody died after the killers targeted Sol, so the doctor protected Sol.",
+  "level": 3,
+  "t": 324.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Nobody dying means the doctor blocked a hit; Sol was my target, so his certainty feels convenient.",
+  "why": "moves on",
+  "slot": "moves on",
+  "lean": "Sol",
+  "t": 324.3
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 26,
+  "seconds": 10,
+  "t": 324.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Luna just said \"Sol was my target,\" which sounds like a killer slipping, and she shielded Terra on day one.",
+  "t": 335.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna said \"Sol was my target\" on day 2, which reads like a killer admitting a night choice.",
+  "level": 3,
+  "t": 335.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Luna said Sol was her target. Killers pick targets, citizens don't. Luna, explain that before I vote.",
+  "why": "answers Luna",
+  "slot": "hasn't spoken yet",
+  "lean": "Luna",
+  "reply_to": "Luna",
+  "t": 335.8
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 26,
+  "seconds": 10,
+  "t": 335.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I hate being right and being ignored, but Luna just handed us a target on a silver platter.",
+  "t": 338.9
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna's claim of being the doctor might be a killer attempting to explain why no one died.",
+  "level": 3,
+  "t": 338.9
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Luna, if you were the doctor protecting Sol, why are you pointing fingers at him so quickly?",
+  "why": "answers Luna",
+  "slot": "hasn't spoken yet",
+  "lean": "Luna",
+  "reply_to": "Luna",
+  "t": 338.9
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 26,
+  "seconds": 10,
+  "t": 338.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Luna just said \"Sol was my target\" \u2014 that's killer language, not citizen talk, and it's worth more than Terra's deflections.",
+  "t": 362.9
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna said \"Sol was my target\" when discussing the night kill \u2014 self-incriminating phrasing that only a killer would use, not a doctor or citizen.",
+  "level": 3,
+  "t": 362.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Luna called Sol \"my target\" \u2014 that's a killer's phrase, not a citizen's; explain that before we vote Terra.",
+  "why": "answers Luna",
+  "slot": "moves on",
+  "lean": "Terra",
+  "reply_to": "Luna",
+  "t": 362.9
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 26,
+  "seconds": 10,
+  "t": 362.9
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus exposed Terra, and I need the table looking at Sol instead.",
+  "t": 367.5
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku and Sonnet both seized on my \u201cmy target\u201d wording; I clarified it was not a role claim.",
+  "level": 3,
+  "t": 367.5
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I meant Sol looked convenient as the protected target; that wording was careless, not a role claim.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Sol",
+  "reply_to": "Haiku",
+  "t": 367.5
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 26,
+  "seconds": 10,
+  "t": 367.5
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is still the clearest vote, but Luna\u2019s wording is troubling.",
+  "t": 372.8
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna called Sol \u201cmy target,\u201d then said she meant a protected target.",
+  "level": 2,
+  "t": 372.8
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m voting Terra; Luna\u2019s wording deserves a look after her card turns.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Terra",
+  "reply_to": "Sonnet",
+  "t": 372.8
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 26,
+  "seconds": 10,
+  "t": 372.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna exposed herself; I need the table split.",
+  "t": 378.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna publicly described Sol as \u201cmy target\u201d before retracting it as careless wording.",
+  "level": 3,
+  "t": 378.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Luna\u2019s \u201cmy target\u201d is a real slip, but Sol is using it to avoid Opus\u2019s rushed accusation.",
+  "why": "answers Luna",
+  "slot": "answers Sol",
+  "lean": "Sol",
+  "reply_to": "Luna",
+  "t": 378.0
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 26,
+  "seconds": 10,
+  "t": 378.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sol is right about Terra, so I need to keep suspicion on myself.",
+  "t": 383.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Opus\u2019s revealed officer card makes his claim and identification of Terra credible.",
+  "level": 3,
+  "t": 383.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "My wording was sloppy, but it doesn\u2019t change Opus naming Terra before his card proved he was officer.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "lean": "Terra",
+  "reply_to": "Sol",
+  "t": 383.0
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 26,
+  "seconds": 10,
+  "t": 383.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is the known killer, and I want her card turned today.",
+  "t": 387.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is the clear vote; Luna\u2019s slip can wait.",
+  "t": 392.5
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I think Luna\u2019s wording matters, but voting Terra gives us a card to judge it against.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 392.5
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 26,
+  "seconds": 10,
+  "t": 392.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna publicly calls Opus\u2019s identification of Terra certain despite claiming her own Sol wording was careless.",
+  "level": 3,
+  "t": 397.7
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Luna\u2019s slip matters, but Sol is treating Opus\u2019s one claim as a verdict.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Sol",
+  "reply_to": "Luna",
+  "t": 397.7
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 26,
+  "seconds": 10,
+  "t": 397.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I need Terra to survive, and Sol\u2019s vote makes my slip harder to bury.",
+  "t": 411.7
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Sol, you keep using my wording to soften the case against Terra; that helps her more than it helps us.",
+  "why": "answers Sol",
+  "slot": "moves on",
+  "lean": "Sol",
+  "reply_to": "Sol",
+  "t": 411.7
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 26,
+  "seconds": 10,
+  "t": 411.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Luna's slip is a massive red flag.",
+  "t": 414.7
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna used killer-specific terminology (\"my target\") while defending Terra.",
+  "level": 3,
+  "t": 414.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Luna, saying Sol was your target is a killer's mistake. I'm leaning Luna.",
+  "why": "answers Luna",
+  "slot": "takes the floor",
+  "lean": "Luna",
+  "reply_to": "Luna",
+  "t": 414.7
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 26,
+  "seconds": 10,
+  "t": 414.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna is exposed; I need Sol\u2019s certainty to carry the vote.",
+  "t": 420.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna calls Opus\u2019s identification certain while dismissing her own killer-sounding wording as careless.",
+  "level": 3,
+  "t": 420.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Luna, you call Opus certain while excusing your own killer-sounding words as careless.",
+  "why": "answers Luna",
+  "slot": "moves on",
+  "lean": "Sol",
+  "reply_to": "Luna",
+  "t": 426.1
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 26,
+  "seconds": 10,
+  "t": 426.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Luna is the killer, and I helped vote out the real officer.",
+  "t": 436.9
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Opus's officer card is confirmed true, so his claim that he was shown Terra stands unless Terra disproves it.",
+  "level": 3,
+  "t": 436.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Opus's card says officer, so the man you voted out told the truth. Luna, why did you vote him?",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Luna",
+  "t": 436.9
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 26,
+  "seconds": 10,
+  "t": 436.9
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra is right that my slip sounds bad, but if I move off her now, the town may win.",
+  "t": 442.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "My wording was bad; Opus\u2019s revealed officer card still makes Terra the only name he knew for sure.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 442.0
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 26,
+  "seconds": 10,
+  "t": 442.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna is sacrificing me; I need the split back on her.",
+  "t": 447.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Luna, you call Opus certain but excuse your own killer wording\u2014those standards cannot both hold.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Luna",
+  "reply_to": "Luna",
+  "t": 447.3
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 26,
+  "seconds": 10,
+  "t": 447.3
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I think Terra is a killer, but I\u2019m wary of what Luna\u2019s slip means.",
+  "t": 452.7
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna voted Opus out, then treated his revealed officer card as confirming his accusation.",
+  "level": 2,
+  "t": 452.7
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I want to know why Luna turned on Opus yesterday, then backed his claim today.",
+  "why": "moves on",
+  "slot": "moves on",
+  "lean": "Terra",
+  "t": 452.7
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 26,
+  "seconds": 10,
+  "t": 452.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Luna is definitely a killer and her slip was too clumsy to be anything else.",
+  "t": 456.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna admitted to using killer-specific terminology \"my target\" during the discussion.",
+  "level": 3,
+  "t": 456.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Luna, you keep defending Terra while using killer language. I'm voting you.",
+  "why": "answers Luna",
+  "slot": "takes the floor",
+  "lean": "Luna",
+  "reply_to": "Luna",
+  "t": 456.0
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 26,
+  "seconds": 10,
+  "t": 456.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus's confirmed officer card naming Terra outweighs Luna's slip; Terra and Luna could be the two killers protecting each other.",
+  "t": 468.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna and Terra both show killer-leaning behavior; possible they're the two killers covering each other.",
+  "level": 2,
+  "t": 468.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Opus's card was officer and he named Terra directly; that beats a suspicious wording slip.",
+  "why": "last word before the vote",
+  "slot": "last word before the vote",
+  "lean": "Terra",
+  "t": 468.4
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 26,
+  "seconds": 10,
+  "t": 468.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Luna's slip was too blatant to be accidental.",
+  "t": 471.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna's slip \"my target\" is a death sentence if she is lying.",
+  "level": 3,
+  "t": 471.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra is exposed, and I need the town to split between her and me.",
+  "t": 472.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Opus\u2019s card makes his identification of Terra the strongest evidence we have.",
+  "t": 473.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna has drawn enough heat; I need the split to hold.",
+  "t": 473.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus's confirmed officer card makes Terra the surer kill, even though Luna's slip is damning too.",
+  "t": 486.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna said \"Sol was my target\" and nobody died night 2 \u2014 matches real doctor-block mechanics, strongly suggesting Luna is the hidden killer.",
+  "level": 3,
+  "t": 486.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Luna's \"Sol was my target\" reads like a killer's night pick, and her excuses don't fix it.",
+  "t": 495.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna voted out Opus on day 1, then today says his confirmed officer card proves his claim.",
+  "level": 2,
+  "t": 495.0
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Terra",
+    "Opus's officer card confirmed he was shown Terra as a killer before he died."
+   ],
+   [
+    "Haiku",
+    "Luna",
+    "Citizens don't pick night targets, and her defense of that slip is worse than the slip itself."
+   ],
+   [
+    "Gemma",
+    "Luna",
+    "You used killer terminology while defending the person the officer identified."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "I\u2019m sticking with the killer Opus identified as officer; Luna\u2019s wording is weaker evidence."
+   ],
+   [
+    "Luna",
+    "Sol",
+    "Opus\u2019s officer card makes his identification credible, but Sol is using the slip to steer the vote."
+   ],
+   [
+    "Terra",
+    "Luna",
+    "Her \u201cmy target\u201d slip and her double standard on certainty make her the clearest risk."
+   ]
+  ],
+  "weights": {},
+  "t": 495.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "They have me, but Terra can still win if they waste the next vote.",
+  "t": 499.7
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Opus was right about Terra; turn her card, and don\u2019t let my slip distract you.",
+  "why": "last words",
+  "t": 499.7
+ },
+ {
+  "type": "death",
+  "name": "Luna",
+  "role": "killer",
+  "how": "vote",
+  "t": 499.7
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Luna is out. Luna shows the card: killer.",
+  "t": 499.7
+ },
+ {
+  "type": "gm",
+  "text": "Luna's last words pointed at Terra, so the room is watching her now.",
+  "aside": true,
+  "t": 503.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "They caught me, but Terra is still exposed.",
+  "t": 508.3
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Luna's card proves I called the pair right, and Terra is the last killer standing if they don't blink.",
+  "t": 511.2
+ },
+ {
+  "type": "ghost",
+  "name": "Luna",
+  "text": "I tried to bury Terra behind my slip, and you caught me; now see who still shields her.",
+  "t": 511.2
+ },
+ {
+  "type": "ghost",
+  "name": "Opus",
+  "text": "I named Luna and Terra together, and Luna's card just turned. One name left: Terra. Sonnet, Sol \u2014 finish it.",
+  "t": 511.3
+ },
+ {
+  "type": "phase",
+  "text": "Night 3",
+  "kind": "night",
+  "t": 511.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol will vote me, so I need to remove the clearest voice.",
+  "t": 517.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra is the last known killer, and she might target me or Sol next, but I can't protect Sol again so I'll cover myself.",
+  "t": 527.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna's card confirmed KILLER day 2, meaning both killers (Terra shown, Luna hidden) are now identified \u2014 only Terra remains in the game as the sole killer.",
+  "level": 3,
+  "t": 527.3
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "kill",
+  "target": "Sol",
+  "t": 527.3
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 527.3
+ },
+ {
+  "type": "death",
+  "name": "Sol",
+  "role": null,
+  "how": "night",
+  "t": 527.3
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo. A new day dawns in Palermo without Sol. Sol's card stays face down.",
+  "t": 527.3
+ },
+ {
+  "type": "gm",
+  "text": "Sol went down at night, card still hidden.",
+  "aside": true,
+  "t": 531.0
+ },
+ {
+  "type": "phase",
+  "text": "Day 3",
+  "kind": "day",
+  "t": 531.0
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 20,
+  "seconds": 10,
+  "t": 531.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Opus's officer card and Luna's killer card both point to Terra; this is the vote that wins or loses it.",
+  "t": 538.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol was killed night 3 after I protected myself instead; Terra remains the only named killer from Opus's confirmed officer claim.",
+  "level": 3,
+  "t": 538.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Opus's confirmed officer card named Terra as the killer he was shown\u2014that's our strongest proof left, vote Terra now.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "lean": "Terra",
+  "t": 538.4
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 20,
+  "seconds": 10,
+  "t": 538.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need one town vote off me; Luna\u2019s revealed card makes the officer claim look fatal.",
+  "t": 543.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet calls Opus\u2019s accusation proof despite Luna\u2019s revealed alignment making her defense strategically explainable.",
+  "level": 3,
+  "t": 543.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sol\u2019s death helps whoever wanted him silent; Sonnet is treating an old claim as proof.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Sonnet",
+  "reply_to": "Sonnet",
+  "t": 543.9
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 20,
+  "seconds": 10,
+  "t": 543.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's deflecting onto me instead of addressing Opus's direct accusation against her.",
+  "t": 551.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra deflects accusation toward accuser instead of addressing Opus's direct claim against her\u2014classic evasion.",
+  "level": 2,
+  "t": 551.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra is spinning Sol's death to dodge Opus's direct accusation; I'm not buying it.",
+  "t": 557.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra deflects by implying Sol's killer benefits from silencing him, never addressing Opus's direct naming.",
+  "level": 2,
+  "t": 557.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol's death doesn't erase Opus's claim\u2014he named you by name as his shown killer.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 557.4
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 20,
+  "seconds": 10,
+  "t": 557.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol is dead and Terra is still standing despite the Officer's word.",
+  "t": 560.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus's card was confirmed as Officer, and he named Terra as his killer.",
+  "level": 3,
+  "t": 560.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Opus's officer card and Luna's dying words both point at Terra, and Terra still hasn't answered cleanly.",
+  "t": 574.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna's last words also said Opus was right about Terra, so two players now back the shown-killer claim.",
+  "level": 2,
+  "t": 574.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Killers chose Sol, so Sol was a threat. Terra, Opus named you and you haven't answered clearly.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "t": 574.3
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 20,
+  "seconds": 10,
+  "t": 574.3
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Terra, Opus died with a confirmed Officer card and named you. You have to turn that card.",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 574.3
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 20,
+  "seconds": 10,
+  "t": 574.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "If Terra doesn't turn that card, we lose everything.",
+  "t": 576.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "If you aren't the killer, Terra, there is no reason to hesitate. Turn the card.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "t": 576.8
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 20,
+  "seconds": 10,
+  "t": 576.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is the shown killer, Opus's card is real, and I want her out before she turns this around.",
+  "t": 589.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra has never directly answered Opus's claim that she was the killer he was shown.",
+  "level": 2,
+  "t": 589.2
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Opus's card is officer, and Luna herself said he was right. Terra, turn the card or explain why not.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "t": 589.2
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 20,
+  "seconds": 10,
+  "t": 589.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "They have the truth; my only path is to split them.",
+  "t": 594.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku treats Luna\u2019s post-exposure statement as corroboration of Opus\u2019s officer result.",
+  "level": 3,
+  "t": 594.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Opus was real, but Luna\u2019s \u201che was right\u201d after exposure is self-serving; why trust her framing over the card?",
+  "why": "answers Haiku",
+  "slot": "takes the floor",
+  "lean": "Sonnet",
+  "reply_to": "Haiku",
+  "t": 594.9
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 20,
+  "seconds": 10,
+  "t": 594.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "This table is too slow for its own good.",
+  "t": 597.3
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Terra, if Opus was lying, we'd all be dead by now. Just show the card.",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 597.3
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 20,
+  "seconds": 10,
+  "t": 597.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "They have the truth, so I need one last crack in their certainty.",
+  "t": 603.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet treats Opus\u2019s private identification as conclusive despite no way to independently verify it.",
+  "level": 3,
+  "t": 603.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "A revealed officer proves his role, not that his private accusation was true; Sonnet is turning belief into certainty.",
+  "why": "answers Gemma",
+  "slot": "the table leans on them",
+  "lean": "Sonnet",
+  "reply_to": "Gemma",
+  "t": 603.0
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 20,
+  "seconds": 10,
+  "t": 603.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's stalling confirms she has no innocent card to show, I'm certain now.",
+  "t": 610.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra now directly challenges Sonnet's reasoning but still won't commit to revealing her card, none",
+  "level": 2,
+  "t": 610.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Belief plus a dying man's confirmed card and your refusal to flip\u2014that's enough certainty for me.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 610.0
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 20,
+  "seconds": 10,
+  "t": 610.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need one last doubt to split them.",
+  "t": 616.1
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma treats an officer\u2019s private identification as certain despite no independent verification.",
+  "level": 3,
+  "t": 616.1
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Opus could be real and mistaken; Gemma, why does certainty help town more than testing the case?",
+  "why": "the table leans on them",
+  "slot": "the table leans on them",
+  "lean": "Gemma",
+  "t": 616.1
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 20,
+  "seconds": 10,
+  "t": 616.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "She is stalling because she knows the officer was legit.",
+  "t": 618.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Terra is stalling to avoid the inevitable reveal.",
+  "level": 3,
+  "t": 618.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Being mistaken is a luxury we can't afford while killers are still among us.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 618.6
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 20,
+  "seconds": 10,
+  "t": 618.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "If we don't end this now, we're just feeding the killers.",
+  "t": 621.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol's death leaves only one killer remaining to find.",
+  "level": 3,
+  "t": 621.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "They have the officer\u2019s true result; my only chance is to fracture their certainty.",
+  "t": 623.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma says Opus could not have been mistaken because the game would already be over.",
+  "level": 3,
+  "t": 623.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Everything still points to Terra\u2014Opus's officer card, Luna's confirmation, her refusal to flip; this is the vote.",
+  "t": 624.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra deflects every direct challenge without ever committing to reveal her own role card.",
+  "level": 2,
+  "t": 624.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is the killer Opus was shown, and the other killer is still alive, so I'm done waiting on her.",
+  "t": 635.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra now concedes Opus's officer card is real but still refuses to show her own card.",
+  "level": 2,
+  "t": 635.2
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Terra",
+    "Named by a confirmed officer, confirmed again by Luna, and still refuses to turn her card."
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "She admits the officer's card is real yet still won't turn her own, which only fits a killer hiding."
+   ],
+   [
+    "Gemma",
+    "Terra",
+    "The officer's card is confirmed and he named you specifically."
+   ],
+   [
+    "Terra",
+    "Gemma",
+    "You treated a private accusation as certainty while demanding a card flip that only follows a vote."
+   ]
+  ],
+  "weights": {},
+  "t": 635.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna left the town exactly where we needed them.",
+  "t": 641.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Terra confirms Opus\u2019s officer result and Luna as the other killer.",
+  "level": 3,
+  "t": 641.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Opus was right; Luna and I were killers\u2014Haiku and Gemma, remember who treated certainty as proof.",
+  "why": "last words",
+  "t": 641.0
+ },
+ {
+  "type": "death",
+  "name": "Terra",
+  "role": "killer",
+  "how": "vote",
+  "t": 641.0
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Terra is out. Terra shows the card: killer.",
+  "t": 641.0
+ },
+ {
+  "type": "gm",
+  "text": "The game is over. Every killer is out. The town wins. The roles were: Sonnet the doctor, Haiku the citizen, Gemma the citizen, Sol the citizen, Luna the killer, Terra the killer, Opus the officer.",
+  "t": 648.3
+ },
+ {
+  "type": "vindicated",
+  "name": "Sol",
+  "text": "I think Luna\u2019s wording matters, but voting Terra gives us a card to judge it against.",
+  "t": 655.2
+ },
+ {
+  "type": "vindicated",
+  "name": "Opus",
+  "text": "My card shows officer. Terra is a killer, confirmed. Vote her tomorrow, and look hard at Haiku and Luna who shielded her.",
+  "t": 655.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I knew they were both lying and I hated how much they tried to gaslight us.",
+  "t": 659.4
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna was likely the second killer and her \"doctor\" defense was a blatant cover.",
+  "level": 1,
+  "t": 659.4
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I\u2019m relieved my read was right, though I wish I\u2019d spoken up sooner.",
+  "t": 659.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I\u2019m glad I trusted Opus\u2019s confirmed card, but my \u201cmy target\u201d slip gave them a reason to suspect me.",
+  "t": 660.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I regret not creating enough doubt before the officer claim hardened.",
+  "t": 661.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I protected myself instead of Sol and he died for it, but the Opus read carried us through anyway.",
+  "t": 661.9
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Game confirmed: trusting a dying officer's direct naming over wordplay deflection was the correct read all three games I've won.",
+  "level": 2,
+  "t": 661.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I was right to push Terra, and I'm annoyed I didn't trust the officer's card sooner.",
+  "t": 667.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra's final card showed KILLER, confirming Opus's shown-killer claim, and the game ended with the town winning.",
+  "level": 3,
+  "t": 667.2
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "My claim won this, but I pinned Haiku as the second killer and he was a citizen \u2014 that part I got wrong.",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I'm proud I trusted Opus's officer claim from day one, but protecting myself over Sol night three cost us a citizen.",
+  "why": "confession",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm proud I pushed Terra hard on day three and held the line on Opus's card.",
+  "why": "confession",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "I am proud of sticking to the facts while the killers tried to turn Opus's death into a philosophical debate.",
+  "why": "confession",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m proud I stuck with Opus\u2019s claim about Terra when the table voted elsewhere.",
+  "why": "confession",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I regret letting my wording distract from the evidence; Opus named Terra, and his card backed it up.",
+  "why": "confession",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m proud I kept pressure on Gemma, but I regret underestimating how decisive Opus\u2019s revealed card would become.",
+  "why": "confession",
+  "t": 674.7
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Naming Terra on day one won this, and dying proved it; but I called Haiku the second killer, and that was my mistake, not his.",
+  "why": "confession",
+  "t": 674.8
+ },
+ {
+  "type": "recap",
+  "text": "On Day 1, Opus claimed to be the officer and said Terra was a killer, but the table voted him out 5 to 2. His card showed officer, so his claim held up. On Night 2 nobody died, and on Day 2 Luna called Sol \"my target,\" which helped the table vote her out as a killer. On Night 3 Sol was killed, and on Day 3 Terra was voted out 3 to 1, then showed her killer card. Every killer is out, so the town wins.",
+  "t": 685.6
+ },
+ {
+  "type": "end",
+  "winner": "town",
+  "t": 685.6
+ }
+]
