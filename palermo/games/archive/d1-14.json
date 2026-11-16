@@ -1,0 +1,606 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "citizen",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "officer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "doctor",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": true
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, and Terra, and nobody knows who the killers are.",
+  "t": 3.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i hope the coffee shop has better luck with the espresso machine than i do.",
+  "t": 5.4
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I\u2019ll keep it light and listen for who leads.",
+  "t": 7.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Just a warm-up, nothing to read into yet.",
+  "t": 7.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "none: none",
+  "level": 2,
+  "t": 7.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I\u2019m trying to think of something small I fixed this week.",
+  "t": 7.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need to stay unnoticed.",
+  "t": 9.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is a killer, so I keep my head down and let the others talk first.",
+  "t": 13.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "My cactus somehow survives weeks of me forgetting it exists, honestly impressive.",
+  "why": "introduces themselves",
+  "t": 13.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Ate cold pizza over the sink, standing up. Don't judge me.",
+  "why": "introduces themselves",
+  "t": 13.3
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i spent twenty minutes looking for my keys in the fridge this morning.",
+  "why": "introduces themselves",
+  "t": 13.3
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I take my coffee with milk and just enough sugar.",
+  "why": "introduces themselves",
+  "t": 13.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I fixed a wobbly chair this week.",
+  "why": "introduces themselves",
+  "t": 13.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m having black coffee tonight.",
+  "why": "introduces themselves",
+  "t": 13.3
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 13.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i hope the killers don't target the fridge where my keys are.",
+  "t": 14.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra's coffee line is the weird one, and Sol's coffee line sounds like a reply to it.",
+  "t": 21.6
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol and Terra both gave coffee lines on night one, which might be a signal.",
+  "level": 1,
+  "t": 21.6
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "save",
+  "target": "Sol",
+  "t": 21.6
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Sol",
+  "result": "a KILLER",
+  "t": 21.6
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 passes quietly in Palermo. The killers met in the dark, the officer was shown one of them, and nobody is out.",
+  "t": 24.8
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 24.8
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 24.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I have to burn my cover now or the town votes wrong today.",
+  "t": 33.9
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol said milk and sugar, Terra said black coffee tonight; both claimed drinks, check who sticks to theirs.",
+  "level": 2,
+  "t": 33.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm the officer. Checked Sol night 1: killer. Terra's the other one, shown to me. Vote Sol.",
+  "why": "has something to say",
+  "t": 33.9
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 33.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku has me cornered, so I need to challenge the claim now.",
+  "t": 39.1
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku claimed officer, called me a checked killer, and said Terra was shown.",
+  "level": 3,
+  "t": 39.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku must be removed before Sol is exposed.",
+  "t": 39.1
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku claimed officer and named Sol and Terra as killers.",
+  "level": 3,
+  "t": 39.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m the officer. I checked Haiku last night: killer. Haiku claimed first to get me out.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 39.1
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 39.1
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I'm the officer. I checked Haiku night one: killer.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 39.1
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 39.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol and Terra both going after me means they're covering each other, and I'm not budging.",
+  "t": 52.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol and Terra both claimed officer and both named Haiku as the killer.",
+  "level": 3,
+  "t": 52.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, Sol and Terra both say I'm killer, that's weird. Sonnet, Gemma, Luna, who's lying?",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 52.8
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 52.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Three officer claims is impossible, but only Haiku mentions a shown killer at all.",
+  "t": 76.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku claims officer, shown-killer Terra, checked Sol=killer. Sol & Terra both claim officer, checked Haiku=killer, no shown-killer mentioned.",
+  "level": 2,
+  "t": 76.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol, Terra, you're both officer but skip the shown killer. Haiku named one. Who was shown to you two?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 76.7
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 76.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Two officers claiming different people makes this a mess.",
+  "t": 79.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Haiku, Sol, and Terra all made conflicting officer claims.",
+  "level": 3,
+  "t": 79.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "do you all actually sleep or just hallucinate?\nSonnet, if two people claim officer and both name Haiku, why isn't it a given?",
+  "why": "hasn't spoken yet",
+  "t": 79.1
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 79.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sol and Terra copying the officer claim makes Haiku look more likely innocent.",
+  "t": 83.2
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku, Sol, and Terra all claim officer; all three name Haiku as a killer.",
+  "level": 3,
+  "t": 83.2
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Sol, you claimed Haiku is a killer, but Terra independently named Haiku too; why should we trust you over Haiku?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 83.2
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 83.2
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I need the vote on Haiku before my claim falls apart.",
+  "t": 88.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm the only one who knows the truth, and they're going to vote me out for it.",
+  "t": 96.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra and Sol both pinned me fast, and I need the room to see who's pushing whom.",
+  "t": 108.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I vote Haiku. Claiming a check on me and naming Terra at once looks like a rushed play.",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 108.9
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 108.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Terra, you named me first and skipped who was shown to you. Sol gave milk and sugar, you gave black tonight. Which one's your real coffee?",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 108.9
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 108.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku exposed us, so I need them out.",
+  "t": 113.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol counter-claimed officer and called Haiku a killer.",
+  "level": 3,
+  "t": 113.4
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I vote Haiku. Their Sol check came with Terra named too fast.",
+  "why": "last word before the vote",
+  "reply_to": "Haiku",
+  "t": 113.4
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 113.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "three officer claims in one night is absolute chaos.",
+  "t": 115.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Haiku, Sol, and Terra all claim officer.",
+  "level": 3,
+  "t": 115.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Three officer claims point at Haiku, but I still suspect Terra\u2019s convenient second claim.",
+  "t": 117.3
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku knows both killers, so I need the others to doubt the claim.",
+  "t": 118.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku\u2019s claim threatens both of us; keep the table focused there.",
+  "t": 119.2
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet questioned why Sol and Terra skipped naming their shown killer.",
+  "level": 2,
+  "t": 119.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol and Terra both skip the shown-killer detail while Haiku's story is complete, that's the real gap.",
+  "t": 122.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol is the killer I checked, and they rushed a counter-claim on me, so Sol goes today.",
+  "t": 133.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet asked who was shown to Sol and Terra, and neither answered.",
+  "level": 2,
+  "t": 133.4
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "You and Terra both claim officer but neither of you mentions a shown-killer, Haiku's story is the only complete one."
+   ],
+   [
+    "Haiku",
+    "Sol",
+    "I checked them night one, and they came in fast with a fake check on me, which is exactly what a killer does."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "Haiku is caught in a massive circle of accusations from three different people."
+   ],
+   [
+    "Sol",
+    "Haiku",
+    "They named two killers at once, and I don't buy how quickly that claim came."
+   ],
+   [
+    "Luna",
+    "Terra",
+    "You claimed officer without saying who was shown to you, then joined the Haiku vote."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "The Sol check and naming me together looked prepared, not discovered."
+   ]
+  ],
+  "t": 133.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm out, and the officer result dies with me unless I say it now.",
+  "t": 143.2
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I was the officer. Checked Sol night one: killer. Terra's the other killer, shown to me. Don't be dumb and let them both walk.",
+  "why": "last words",
+  "t": 143.2
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "officer",
+  "how": "vote",
+  "t": 143.2
+ },
+ {
+  "type": "gm",
+  "text": "Haiku is eliminated by vote, and Haiku was the officer. The town is left with its suspicions and one fewer voice to argue them.",
+  "t": 146.7
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 146.7
+ }
+]

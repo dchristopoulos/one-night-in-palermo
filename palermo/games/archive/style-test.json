@@ -1,0 +1,638 @@
+[
+ {
+  "type": "cast",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "killer",
+    "seat": 0,
+    "tagline": "The Analyst"
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "citizen",
+    "seat": 1,
+    "tagline": "The Gut Player"
+   },
+   {
+    "name": "Gemma",
+    "model": "local:gemma-4-12b-it-qat",
+    "role": "citizen",
+    "seat": 2,
+    "tagline": "The Joker"
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "officer",
+    "seat": 3,
+    "tagline": "The Diplomat"
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One"
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "doctor",
+    "seat": 5,
+    "tagline": "The Quiet One"
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Six players take their seats: Sonnet, Haiku, Gemma, Sol, Luna, and Terra. Nobody at the table knows who the killer is.",
+  "t": 3.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I don\u2019t trust anyone yet, but there\u2019s nothing to go on.",
+  "t": 7.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I will listen before I decide who needs protecting.",
+  "t": 7.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I need to see who acts weird first.",
+  "t": 9.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Just blend in, stay calm, watch who talks too much later.",
+  "t": 9.6
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have nothing to go on yet, so I\u2019ll listen.",
+  "t": 11.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Nobody has facts yet, so I'll just watch who goes quiet and who jumps in too fast.",
+  "t": 15.6
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Hey everyone, good luck tonight, let's see who slips up first.",
+  "why": "introduces themselves",
+  "t": 15.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Hey all. Who's gonna talk first, or do we just sit here?",
+  "why": "introduces themselves",
+  "t": 15.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "hey everyone, i'm just here for the snacks and to watch you guys panic.",
+  "why": "introduces themselves",
+  "t": 15.6
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Hey everyone, let\u2019s see what people say before we settle on anyone.",
+  "why": "introduces themselves",
+  "t": 15.6
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hi, everyone. Let\u2019s see who talks first.",
+  "why": "introduces themselves",
+  "t": 15.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Hi everyone. I\u2019m listening.",
+  "why": "introduces themselves",
+  "t": 15.6
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 15.6
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "No one stands out yet, so I should protect myself.",
+  "t": 19.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have no real leads yet, so I\u2019ll check someone quiet.",
+  "t": 20.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Nobody's shown anything yet, so I'll cut someone who sounds like they'd be sharp at tracking contradictions later.",
+  "t": 20.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra stayed quiet, just said \"I'm listening\" - watch for officer-type behavior from others too.",
+  "level": 1,
+  "t": 20.8
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "kill",
+  "target": "Terra",
+  "t": 20.8
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "save",
+  "target": "Terra",
+  "t": 20.8
+ },
+ {
+  "type": "night_action",
+  "name": "Sol",
+  "action": "check",
+  "target": "Terra",
+  "result": "NOT the killer",
+  "t": 20.8
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 passes with an attack, but the doctor got there first, so nobody is out. Everyone gets to keep their seat and their suspicions.",
+  "t": 24.5
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 24.5
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 24.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Everyone is being way too polite for a game with killers.",
+  "t": 29.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol is acting very calm.",
+  "level": 1,
+  "t": 29.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "why is everyone so chill? sol, you're being suspiciously relaxed for day one.",
+  "why": "takes the floor",
+  "t": 29.1
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 29.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Nobody knows who I targeted, good \u2014 I can steer suspicion onto someone else now.",
+  "t": 37.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna and Terra both opened with near-identical \"let's see who talks\" lines.",
+  "level": 1,
+  "t": 37.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gemma's right that Sol seems calm, but Luna and Terra basically said the same thing twice \u2014 \"let's see who talks.\" Feels like stalling.",
+  "why": "takes the floor",
+  "t": 37.7
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 37.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol is way too composed for a first day.",
+  "t": 43.9
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sonnet and Gemma both suspect Sol.",
+  "level": 2,
+  "t": 43.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma\u2019s push on me is thin, and I want to see whether she has more.",
+  "t": 46.4
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma called me suspicious for seeming relaxed on day one.",
+  "level": 2,
+  "t": 46.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "if they're stalling, it's because they're waiting for us to do the work. terra, you've been quiet, what are you hiding?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 46.4
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 46.4
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Gemma, I was waiting because we had nothing to go on. What about my calm answer worries you?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 46.4
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 46.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol is trying to play it cool, but I want to see if he can handle some pressure.",
+  "t": 53.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol is defending his calm demeanor.",
+  "level": 2,
+  "t": 53.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "maybe you're just a master of zen, or maybe you're hiding something big. haiku, what do you think about sol?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 53.1
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 53.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is steering everyone at Sol, and Sol's calm is just calm, so I want Gemma's read on Terra first.",
+  "t": 57.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma pushed Sol first and called Terra quiet, then asked Haiku about Sol.",
+  "level": 1,
+  "t": 57.3
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma is pressing me, but Terra is clean and I should stay quiet about that.",
+  "t": 58.3
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet also questioned Luna and Terra for giving similar opening lines.",
+  "level": 2,
+  "t": 58.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you asked me about Sol, but you already picked Sol. Terra's quiet too, so why Sol and not Terra? Terra, say something real.",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 58.3
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 58.3
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Haiku, I want your read too. Gemma, what besides my tone makes you suspect me?",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 58.3
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 58.3
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I suspect Gemma is steering this toward Sol without giving a clear reason.",
+  "t": 62.8
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma accused Sol, then asked Haiku to weigh in after already choosing Sol.",
+  "level": 2,
+  "t": 62.8
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m voting for Gemma; she picked Sol quickly, then pushed Haiku and Terra to back it up.",
+  "why": "hasn't spoken yet",
+  "t": 62.8
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 62.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma pushed several people without giving a reason.",
+  "t": 67.2
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma pushed Sol, Haiku, and me early without evidence.",
+  "level": 2,
+  "t": 67.2
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m voting Gemma; she keeps demanding reads while avoiding her own.",
+  "why": "hasn't spoken yet",
+  "reply_to": "Luna",
+  "t": 67.2
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 67.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's getting the votes, so I'll ride along and keep the Luna-Terra sync theory alive for later.",
+  "t": 78.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna and Terra both voted Gemma immediately after near-identical opening lines \u2014 possible coordinated pair.",
+  "level": 2,
+  "t": 78.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I'll go with Gemma too \u2014 she pushed hard without giving her own read. Still think Luna and Terra echoing each other is worth watching after today.",
+  "why": "last word before the vote",
+  "t": 78.3
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 78.3
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma started the Sol push, but her questions felt like pressure without a solid reason.",
+  "t": 83.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku challenged Gemma for choosing Sol before asking for other reads.",
+  "level": 2,
+  "t": 83.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma's pressure feels thin, and Terra's clean result makes me comfortable joining this vote.",
+  "t": 84.2
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "The doctor stopped the first night's attack, so everyone survived.",
+  "level": 2,
+  "t": 84.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma never gave a real read and the bandwagon is forming anyway, so riding it keeps me invisible.",
+  "t": 85.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma deflected every question back onto Sol, Haiku, and Terra without stating her own suspicion.",
+  "level": 1,
+  "t": 85.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I'm being targeted by the quiet ones because I'm making noise.",
+  "t": 85.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna and Terra are voting together to take out the loudest person.",
+  "level": 2,
+  "t": 85.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma is driving suspicion without committing to a real case.",
+  "t": 87.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet suspects Luna and me for echoing each other.",
+  "level": 2,
+  "t": 87.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma keeps pushing everyone else while dodging her own read, and three votes already make her the easy call.",
+  "t": 92.9
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet said Luna and Terra's openers were near-identical, both stalling with \"let's see who talks.",
+  "level": 1,
+  "t": 92.9
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Gemma",
+    "Gemma pushed three people for reads but never gave her own on anyone."
+   ],
+   [
+    "Haiku",
+    "Gemma",
+    "Gemma, you picked Sol first and only asked me after, so I'm voting you with the rest."
+   ],
+   [
+    "Gemma",
+    "Luna",
+    "if you and terra are just echoing each other, one of you is definitely a killer."
+   ],
+   [
+    "Sol",
+    "Gemma",
+    "I'm voting Gemma; she pushed me over my tone, then asked others to make the case for her."
+   ],
+   [
+    "Luna",
+    "Gemma",
+    "I\u2019m staying on Gemma because she picked Sol quickly, then asked Haiku to weigh in after deciding."
+   ],
+   [
+    "Terra",
+    "Gemma",
+    "I\u2019m staying on Gemma; she pushed Sol, Haiku, and me without evidence."
+   ]
+  ],
+  "t": 92.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I'm a citizen and they all just fell for my \"joker\" act.",
+  "t": 101.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna and Terra are perfectly synced in their voting behavior.",
+  "level": 2,
+  "t": 101.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i'm a citizen, but you guys are way too easy to trick. enjoy the snacks while you hunt each other.",
+  "why": "last words",
+  "t": 101.0
+ },
+ {
+  "type": "death",
+  "name": "Gemma",
+  "role": "citizen",
+  "how": "vote",
+  "t": 101.0
+ },
+ {
+  "type": "gm",
+  "text": "Gemma was voted out and revealed as a citizen. Gemma's last words were about snacks, which is about as much as anyone got out of her.",
+  "t": 104.8
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 104.8
+ }
+]

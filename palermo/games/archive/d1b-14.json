@@ -1,0 +1,610 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "citizen",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "officer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "doctor",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": true
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, and Terra, and nobody knows who the killers are.",
+  "t": 3.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i hope nobody notices i'm just here for the free snacks.",
+  "t": 5.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I\u2019m trying to think of one real thing I fixed this week.",
+  "t": 7.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I need to sound relaxed.",
+  "t": 7.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need to stay unremarkable.",
+  "t": 8.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Nothing to analyze yet, just small talk before the real game starts.",
+  "t": 9.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is my killer, and I need to keep the table off me while I push Terra gently.",
+  "t": 13.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "My basil plant is somehow still alive despite my complete lack of a green thumb.",
+  "why": "introduces themselves",
+  "t": 13.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Ate a cold slice of pizza for lunch. Nothing fancy, just fast and greasy, which is how I like it.",
+  "why": "introduces themselves",
+  "t": 13.9
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i took a wrong turn and ended up in a circus.",
+  "why": "introduces themselves",
+  "t": 13.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I like my coffee strong, with a little milk.",
+  "why": "introduces themselves",
+  "t": 13.9
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I fixed a loose drawer handle this week.",
+  "why": "introduces themselves",
+  "t": 13.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m having black coffee tonight.",
+  "why": "introduces themselves",
+  "t": 13.9
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 13.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "nobody has said anything useful yet.",
+  "t": 14.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra's a killer, so I need the other one, and Gemma's circus line feels like a dodge.",
+  "t": 20.4
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "save",
+  "target": "Terra",
+  "t": 20.4
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Gemma",
+  "result": "NOT a killer",
+  "t": 20.4
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 passes quietly in Palermo, and the killers met in the dark while the officer was shown one of them. Nobody is out.",
+  "t": 23.4
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 23.4
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 23.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need the officer to show themselves without looking pushed.",
+  "t": 26.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna mentioned fixing a loose drawer handle.",
+  "level": 1,
+  "t": 26.8
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Luna, why did you volunteer the drawer story?",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 26.8
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 26.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra\u2019s question feels like a small push, but there\u2019s not enough to call her a killer.",
+  "t": 30.5
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra questioned my drawer story.",
+  "level": 1,
+  "t": 30.5
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Terra, I mentioned the drawer because it was a plain thing from my week; what made it stand out to you?",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 30.5
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 30.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is the one I'm pushing, and that drawer question looked like a shove, not a real question.",
+  "t": 38.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Day 1: Terra pressed Luna about her drawer line and gave a coffee line that echoed Sol's.",
+  "level": 1,
+  "t": 38.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Terra, why'd you go after Luna over a drawer? Nah, that's weird. And \"black coffee tonight\" right after Sol's coffee line? Feels copied.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 38.3
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 38.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Terra is acting awfully defensive about a simple drawer.",
+  "t": 40.7
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "terra is pushing luna early.",
+  "level": 1,
+  "t": 40.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "luna, why'd you volunteer the drawer story?\nwait, terra, why are you so obsessed with a handle?\nis anyone actually paying attention to haiku saying you sounded \"copied\"?",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 40.7
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 40.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma is spreading attention across everyone.",
+  "t": 44.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pushed Terra over the coffee line.",
+  "level": 2,
+  "t": 44.5
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku may be right about Terra copying Sol, but Gemma repeating Terra\u2019s question feels like easy pressure.",
+  "t": 44.6
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku pointed out Terra\u2019s black coffee followed Sol\u2019s coffee comment.",
+  "level": 2,
+  "t": 44.6
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Gemma, I already answered the drawer question; the coffee match between Sol and Terra is the detail I\u2019d watch.",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 44.6
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 44.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I asked once; Haiku\u2019s coffee link is a thinner read than a vote case.",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 44.6
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 44.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra dodged the actual question twice and just waved off Haiku's point instead of answering it.",
+  "t": 51.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra deflected Haiku's \"copied coffee line\" point by calling it a \"thinner read\" instead of addressing it.",
+  "level": 1,
+  "t": 51.1
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Terra, you still haven't said why Luna's drawer story bothered you specifically. That's the real question.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 51.1
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 51.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra is drawing heat; I should shift attention without defending them.",
+  "t": 55.5
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma repeated Terra\u2019s question after Luna answered it.",
+  "level": 2,
+  "t": 55.5
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Gemma, why did you repeat Terra\u2019s drawer question after Luna answered it?",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 55.5
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 55.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "terra is definitely acting suspicious by picking fights over nothing.",
+  "t": 57.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku jumped on me fastest and keeps the coffee link alive.",
+  "t": 60.6
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pushed the coffee connection between Sol and Terra.",
+  "level": 2,
+  "t": 60.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i vote terra because you're acting way too aggressive over a drawer handle.",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 60.6
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 60.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I vote Haiku; they turned two casual coffee comments into a case.",
+  "why": "last word before the vote",
+  "reply_to": "Sol",
+  "t": 60.6
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 60.6
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra looks exposed, and joining the vote could keep me safe.",
+  "t": 64.7
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet pressed Terra to explain the drawer question.",
+  "level": 2,
+  "t": 64.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra\u2019s drawer push feels flimsy, but Gemma repeated it after I answered.",
+  "t": 65.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra called Haiku\u2019s coffee link too thin, then voted Haiku over it.",
+  "level": 2,
+  "t": 65.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is driving the easiest case against me.",
+  "t": 65.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna highlighted the Sol and Terra coffee connection.",
+  "level": 2,
+  "t": 65.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra dodged the drawer question twice and now flipped the vote onto Haiku to escape it.",
+  "t": 67.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra counter-voted Haiku right after dodging the drawer question twice, classic deflection pattern.",
+  "level": 2,
+  "t": 67.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra pushed Luna, copied Sol's coffee line, and now votes me for calling it out, so Terra goes.",
+  "t": 76.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra voted Haiku right after Haiku flagged the coffee echo, which looks like retaliation.",
+  "level": 2,
+  "t": 76.1
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Terra",
+    "Still never explained why the drawer bothered you, just called it thinner and pivoted to counter-voting Haiku."
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "Went after Luna's drawer, copied Sol's coffee, then voted me the second I called it out. Nah, that's the play."
+   ],
+   [
+    "Gemma",
+    "Terra",
+    "You are making a massive deal out of a drawer handle."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "You pressed Luna over the drawer, then never explained what bothered you."
+   ],
+   [
+    "Luna",
+    "Gemma",
+    "You repeated Terra\u2019s drawer question after I had already answered it."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "You made a case from two unrelated coffee comments before anyone had voted."
+   ]
+  ],
+  "t": 76.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku may be the officer; Sol needs them gone tonight.",
+  "t": 81.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Terra claimed Citizen after being voted out.",
+  "level": 3,
+  "t": 81.4
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I was a Citizen. Haiku built a weak case and dragged everyone here.",
+  "why": "last words",
+  "t": 81.4
+ },
+ {
+  "type": "death",
+  "name": "Terra",
+  "role": "killer",
+  "how": "vote",
+  "t": 81.4
+ },
+ {
+  "type": "gm",
+  "text": "A new day dawns in Palermo. The town votes Terra out, and Terra was one of the killers.",
+  "t": 84.8
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 84.8
+ }
+]

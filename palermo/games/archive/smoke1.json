@@ -1,0 +1,1166 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": true,
+  "hide_night": false,
+  "hide_vote": false,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "citizen",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "officer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "killer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": true
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "doctor",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "citizen",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   },
+   {
+    "name": "Opus",
+    "model": "claude:opus",
+    "role": "citizen",
+    "seat": 6,
+    "tagline": "The Veteran",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Seven players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra, Opus. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i am going to enjoy watching them trip over their own feet while we act like innocent bystanders.",
+  "t": 2.1
+ },
+ {
+  "type": "whisper",
+  "name": "Gemma",
+  "to": "Sol",
+  "text": "sol, we play quiet today and let someone else stumble into the light tomorrow.",
+  "t": 2.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's the killer, so I'm checking someone new and I'm not waiting around.",
+  "t": 4.6
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma is exposed if the officer speaks, so I need room to shift.",
+  "t": 7.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma wants us both quiet on Day 1.",
+  "level": 2,
+  "t": 7.0
+ },
+ {
+  "type": "whisper",
+  "name": "Sol",
+  "to": "Gemma",
+  "text": "I\u2019m good with quiet; let\u2019s see where the room goes.",
+  "t": 7.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no clue who is dangerous yet, so I\u2019ll protect myself.",
+  "t": 8.9
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Night 1 has given me no information.",
+  "level": 1,
+  "t": 8.9
+ },
+ {
+  "type": "night_action",
+  "name": "Luna",
+  "action": "save",
+  "target": "Luna",
+  "t": 8.9
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Sol",
+  "result": "a KILLER",
+  "t": 8.9
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 8.9
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 8.9
+ },
+ {
+  "type": "clock",
+  "left": 30,
+  "total": 30,
+  "seconds": 10,
+  "t": 8.9
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no proof yet, and a friendly tone would make me more suspicious.",
+  "t": 13.5
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I have no read yet; I want to hear who is ready to name a target.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 13.5
+ },
+ {
+  "type": "clock",
+  "left": 29,
+  "total": 30,
+  "seconds": 10,
+  "t": 13.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I want the first confident push to own it.",
+  "t": 18.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna says she has no read yet.",
+  "level": 1,
+  "t": 18.4
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m listening; early certainty matters more than a random name.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "t": 18.4
+ },
+ {
+  "type": "clock",
+  "left": 28,
+  "total": 30,
+  "seconds": 10,
+  "t": 18.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Day one, no info yet, so I should watch for early claims rather than push a name.",
+  "t": 24.6
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna and Terra both want names before committing, neither has claimed a role yet.",
+  "level": 1,
+  "t": 24.6
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I have nothing solid yet either; if anyone is officer or doctor, now's the time to start laying groundwork quietly\u2026",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 24.6
+ },
+ {
+  "type": "clock",
+  "left": 27,
+  "total": 30,
+  "seconds": 10,
+  "t": 24.6
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "I have nothing but I can set the frame, and the \"officer stay quiet\" line smells wrong to me.",
+  "t": 34.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Sonnet opened by asking officer/doctor to work \"quietly\" \u2014 killer-friendly framing worth remembering.",
+  "level": 2,
+  "t": 34.0
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "I've played this more than anyone here, and the pattern is always the same: a quiet officer dies with his\u2026",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "lean": "Sonnet",
+  "t": 34.0
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 30,
+  "seconds": 10,
+  "t": 34.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I want to stay off the officer\u2019s radar and keep Gemma safe.",
+  "t": 40.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m wary of picking a target before we have a real claim to weigh.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 40.9
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 30,
+  "seconds": 10,
+  "t": 40.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm the officer, I have two killers in hand, and Sonnet and Opus are steering us toward a quiet officer, so I'm done waiting.",
+  "t": 54.7
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Haiku claims officer. Night 1 check: Sol is KILLER. Start of game: Gemma is KILLER.",
+  "level": 3,
+  "t": 54.7
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm the officer. Sol is a killer, I checked him last night. Gemma is a killer too, I was shown her at the start. Vote Sol now.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "lean": "Sol",
+  "claim": "officer",
+  "t": 54.7
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 30,
+  "seconds": 10,
+  "t": 54.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku has both of us; I need to make his claim look rushed.",
+  "t": 64.3
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku claims officer and named both Sol and Gemma as killers.",
+  "level": 3,
+  "t": 64.3
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m not a killer. That\u2019s a lot of certainty on day one.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 64.3
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 30,
+  "seconds": 10,
+  "t": 64.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is trying a bit too hard with that dramatic reveal.",
+  "t": 66.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku claims to be officer and has already named two killers.",
+  "level": 2,
+  "t": 66.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is lying. i am just a citizen.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 66.2
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 30,
+  "seconds": 10,
+  "t": 66.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is a killer I was shown on the first night, and she's calling me a liar to kill my credibility before I can name her.",
+  "t": 73.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma calls me a liar on day 1 with no proof, and Sol denies being a killer without any claim to back it up.",
+  "level": 2,
+  "t": 73.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is my fellow killer and she's trying to get me voted out before I can name her partner, so I'll be loud about Sol and hope the table follows.",
+  "t": 78.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma calls Haiku a liar on day 1 and says she is a citizen, which contradicts the start-of-game reveal the officer saw.",
+  "level": 2,
+  "t": 78.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you're a killer and you know it. Sol is the one I checked. Vote Sol, that's my whole read.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Sol",
+  "reply_to": "Gemma",
+  "t": 78.1
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 30,
+  "seconds": 10,
+  "t": 78.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is far too eager to be the hero and it's embarrassing.",
+  "t": 80.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku claims both of his checks were killers on day one;",
+  "level": 3,
+  "t": 80.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is lying through his teeth; he's just trying to buy himself safety by throwing us under the bus.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 80.6
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 30,
+  "seconds": 10,
+  "t": 80.6
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I hear the claim, but I can\u2019t back a vote on myself. Why Sol first?",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 87.1
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 30,
+  "seconds": 10,
+  "t": 87.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is a killer I was shown at the start, and she is scrambling to paint me as the liar, so I want Sol out now.",
+  "t": 91.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma is the killer I was shown at the start, and she has now called me a liar twice on day 1.",
+  "level": 3,
+  "t": 91.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you were shown to me at the start as a killer, and you're still pretending to be a citizen.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Sol",
+  "reply_to": "Gemma",
+  "t": 91.0
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 30,
+  "seconds": 10,
+  "t": 91.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is trying way too hard and it's embarrassing.",
+  "t": 93.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is definitely lying. he's claiming two kills on day one? that's a reach.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 93.6
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 30,
+  "seconds": 10,
+  "t": 93.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku could be telling the truth, but two confident claims make me uneasy.",
+  "t": 99.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku claims Gemma was shown as a killer and says he checked Sol as a killer.",
+  "level": 3,
+  "t": 99.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m leaning Haiku; Gemma\u2019s denial is weak, but I don\u2019t want to trust a double claim without proof.",
+  "why": "moves on",
+  "slot": "moves on",
+  "lean": "Haiku",
+  "t": 99.1
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 30,
+  "seconds": 10,
+  "t": 99.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Luna is wavering on me, and Gemma's \"citizen\" denial is the lie that matters, so I need to pull the table back to her.",
+  "t": 103.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Luna, fair doubt.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Sol",
+  "reply_to": "Luna",
+  "t": 103.0
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 30,
+  "seconds": 10,
+  "t": 103.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is incredibly aggressive for a first day, but he is actually telling the truth.",
+  "t": 105.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku claims two killers on day one which is a bold move for an officer.",
+  "level": 3,
+  "t": 105.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is desperate and making up things to look powerful. i am a citizen.",
+  "why": "answers Haiku",
+  "slot": "answers Luna",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 105.2
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 30,
+  "seconds": 10,
+  "t": 105.2
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku naming me makes his claim feel even less safe.",
+  "t": 110.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku named Luna as a killer.",
+  "level": 2,
+  "t": 110.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m the doctor, and I protected myself last night; Haiku\u2019s claim still doesn\u2019t add up.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 110.1
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 30,
+  "seconds": 10,
+  "t": 110.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna claims doctor and says she protected herself last night, so there is a second claim on the table now.",
+  "level": 2,
+  "t": 118.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is the one I was shown, and she is now pointing the table at me, so I am going to push her.",
+  "t": 127.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma called me a liar within one line of my claim, before anyone asked her anything.",
+  "level": 2,
+  "t": 127.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you called me a liar before I finished my first line.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 127.1
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 30,
+  "seconds": 10,
+  "t": 127.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is absolutely losing it with those claims.",
+  "t": 129.9
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is playing a dangerous game of fiction. i'm a citizen and he's clearly bluffing.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 129.9
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 30,
+  "seconds": 10,
+  "t": 129.9
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Lynching the one player who gave us real information is how towns lose by day three.",
+  "t": 144.4
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Luna claimed doctor (self-protect night 1) only after she had already leaned Haiku \u2014 timing props up the anti-officer push.",
+  "level": 2,
+  "t": 144.4
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Voting the officer claim teaches us nothing we can use \u2014 we flip a card and still don't know who\u2026",
+  "why": "moves on",
+  "slot": "moves on",
+  "lean": "Sol",
+  "t": 144.4
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 30,
+  "seconds": 10,
+  "t": 144.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku\u2019s specific two-name claim is stronger than Luna\u2019s late doctor reveal.",
+  "t": 149.6
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku claims officer, with Gemma shown as killer and Sol checked as killer.",
+  "level": 3,
+  "t": 149.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma just repeats \"liar\" with zero counter-logic, that's weaker than Sol's calm pushback.",
+  "t": 155.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna now claims doctor, protected self night 1; earlier she said she wanted names before committing, that's gone.",
+  "level": 2,
+  "t": 155.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gemma's only defense is calling Haiku a liar four times with nothing new each time; that's thin.",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "lean": "Sol",
+  "reply_to": "Gemma",
+  "t": 155.7
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 30,
+  "seconds": 10,
+  "t": 155.7
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I believe Haiku for now; Gemma was named before Sol had any chance to react.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Gemma",
+  "t": 155.7
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 30,
+  "seconds": 10,
+  "t": 155.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is incredibly brave or incredibly stupid to name us both so early.",
+  "t": 157.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "sonnet is just repeating haiku's hype; i'm clearly a citizen and haiku is a fraud.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Haiku",
+  "reply_to": "Sonnet",
+  "t": 157.6
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 30,
+  "seconds": 10,
+  "t": 157.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is the only one who has actually looked at Gemma's defense, and Gemma is the killer I was shown.",
+  "t": 165.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, I'm not guessing.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Gemma",
+  "reply_to": "Sonnet",
+  "t": 165.9
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 30,
+  "seconds": 10,
+  "t": 165.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma repeating \"I'm a citizen\" with zero new content is weaker than a specific double-claim from Haiku.",
+  "t": 171.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma's only response pattern is repeated flat denial with no counter-detail against Haiku's specific claim.",
+  "level": 2,
+  "t": 171.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I'm just pointing out Gemma offers no new argument, only denial; that's an observation, not hype.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 171.5
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 30,
+  "seconds": 10,
+  "t": 171.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "sonnet, you're just enabling haiku's frantic delusion. haiku is a fake officer trying to clear himself.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Haiku",
+  "reply_to": "Sonnet",
+  "t": 173.8
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 30,
+  "seconds": 10,
+  "t": 173.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's deflecting onto me instead of answering Haiku's claim, that's telling.",
+  "t": 179.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma pivoted to attacking Sonnet directly instead of addressing Haiku's specific claim again, no new content.",
+  "level": 2,
+  "t": 179.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Calling it hype isn't a counter; still waiting for Gemma to give any detail, not just denial.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 179.4
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 30,
+  "seconds": 10,
+  "t": 179.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is the killer I was shown, and she's been screaming \"liar\" at me since the first line; I want her out before she drags Sol and me down together.",
+  "t": 185.6
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna claims doctor and says she protected herself last night, which means she has not named anyone; Gemma has denied being a killer without any proof, and Sol has denied it too.",
+  "level": 3,
+  "t": 185.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you were the one I was shown at the start, and you still haven't said a single thing that\u2026",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 185.6
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 30,
+  "seconds": 10,
+  "t": 185.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is actually playing the role too well, which is hilarious and terrifying.",
+  "t": 187.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is a desperate fraud fishing for a vote. sol is just a pawn.",
+  "why": "answers Haiku",
+  "slot": "answers Sonnet",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 187.8
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 30,
+  "seconds": 10,
+  "t": 187.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "If I move onto Gemma, I might survive the vote.",
+  "t": 194.2
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna claims doctor and says she protected herself on night one.",
+  "level": 3,
+  "t": 194.2
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I won\u2019t vote for myself, and Gemma\u2019s defense hasn\u2019t given me a reason to trust her.",
+  "why": "last word before the vote",
+  "slot": "last word before the vote",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 194.2
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 30,
+  "seconds": 10,
+  "t": 194.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is being much too loud for a man who wants to survive.",
+  "t": 196.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "luna claims doctor and says she protected herself last night.",
+  "level": 3,
+  "t": 196.2
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma is lost; I need to survive the vote.",
+  "t": 199.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra said he believes Haiku\u2019s officer claim.",
+  "level": 3,
+  "t": 199.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku naming two killers makes him more likely the real officer, and I shouldn\u2019t let my suspicion of him outweigh that.",
+  "t": 199.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku\u2019s immediate, specific double accusation is credible enough to test.",
+  "t": 199.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma never once engaged with the specific claim, that's the loudest tell on the table.",
+  "t": 200.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma repeated \"haiku is lying/fraud/desperate\" five separate times without ever addressing being \"shown at the start\" specifically.",
+  "level": 2,
+  "t": 200.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "The killer I was shown on night zero is the one everyone is already leaning toward, so I'm switching my vote to her.",
+  "t": 209.7
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra and Sonnet now both lean toward backing my claim, while Gemma has only ever answered with \"Haiku is lying.",
+  "level": 2,
+  "t": 209.7
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Haiku's double name is probably real, and the shown killer screaming \"liar\" five times with no content is the oldest tell there is.",
+  "t": 221.4
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Gemma attacked the officer claim before Haiku had finished naming her, and never offered anything but denial.",
+  "level": 2,
+  "t": 221.4
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Gemma",
+    "Four repetitions of flat denial with zero new detail against a specific double-claim."
+   ],
+   [
+    "Haiku",
+    "Gemma",
+    "She's the killer I was shown at the start, most of the table already leans her way, and I'd rather be right with them than stubborn on Sol."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "claiming two killers on day one is an incredibly clumsy way to play officer."
+   ],
+   [
+    "Sol",
+    "Gemma",
+    "I stayed with my lean because her defense never went beyond calling the claim a lie."
+   ],
+   [
+    "Luna",
+    "Gemma",
+    "Her repeated denials add no detail against the officer\u2019s specific claim."
+   ],
+   [
+    "Terra",
+    "Gemma",
+    "Her defense has been only repeated denial, while the claim named her before the argument formed."
+   ],
+   [
+    "Opus",
+    "Gemma",
+    "I still say flipping the officer claim is wasted, so I move to the named player the table already has pressure on \u2014 five rounds of \"he's lying\" with not one new detail is how the shown killer always plays it."
+   ]
+  ],
+  "weights": {},
+  "t": 221.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "they fell for the most basic trap and i am still going to win.",
+  "t": 224.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku claims he checked sol last night and is officer",
+  "level": 3,
+  "t": 224.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i am a simple citizen being persecuted by a delusional officer.",
+  "why": "last words",
+  "t": 224.6
+ },
+ {
+  "type": "death",
+  "name": "Gemma",
+  "role": "killer",
+  "how": "vote",
+  "t": 224.6
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Gemma is out. Gemma shows the card: killer.",
+  "t": 224.6
+ },
+ {
+  "type": "gm",
+  "text": "Gemma's out, and she was the killer. Nobody saw that coming, except everyone.",
+  "aside": true,
+  "t": 227.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "they actually fell for it and thought a single denial would save me, how pathetic.",
+  "t": 231.0
+ },
+ {
+  "type": "ghost",
+  "name": "Gemma",
+  "text": "i am a simple citizen being persecuted by a delusional officer.",
+  "t": 231.0
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 231.0
+ }
+]

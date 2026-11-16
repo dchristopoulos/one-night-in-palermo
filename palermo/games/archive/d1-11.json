@@ -1,0 +1,601 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "officer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "killer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": true
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "killer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "doctor",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, and Terra, and nobody knows who the killers are.",
+  "t": 3.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I hope Haiku doesn't mess this up for us.",
+  "t": 5.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I slept lightly; six people at a table makes me suspicious already.",
+  "t": 7.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I should stay quiet and watch.",
+  "t": 7.3
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I want to see how everyone talks before I settle on anyone.",
+  "t": 8.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "This chair wobbles a little, I need to focus on who's acting off.",
+  "t": 8.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm a killer, so I need to look like a harmless, bored townsperson and not stand out.",
+  "t": 12.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "This chair's a bit creaky, but it'll do for a long night.",
+  "why": "introduces themselves",
+  "t": 12.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Coffee, black, no sugar. Tea's for people who are waiting for something. Anyway, let's get moving.",
+  "why": "introduces themselves",
+  "t": 12.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i took the scenic route through a garlic field and now i smell weird.",
+  "why": "introduces themselves",
+  "t": 12.4
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I watched a cooking show last night, and the burnt cake still looked pretty good.",
+  "why": "introduces themselves",
+  "t": 12.4
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I slept fine, thanks.",
+  "why": "introduces themselves",
+  "t": 12.4
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I ate lentil soup and bread today.",
+  "why": "introduces themselves",
+  "t": 12.4
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 12.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I should protect the player most likely to guide town tomorrow.",
+  "t": 16.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pushed the group to start quickly.",
+  "level": 1,
+  "t": 16.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I need to find the hidden killer among the other four, so I'll start checking them one by one.",
+  "t": 18.4
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "save",
+  "target": "Haiku",
+  "t": 18.4
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "check",
+  "target": "Sol",
+  "result": "NOT a killer",
+  "t": 18.4
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 passes quietly in Palermo. The killers met in the dark, the officer was shown one of them, and nobody is out.",
+  "t": 21.3
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 21.3
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 21.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Haiku is the obvious target for the officer so i need to distance myself immediately.",
+  "t": 23.3
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is being way too much of a main character with that coffee talk. \ndid anyone actually hear anything useful during the night?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 23.3
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 23.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol's cake line was a dodge, and I want to see how Sol handles being pushed.",
+  "t": 33.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol's opening line was a cooking show and a burnt cake, with no real info.",
+  "level": 1,
+  "t": 33.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, nobody said anything useful. Sol, burnt cake still looking good? Why would you say that on day one?",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 33.4
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 33.4
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku's question feels thin, but I have no solid read yet.",
+  "t": 37.9
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku questioned my opening joke as suspicious.",
+  "level": 1,
+  "t": 37.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Haiku, what about my cake comment makes you suspicious?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 37.9
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 37.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku jumping on Sol's throwaway cake line feels like deflection, classic killer move to redirect heat.",
+  "t": 46.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku deflected onto Sol immediately after Gemma called Haiku out, picking a trivial line to attack.",
+  "level": 2,
+  "t": 46.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Haiku, you picked a weirdly small thing to attack Sol over. Why go after a cake comment this hard on day one?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 46.5
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 46.5
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku feels suspicious for jumping on Sol\u2019s harmless cake comment.",
+  "t": 50.8
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku questioned Sol over the burnt cake comment.",
+  "level": 2,
+  "t": 50.8
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Haiku, why did Sol\u2019s burnt cake comment bother you enough to single him out?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 50.9
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 50.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku pushed Sol over nothing, then ignored the pressure.",
+  "t": 56.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku singled out Sol over the burnt cake comment, then several players challenged it.",
+  "level": 2,
+  "t": 56.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Haiku, why did the cake comment need an accusation?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 56.3
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 56.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is being targeted by everyone for the cake comment, so i should probably let them finish him off.",
+  "t": 58.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "everyone is jumping on haiku for a cake comment. is everyone a professional food critic now? sonnet is right, he's being super aggressive for no reason.",
+  "why": "takes the floor",
+  "t": 58.6
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 58.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet jumped on me fast and Gemma's defense helps, so I'll push Sonnet out.",
+  "t": 66.7
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma opened on my coffee line, and Sonnet piled on right after with the cake attack.",
+  "level": 1,
+  "t": 66.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku deflected hard onto Sol, textbook killer move, I'm confident here.",
+  "t": 74.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, you piled on me before anyone even asked why. Voting Sonnet.",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 74.3
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 74.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I'm voting Haiku. That deflection onto Sol's cake comment was way too forced for day one.",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 74.3
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 74.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet hit me first, so Sonnet is the cleanest vote, and Gemma stays out of it.",
+  "t": 83.5
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet's opening line was only about a creaky chair, with no real info.",
+  "level": 1,
+  "t": 83.5
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, your only day-one line was a chair comment, and you still piled on me before anyone asked. Still on you.",
+  "why": "last word before the vote",
+  "reply_to": "Sonnet",
+  "t": 83.5
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 83.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is getting scorched so i might as well join the bandwagon to look clean.",
+  "t": 85.3
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku is being targeted by sonnet and luna.",
+  "level": 2,
+  "t": 85.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku pushed too hard over a harmless cake comment, then snapped at Sonnet for doing the same.",
+  "t": 87.7
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma said Haiku was being aggressive, then defended the group for piling on him.",
+  "level": 2,
+  "t": 87.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku looks defensive, but I have little to go on.",
+  "t": 88.2
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet, Luna, and Terra all questioned Haiku\u2019s cake accusation.",
+  "level": 2,
+  "t": 88.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku\u2019s accusation felt forced, then he turned on Sonnet.",
+  "t": 88.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku voted Sonnet after several players questioned his push on Sol.",
+  "level": 2,
+  "t": 88.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku's deflection onto me is just more of the same pattern, no reason to doubt my read.",
+  "t": 88.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is the loudest push against me, so voting them keeps my own vote clean and the room calm.",
+  "t": 96.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet and Terra both joined the Haiku pile-on in the first round.",
+  "level": 1,
+  "t": 96.3
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "Pivoting the whole fight onto my chair comment instead of answering about the cake deflection is just dodging again."
+   ],
+   [
+    "Haiku",
+    "Sonnet",
+    "They piled on me before anyone asked why, and their only day-one line was a chair comment."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "he's being way too aggressive over a cake comment."
+   ],
+   [
+    "Sol",
+    "Haiku",
+    "You turned several questions about your cake accusation into a push against Sonnet."
+   ],
+   [
+    "Luna",
+    "Haiku",
+    "The cake comment was harmless, but you turned it into an accusation and then blamed Sonnet for questioning you."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "You made Sol\u2019s harmless cake comment into the first accusation."
+   ]
+  ],
+  "t": 96.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's still hidden, so I'll push the town toward Sonnet and Terra before I'm gone.",
+  "t": 107.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Fine, I'm a killer. Watch Sonnet and Terra. They piled on fast and never said why.",
+  "why": "last words",
+  "t": 107.8
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "killer",
+  "how": "vote",
+  "t": 107.8
+ },
+ {
+  "type": "gm",
+  "text": "A new day dawns in Palermo, and the village votes Haiku out. Haiku was a killer, and the town is left with five players.",
+  "t": 110.8
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 110.8
+ }
+]

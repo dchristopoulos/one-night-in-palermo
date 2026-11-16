@@ -1,0 +1,654 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "doctor",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "citizen",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "officer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": true
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i have to figure out who the second killer is without making it too obvious.",
+  "t": 2.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I hope the weekend stays quiet and gives me time to rest.",
+  "t": 4.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need to look ordinary.",
+  "t": 4.2
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I want to sound relaxed.",
+  "t": 4.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Six left, no info yet, just need to blend in and watch faces.",
+  "t": 5.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Nobody has said anything useful yet, so I'll just wing it and see who gets nervous.",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "My basil plant keeps dying no matter how much I water it, honestly it's a mystery.",
+  "why": "introduces themselves",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Ate a burnt toast this morning, nah, don't ask. Who's talking first here?",
+  "why": "introduces themselves",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "my fern is dying and it's definitely not my fault.",
+  "why": "introduces themselves",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "The bus was slow, but I got here right on time.",
+  "why": "introduces themselves",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m hoping for a slow weekend with good food and time to relax.",
+  "why": "introduces themselves",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I ate yogurt and fruit today.",
+  "why": "introduces themselves",
+  "t": 10.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 10.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i need to find the other one before they kill someone.",
+  "t": 11.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "No info yet, just small talk, I'll protect myself since nobody stands out as a target.",
+  "t": 15.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma and I both made plant-dying small talk, odd coincidence to watch",
+  "level": 1,
+  "t": 15.8
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 15.8
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "check",
+  "target": "Haiku",
+  "result": "NOT a killer",
+  "t": 15.8
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 15.8
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 15.8
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 15.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet and Gemma both talk about plants, and Terra's line is so flat it sounds rehearsed, but it's day one so I have no real proof.",
+  "t": 20.5
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Day 1: Sonnet opened with a plant story and Gemma copied it right after, which could be coordination or nothing.",
+  "level": 1,
+  "t": 20.5
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, everyone's just chatting about food and plants. Terra, your line was super short. Why so dry? Sonnet, you started on plants and Gemma matched you right away. Weird.",
+  "why": "takes the floor",
+  "t": 20.5
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 20.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is looking for trouble and i've already cleared them.",
+  "t": 22.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is being super intense for a monday morning.\ndid you really just attack terra for being \"dry\"?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 22.5
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 22.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is deflecting by attacking me, and Sonnet and Gemma matching on plants still smells off.",
+  "t": 26.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma called me intense to deflect, right after I pressed on the Sonnet and Gemma plant match.",
+  "level": 1,
+  "t": 26.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is pushing too fast, but Gemma\u2019s defense came instantly.",
+  "t": 27.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma immediately defended Terra after Haiku questioned Terra.",
+  "level": 2,
+  "t": 27.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's fern line and Sonnet's basil line are too similar, and Gemma's \"intense\" dodge makes me think Gemma's a killer.",
+  "t": 34.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma deflected my plant-match question by calling me intense, instead of answering it.",
+  "level": 1,
+  "t": 34.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you still haven't answered why you matched Sonnet's plant story. Sol, you're quiet, so talk. Who do you think is lying?",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 34.0
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 34.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Gemma, why defend me before I even answered Haiku?",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 34.0
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 34.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku's throwing accusations at three people at once without giving a real reason for any of them.",
+  "t": 40.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku deflected hard on day one, accusing four players without specifics.",
+  "level": 1,
+  "t": 40.8
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Haiku, you called out Terra, Sonnet, Gemma, and Sol all in two lines. That's a lot of fingers for day one.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 40.8
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 40.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku\u2019s pressure could draw attention away from me, but I need to watch who pushes back.",
+  "t": 48.1
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku pressed Terra, Gemma, and me; Sonnet called out how widely Haiku was pressing.",
+  "level": 2,
+  "t": 48.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Haiku, you pressed four people before anyone had a reason to lie. Who worries you most?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 48.1
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 48.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku feels like they\u2019re steering attention everywhere.",
+  "t": 54.7
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku questioned Terra, Sonnet, Gemma, and Sol.",
+  "level": 2,
+  "t": 54.7
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Haiku, you pressed four people before anyone gave you a reason to suspect them.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 54.7
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 54.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku\u2019s wide pressure gives me a safe vote without drawing attention to Terra.",
+  "t": 59.2
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna echoed my concern about Haiku\u2019s wide pressure.",
+  "level": 2,
+  "t": 59.2
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I vote Haiku. Pushing half the table this early gives us little to go on.",
+  "why": "takes the floor",
+  "t": 59.2
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 59.2
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku may be pushing too hard, but I don\u2019t have enough to trust Sol\u2019s quick vote either.",
+  "t": 62.7
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra questioned Gemma for defending her before Terra answered Haiku.",
+  "level": 2,
+  "t": 62.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku\u2019s pressure was broad, but Sonnet and Sol both noticed it independently, so I\u2019m less certain.",
+  "t": 68.4
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sol voted Haiku after Sonnet and Sol both questioned Haiku\u2019s broad pressure.",
+  "level": 2,
+  "t": 68.4
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Sol, what did Haiku say that made you choose Haiku over Gemma?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 68.4
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 68.4
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Luna wants me to explain my vote, and Haiku is still the easiest target.",
+  "t": 73.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna asked me to explain why I chose Haiku over Gemma.",
+  "level": 2,
+  "t": 73.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I vote Haiku. Luna, Haiku treated Gemma\u2019s plant story as suspicious without saying why it mattered.",
+  "why": "last word before the vote",
+  "reply_to": "Luna",
+  "t": 73.0
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 73.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is definitely trying too hard to stir the pot.",
+  "t": 75.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol and Luna both called out Haiku's aggression.",
+  "level": 1,
+  "t": 75.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol is exposed, so I should look separate from him.",
+  "t": 76.6
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet and Luna both called out Haiku for pressing four players early.",
+  "level": 2,
+  "t": 76.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sol repeats the same weak reason for targeting Haiku and seems set on that vote.",
+  "t": 77.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sol repeated his Haiku vote after Luna asked why he chose Haiku over Gemma.",
+  "level": 2,
+  "t": 77.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku is the easiest vote to hold, and Terra stays clear.",
+  "t": 77.7
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra questioned Gemma for defending her before she answered.",
+  "level": 2,
+  "t": 77.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku's scattershot accusations with zero follow-up reasoning is exactly deflection tactics, going with the group here.",
+  "t": 80.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol and Luna both pushed Haiku first, worth remembering if Haiku flips the vote later.",
+  "level": 2,
+  "t": 80.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma copied Sonnet's plant story and dodged the question, and that's the only thing here that smells off.",
+  "t": 86.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol and Luna both pushed me out with near-identical lines within minutes of each other, which could be coordination.",
+  "level": 2,
+  "t": 86.4
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "Pressed four different people without giving a single concrete reason for any of them."
+   ],
+   [
+    "Haiku",
+    "Gemma",
+    "Dodged my plant question twice and just called me intense instead of answering."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "You're pointing fingers at everyone before anyone has even done anything suspicious."
+   ],
+   [
+    "Sol",
+    "Haiku",
+    "The plant story became suspicious without any reason it mattered."
+   ],
+   [
+    "Luna",
+    "Sol",
+    "You backed the Haiku vote twice without explaining why Gemma\u2019s matching plant story seemed less suspicious."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "Haiku pushed four people before giving any real reason."
+   ]
+  ],
+  "t": 86.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol and Luna pushed me out together, so they're probably the killers.",
+  "t": 94.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma defended Terra before Terra answered any of my questions.",
+  "level": 2,
+  "t": 94.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm a citizen, not a killer. Sol and Luna pushed me fast with matching lines. Watch that pair.",
+  "why": "last words",
+  "t": 94.3
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "citizen",
+  "how": "vote",
+  "t": 94.3
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Haiku is out. Haiku shows the card: citizen.",
+  "t": 94.3
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 94.3
+ }
+]

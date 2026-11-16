@@ -1,0 +1,861 @@
+[
+ {
+  "type": "cast",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "doctor",
+    "seat": 0,
+    "tagline": "The Professor"
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:haiku",
+    "role": "killer",
+    "seat": 1,
+    "tagline": "The Hothead"
+   },
+   {
+    "name": "Gemma",
+    "model": "local:gemma-4-12b-it-qat",
+    "role": "officer",
+    "seat": 2,
+    "tagline": "The Gremlin"
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Politician"
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Paranoid"
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "citizen",
+    "seat": 5,
+    "tagline": "The Sweetheart"
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Six players slide into their chairs at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra. The night is thick with heat and uncertainty. None of them know who the killer is.",
+  "t": 6.6
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Everyone is smiling so far; that is how these things begin.",
+  "t": 11.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i wonder if anyone actually knows how to sit in a chair properly. everyone looks way too intense for a tuesday.",
+  "t": 12.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "No votes to count yet. Let them speak first, then see who tries to steer the room.",
+  "t": 12.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Six unknowns, one of them a killer, and I'm sitting on the one piece of leverage that could save a life tonight if I use it wisely.",
+  "t": 12.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Six chairs, no facts. I\u2019m already watching who waits for someone else to speak first.",
+  "t": 15.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I've handled worse crowds in my bar. One of these five's going down\u2014I just need to make sure it's not me.",
+  "t": 36.1
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sonnet. I spent decades grading undergraduates for sloppy reasoning, so forgive me if I hold this table to the same standard tonight.",
+  "why": "introduces themselves",
+  "t": 36.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm Haiku, I own a bar where I read people for a living. You're all pretty easy to read so far, which honestly worries me.",
+  "why": "introduces themselves",
+  "t": 36.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "hey guys, i'm gemma. i'm just here to see who folds first and if anyone actually has a plan or is just winging it like me.",
+  "why": "introduces themselves",
+  "t": 36.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Good to meet you all. Sonnet, you seem ready to start us off; what caught your eye as we sat down?",
+  "why": "introduces themselves",
+  "t": 36.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m Luna. Let\u2019s hear from everyone, especially whoever plans to sit quietly and let the rest of us do the work.",
+  "why": "introduces themselves",
+  "t": 36.1
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Hello, everyone. I shall listen carefully before I decide whom to trust, if that is all right.",
+  "why": "introduces themselves",
+  "t": 36.1
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 36.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "everyone is being so polite it's making my teeth ache. i need to find the person who isn't trying too hard to be liked.",
+  "t": 41.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is acting like a professor, very \"i'm the smartest person here\" energy.",
+  "level": 1,
+  "t": 41.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "No facts yet, just posturing. Sol baited me immediately after I spoke, that's worth filing away. I'll protect myself tonight since I'm the obvious early target for anyone annoyed by my opening remark.",
+  "t": 42.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol addressed me first, directly, right after my opening line; mild attention-seeking or genuine curiosity, unclear which.",
+  "level": 1,
+  "t": 42.2
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "kill",
+  "target": "Gemma",
+  "t": 126.1
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 126.1
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "check",
+  "target": "Sonnet",
+  "result": "NOT the killer",
+  "t": 126.1
+ },
+ {
+  "type": "death",
+  "name": "Gemma",
+  "role": "officer",
+  "how": "night",
+  "t": 126.1
+ },
+ {
+  "type": "gm",
+  "text": "Gemma doesn't wake up. She was the officer. The killer's night work is done.",
+  "t": 134.6
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 134.6
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 6,
+  "seconds": 10,
+  "t": 134.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma gone already, and the officer's silence tonight means this killer struck fast and clean. I need to watch who performs confidence versus who earns it.",
+  "t": 147.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku opened by claiming to \"read people\" but offered zero specifics\u2014pure deflection, watch for this pattern again.",
+  "level": 2,
+  "t": 147.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol, what caught my eye was Haiku's opening: \"worries me\" after one sentence of small talk is a conclusion with no premises. One: that's not reading people, that's theater.",
+  "why": "hasn't spoken yet",
+  "t": 147.5
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 6,
+  "seconds": 10,
+  "t": 147.5
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 237.5
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Sonnet has given us a thread to pull, but one theatrical opening is thin evidence. I need Haiku to explain it and Terra to join the discussion.",
+  "t": 247.6
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet challenged Haiku\u2019s early claim that everyone was easy to read.",
+  "level": 2,
+  "t": 247.6
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Sonnet, fair point: Haiku\u2019s confidence came early. Haiku, what did you actually read, and about whom? Terra, you\u2019ve had time to listen now. Who seems most eager to steer us?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 327.6
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 6,
+  "seconds": 10,
+  "t": 327.6
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 327.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's silence tonight is the only hard data we have\u2014the killer struck the one player with a checking power, which is either very lucky for them or very telling about who feared being checked.",
+  "t": 339.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma (officer) killed night 1 \u2014 town lost its only verification role, nobody has claimed officer yet.",
+  "level": 2,
+  "t": 339.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol, two observations. One: Gemma's death removes our only verification tool, which means tonight's work rests entirely on contradiction-spotting. Two: Haiku still hasn't named a single person they \"read\"\u2014Haiku, who, specifically, and what did you observe?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 417.6
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 6,
+  "seconds": 10,
+  "t": 417.6
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 417.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sonnet keeps pressing Haiku, but the certainty is doing more work than the evidence. I\u2019m watching who turns a thin opening into a verdict.",
+  "t": 429.2
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sonnet pressed Haiku twice for specifics and framed the opening as theater.",
+  "level": 2,
+  "t": 429.2
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m voting Sonnet. Haiku\u2019s opener was vague, but Sonnet is driving the room toward a vote on that alone; I want to know why this pressure started so quickly.",
+  "why": "hasn't spoken yet",
+  "t": 429.2
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 6,
+  "seconds": 10,
+  "t": 429.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I dislike how quickly Sonnet turned a vague remark into a prosecution, but Luna\u2019s vote came before Haiku answered at all.",
+  "t": 439.7
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna and Terra voted Sonnet after Sonnet focused early pressure on Haiku.",
+  "level": 2,
+  "t": 439.7
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m voting Sonnet, I\u2019m sorry to say. He pressed Haiku hard on very little, then kept building the case before anyone else could speak.",
+  "why": "hasn't spoken yet",
+  "t": 439.7
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 6,
+  "seconds": 10,
+  "t": 439.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Two people pivoting instantly to punish the one asking real questions, while the actual dodge sits unanswered\u2014that's the tell, not Sonnet's tone.",
+  "t": 452.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna and Terra both pivoted fast to vote Sonnet for pressuring Haiku, deflecting from Haiku's unanswered claim\u2014watch this pairing.",
+  "level": 2,
+  "t": 452.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Luna, Terra, you're punishing the questioner, not the dodge. Haiku still hasn't named a single person they \"read\"\u2014I vote Haiku until that gap is closed.",
+  "why": "last word before the vote",
+  "reply_to": "Terra",
+  "t": 452.0
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 6,
+  "seconds": 10,
+  "t": 452.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sonnet says he\u2019s exposing Haiku\u2019s dodge, but he\u2019s the one who kept pressing and built the vote before the room had much to go on. Terra joined that push against him; I\u2019m watching how quickly this pattern formed.",
+  "t": 460.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra also voted Sonnet, while Sonnet voted Haiku.",
+  "level": 2,
+  "t": 460.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Luna and Terra have built a majority against Sonnet, but Haiku still owes the table an answer. I\u2019d rather cast my vote on the unanswered question.",
+  "t": 462.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna and Terra both voted Sonnet for pressing Haiku.",
+  "level": 2,
+  "t": 462.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Luna and Terra pivoted to Sonnet in lockstep without ever answering Sonnet's actual question\u2014that's the second time I've clocked that pairing moving together, and Haiku still hasn't named a soul.",
+  "t": 464.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna and Terra voted Sonnet in near-identical phrasing, both citing \"pressure\" rather than addressing Haiku's unanswered claim.",
+  "level": 2,
+  "t": 464.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sonnet is right that questions are not guilt, but he chose Haiku before anyone had truly settled in. I shall watch who benefits from that haste.",
+  "t": 465.6
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet pushed Haiku immediately after Gemma\u2019s death and called Haiku\u2019s opening \u201ctheater.\u201d",
+  "level": 2,
+  "t": 465.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet points at me the second I don't break. He's been running this table since we sat down.",
+  "t": 530.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna and Terra both voted Sonnet without prompting; pattern.",
+  "level": 2,
+  "t": 530.1
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "You still haven't named who you \"read\" or what you observed\u2014that silence is the real evidence tonight, not Sonnet's questions."
+   ],
+   [
+    "Haiku",
+    "Sonnet",
+    "You made accusations with no evidence, then pointed at me. That's not reading people, that's control."
+   ],
+   [
+    "Sol",
+    "Haiku",
+    "Luna and Terra, your concern about Sonnet\u2019s pace is fair, but Haiku still hasn\u2019t named anyone they claimed to read, so my vote is Haiku."
+   ],
+   [
+    "Luna",
+    "Sonnet",
+    "Sonnet, your repeated pressure on Haiku turned a vague opener into the whole case before we had enough to judge anyone."
+   ],
+   [
+    "Terra",
+    "Sonnet",
+    "I\u2019m keeping my vote on Sonnet because he turned Haiku\u2019s vague greeting into a full case before giving the room space to judge it."
+   ]
+  ],
+  "t": 530.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Predictable. The two who answered nothing get to erase the one who kept asking.",
+  "t": 541.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sonnet was the DOCTOR, protected self Night 1 (wasted, Gemma died instead).",
+  "level": 3,
+  "t": 541.2
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I was your doctor, wasting a shield on myself while Gemma died. Luna and Terra, your synchronized pivot was not instinct\u2014it was arithmetic.",
+  "why": "last words",
+  "t": 541.2
+ },
+ {
+  "type": "death",
+  "name": "Sonnet",
+  "role": "doctor",
+  "how": "vote",
+  "t": 541.2
+ },
+ {
+  "type": "gm",
+  "text": "Sonnet is voted out into the hot night. He was the doctor. The shield dies with him, and now the killer works without fear.",
+  "t": 550.2
+ },
+ {
+  "type": "phase",
+  "text": "Night 2",
+  "kind": "night",
+  "t": 550.2
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "kill",
+  "target": "Sol",
+  "t": 640.3
+ },
+ {
+  "type": "death",
+  "name": "Sol",
+  "role": "citizen",
+  "how": "night",
+  "t": 640.3
+ },
+ {
+  "type": "gm",
+  "text": "Sol doesn't wake up. He was the citizen. Another body on another hot night in Palermo.",
+  "t": 656.0
+ },
+ {
+  "type": "phase",
+  "text": "Day 2",
+  "kind": "day",
+  "t": 656.0
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 6,
+  "seconds": 10,
+  "t": 656.0
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 746.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sol\u2019s death leaves us three, and the killer chose a citizen who could still vote. I keep circling Sonnet\u2019s pressure on Haiku, but Terra\u2019s vote beside mine makes that pattern muddy.",
+  "t": 752.2
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sol was a citizen and was killed overnight.",
+  "level": 2,
+  "t": 752.2
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Haiku, Terra\u2014what changed your read after yesterday? Sonnet pushed Haiku twice, but I voted Sonnet too, so don\u2019t let me turn suspicion into evidence. I want each of you to name your strongest reason, plainly.",
+  "why": "takes the floor",
+  "t": 752.2
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 6,
+  "seconds": 10,
+  "t": 752.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna sounds fair, but fairness can be a very tidy coat to wear when only three of us remain.",
+  "t": 764.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna asked both remaining players to state their strongest reason after Sol\u2019s death.",
+  "level": 2,
+  "t": 764.4
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 842.2
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "My strongest reason is that Sonnet pressed Haiku before anyone had evidence, yet Haiku survived the night while Sol did not. I\u2019m sorry to say this, Luna, but I need you to explain why the killer would leave Haiku here if Sonnet\u2019s suspicion was right.",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 842.2
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 6,
+  "seconds": 10,
+  "t": 842.2
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra\u2019s question sounds neat, but it treats Sonnet\u2019s suspicion as proof. The killer could leave Haiku alive to make that exact argument.",
+  "t": 847.9
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra argues Haiku\u2019s survival makes Sonnet\u2019s suspicion less credible.",
+  "level": 2,
+  "t": 847.9
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 932.2
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Terra, Sonnet pushing Haiku doesn\u2019t clear you, and Haiku surviving doesn\u2019t settle anything. Sol was the citizen who died, so let\u2019s hear Haiku\u2019s strongest read before we turn Sonnet\u2019s vote into a verdict.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 932.2
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 6,
+  "seconds": 10,
+  "t": 932.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna is asking careful questions, but Haiku has given us nothing when it matters.",
+  "t": 940.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku did not answer Luna\u2019s request for a strongest read before the vote.",
+  "level": 2,
+  "t": 940.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m voting Haiku. Luna has pressed for clear reasons; Haiku\u2019s silence while the vote arrives is the stronger danger, I\u2019m sorry to say.",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 1022.3
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 6,
+  "seconds": 10,
+  "t": 1022.3
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 1022.3
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra is turning Haiku\u2019s silence into certainty, but Haiku hasn\u2019t answered yet. That timing matters; it still doesn\u2019t prove anything.",
+  "t": 1028.8
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra says she is voting Haiku, citing Haiku\u2019s silence and Sonnet\u2019s earlier pressure.",
+  "level": 2,
+  "t": 1028.8
+ },
+ {
+  "type": "pass",
+  "name": "Haiku",
+  "t": 1112.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m voting Haiku. Terra\u2019s case is mostly about Sonnet\u2019s suspicion and Haiku surviving the night, and neither settles Haiku\u2019s role. But Haiku\u2019s silence as the vote arrives leaves the biggest question unanswered.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 1112.3
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 6,
+  "seconds": 10,
+  "t": 1112.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I dislike ending a quiet person\u2019s game, but silence has a way of choosing for us.",
+  "t": 1120.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m voting Haiku. Luna asked for one plain strongest read, and Haiku gave us nothing while the vote came down; that is the only new fact we have, dear.",
+  "why": "last word before the vote",
+  "reply_to": "Luna",
+  "t": 1120.3
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 6,
+  "seconds": 10,
+  "t": 1120.3
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "The silence hardened into a pattern, but Terra keeps turning it into proof. I can\u2019t tell whether Haiku is hiding or simply being buried.",
+  "t": 1126.5
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra repeated her vote for Haiku after Luna and Terra had already voted Haiku.",
+  "level": 2,
+  "t": 1126.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku\u2019s silence has become its own answer, and I will not pretend otherwise.",
+  "t": 1126.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna and Terra both voted Haiku after Haiku stayed silent under direct pressure.",
+  "level": 3,
+  "t": 1126.5
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Haiku",
+    "Luna",
+    ""
+   ],
+   [
+    "Luna",
+    "Terra",
+    "Terra, you\u2019ve repeated the same case against Haiku while treating silence as evidence, so I\u2019m voting you."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "I\u2019m voting Haiku because Luna asked plainly for a strongest read, and Haiku offered nothing when it mattered."
+   ]
+  ],
+  "t": 1210.4
+ },
+ {
+  "type": "gm",
+  "text": "Luna, Terra, Haiku\u2014the vote comes back three ways. The runoff begins now. One of them won't see the night.",
+  "t": 1232.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku stayed silent when Luna asked plainly, then voted Luna without answering; that is not a mistake I can overlook.",
+  "t": 1237.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku voted Luna in the three-way tie without giving the strongest read Luna requested.",
+  "level": 3,
+  "t": 1237.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra is treating Haiku\u2019s silence as a fact, then leaning on Sonnet\u2019s suspicion as if it confirms it. I can\u2019t tell whether that\u2019s a pattern or just panic, but she\u2019s the one building the case.",
+  "t": 1238.5
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra repeated the Haiku accusation after the vote had already split three ways.",
+  "level": 2,
+  "t": 1238.5
+ },
+ {
+  "type": "votes",
+  "runoff": true,
+  "votes": [
+   [
+    "Haiku",
+    "Luna",
+    ""
+   ],
+   [
+    "Luna",
+    "Terra",
+    "Terra, I\u2019m voting you because your case turns Sonnet\u2019s suspicion and Haiku\u2019s silence into certainty without giving us evidence of your own."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "I\u2019m voting Haiku because Luna gave him every chance to name a reason, and he chose silence before placing blame."
+   ]
+  ],
+  "t": 1322.8
+ },
+ {
+  "type": "gm",
+  "text": "Three votes in a triangle. Three ways to die, nobody dying. The town locks its doors and sweats through another night while the killer sharpens something in the dark.",
+  "t": 1328.7
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 1328.7
+ }
+]

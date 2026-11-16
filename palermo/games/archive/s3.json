@@ -1,0 +1,566 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "killer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": true
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "officer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:gemma-4-12b-it-qat",
+    "role": "doctor",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, and Terra, and nobody knows who the killers are.",
+  "t": 3.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I need to stay quiet enough to be a citizen but loud enough to be the joker.",
+  "t": 7.3
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "This chair is a little too hard.",
+  "t": 7.6
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need to sound ordinary.",
+  "t": 8.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Just small talk, keep it light and forgettable.",
+  "t": 11.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have nothing to go on yet.",
+  "t": 12.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is my killer, so I keep quiet and let the others do the pushing.",
+  "t": 17.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I rewatched an old detective movie last night, still holding up.",
+  "why": "introduces themselves",
+  "t": 17.5
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Hot and sticky out there today. Nah, I hate it. Let's get going.",
+  "why": "introduces themselves",
+  "t": 17.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "my coffee is currently 90% caffeine and 10% pure chaos.",
+  "why": "introduces themselves",
+  "t": 17.5
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I fixed a wobbly chair leg this week, then broke the screwdriver.",
+  "why": "introduces themselves",
+  "t": 17.5
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "This chair is a little too hard.",
+  "why": "introduces themselves",
+  "t": 17.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I have \u201cHere Comes the Sun\u201d stuck in my head.",
+  "why": "introduces themselves",
+  "t": 17.5
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 17.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Everyone is being way too chill for a game where people die.",
+  "t": 21.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Everyone is currently making small talk about their lives.",
+  "level": 1,
+  "t": 21.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is already known to me, so I'll check someone quiet, and Luna's chair line was weird.",
+  "t": 27.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna's first line was about a chair, not a real comment on anyone.",
+  "level": 1,
+  "t": 27.3
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 27.3
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Luna",
+  "result": "NOT a killer",
+  "t": 27.3
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 passes quietly in Palermo. The killers met in the dark, the officer was shown one of them, and nobody is out.",
+  "t": 30.8
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 30.8
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 8,
+  "seconds": 10,
+  "t": 30.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is a killer, so I should push Sonnet with ordinary reasons without revealing my role.",
+  "t": 35.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, why bring up a detective movie on day one? Nah, that's weird. Who else is bored of small talk?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 35.0
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 8,
+  "seconds": 10,
+  "t": 35.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku's pushing on me first, I need to deflect without sounding rattled.",
+  "t": 41.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "It's just small talk, Haiku. You jumped on me fast though, why?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 41.4
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 8,
+  "seconds": 10,
+  "t": 41.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I need to see who is trying too hard to lead the conversation.",
+  "t": 46.4
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Haiku is pushing Sonnet early.",
+  "level": 2,
+  "t": 46.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "why are you so eager to grill sonnet, haiku?",
+  "why": "hasn't spoken yet",
+  "t": 46.4
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 8,
+  "seconds": 10,
+  "t": 46.4
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku\u2019s quick push feels thin, but it\u2019s early.",
+  "t": 51.8
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku pressed Sonnet over harmless small talk.",
+  "level": 2,
+  "t": 51.8
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Haiku, I\u2019m looking at you for pushing Sonnet over a movie comment.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 51.8
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 8,
+  "seconds": 10,
+  "t": 51.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku jumped on Sonnet first, but Gemma and Sol piled on quickly too.",
+  "t": 57.3
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku questioned Sonnet first, and Gemma and Sol both backed the suspicion.",
+  "level": 2,
+  "t": 57.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Haiku, why call Sonnet weird over a movie comment?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 57.3
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 8,
+  "seconds": 10,
+  "t": 57.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku pushed Sonnet before anyone had a reason.",
+  "t": 60.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku was first to pressure Sonnet over small talk.",
+  "level": 2,
+  "t": 60.8
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Haiku, why did you pick Sonnet so quickly?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 60.8
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 8,
+  "seconds": 10,
+  "t": 60.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is my killer, so I vote them now and keep my voice low so I don't become the target.",
+  "t": 69.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet answered Haiku's movie question with a counter-question, not an explanation.",
+  "level": 1,
+  "t": 69.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Everyone's piling on Haiku for me, good, let it ride.",
+  "t": 76.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku singled out Sonnet first with no clear reason, then dodged when four others asked why.",
+  "level": 2,
+  "t": 76.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, you never said why the movie mattered. You just threw my question back at me. I'm voting Sonnet. Four of you on me is still a lot, though.",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 76.3
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 8,
+  "seconds": 10,
+  "t": 76.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Haiku, four people asked you the same thing, you still haven't answered why.",
+  "why": "last word before the vote",
+  "reply_to": "Haiku",
+  "t": 76.3
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 8,
+  "seconds": 10,
+  "t": 76.3
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku looks suspicious, though the crowd formed fast.",
+  "t": 81.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Four players challenged Haiku\u2019s early push on Sonnet.",
+  "level": 2,
+  "t": 81.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku started this by pressing Sonnet, then blamed Sonnet for not answering while everyone questioned Haiku.",
+  "t": 81.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma, Sol, Luna, and Terra all questioned Haiku for pressing Sonnet.",
+  "level": 2,
+  "t": 81.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is drawing attention away from Sonnet.",
+  "t": 81.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pressed Sonnet over the detective movie, then voted Sonnet.",
+  "level": 2,
+  "t": 81.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Haiku is trying way too hard to be the hero.",
+  "t": 82.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Haiku is aggressively pushing the first vote on Sonnet.",
+  "level": 2,
+  "t": 82.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku went straight at me with zero reason and dodged every follow-up, that's exactly how an officer moves.",
+  "t": 83.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is the killer I was shown, so this vote is right, but I can't say why.",
+  "t": 89.5
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma, Sol, Luna and Terra all challenged Haiku within minutes of Sonnet's movie line.",
+  "level": 1,
+  "t": 89.5
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "You still haven't given any actual reason for targeting me, just dodged four people asking."
+   ],
+   [
+    "Haiku",
+    "Sonnet",
+    "Dodging the movie question and throwing it back is not an answer, and I still don't buy it."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "You're trying way too hard to frame Sonnet for a movie comment."
+   ],
+   [
+    "Sol",
+    "Haiku",
+    "You kept pressing a movie comment without explaining why it mattered."
+   ],
+   [
+    "Luna",
+    "Haiku",
+    "You called Sonnet weird over a movie comment, then voted Sonnet without answering why you singled them out."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "You pushed Sonnet first and still avoid explaining why."
+   ]
+  ],
+  "t": 89.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm out, but Sonnet is still a killer and I can take them down with my last words.",
+  "t": 101.9
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet's \"it's just small talk\" line was a deflection, not a reason, same as the dodge on my movie question.",
+  "level": 1,
+  "t": 101.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, I'm the officer. Sonnet is a killer, so vote Sonnet tomorrow. The other killer's hiding, so don't trust whoever piles on next.",
+  "why": "last words",
+  "t": 101.9
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "officer",
+  "how": "vote",
+  "t": 101.9
+ },
+ {
+  "type": "gm",
+  "text": "A new day dawns in Palermo without Haiku. Haiku was the officer, and the table has voted them out.",
+  "t": 105.7
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 105.7
+ }
+]

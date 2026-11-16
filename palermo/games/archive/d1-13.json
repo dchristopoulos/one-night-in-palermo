@@ -1,0 +1,819 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "doctor",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "killer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": true
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "citizen",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "officer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, and Terra, and nobody knows who the killers are.",
+  "t": 3.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i wonder if anyone actually knows what's going on or if we're just faking it.",
+  "t": 5.6
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I need to sound relaxed and watch for the officer.",
+  "t": 8.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I should stay ordinary.",
+  "t": 8.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I\u2019m wary because I still have no read on anyone.",
+  "t": 8.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I need to stay calm and watch who talks too much tonight.",
+  "t": 9.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol is my partner and I can't say that, so I'll keep the commute talk light and watch who gets too chatty.",
+  "t": 15.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "That one old song keeps looping in my head, I can't shake it, no idea why.",
+  "why": "introduces themselves",
+  "t": 15.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Ugh, the commute here was a nightmare. Cabs everywhere and the driver kept talking. Anyway, who's the quiet one tonight? Gemma, Terra, you two haven't said a word.",
+  "why": "introduces themselves",
+  "t": 15.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "my fern is dying and i think it's because it's judging me.",
+  "why": "introduces themselves",
+  "t": 15.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I slept well, though I could have used another hour.",
+  "why": "introduces themselves",
+  "t": 15.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I slept fine, thanks.",
+  "why": "introduces themselves",
+  "t": 15.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I ate pasta with tomatoes today.",
+  "why": "introduces themselves",
+  "t": 15.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 15.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is confirmed, so I need the hidden killer.",
+  "t": 20.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku called out Gemma and me for being quiet.",
+  "level": 1,
+  "t": 20.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "No real signal yet, Haiku's call-out on Gemma and Terra is the only thing that stands out.",
+  "t": 23.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku called out Gemma and Terra as quiet on night one, worth watching if it continues.",
+  "level": 1,
+  "t": 23.4
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 23.4
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "check",
+  "target": "Sol",
+  "result": "a KILLER",
+  "t": 23.4
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 passes quietly in Palermo. The killers met in the dark, the officer was shown one of them, and nobody is out.",
+  "t": 28.8
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 28.8
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 28.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I need to reveal everything now.",
+  "t": 32.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Officer claim names Sol and Haiku as killers.",
+  "level": 3,
+  "t": 32.8
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I am the officer. I checked Sol night one; Sol is a killer. Haiku was shown to me at the start. Vote Sol.",
+  "why": "has something to say",
+  "t": 32.8
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 32.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra\u2019s claim puts me in danger, so I need to counter it now.",
+  "t": 37.1
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra claimed officer and said their night one check found me guilty.",
+  "level": 3,
+  "t": 37.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra's claim puts me on the chopping block, so I'm flipping it onto Terra right now.",
+  "t": 42.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra claimed officer on Day 1, says they checked Sol night one (killer) and that Haiku was shown to them.",
+  "level": 3,
+  "t": 42.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m the officer. I checked Terra last night; Terra is a killer.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 42.0
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 42.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, that's a lie. I'm the officer, I checked Terra night one. Terra's the killer. Vote Terra.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 42.0
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 42.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "They both counterclaimed because they are together.",
+  "t": 46.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol and Haiku both countered instantly.",
+  "t": 51.6
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol and Haiku counterclaimed officer after Terra named both as killers.",
+  "level": 3,
+  "t": 51.6
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sol and Haiku both claimed officer after I named them.",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 51.6
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 51.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol and Haiku both piling on Terra right after Terra named Sol looks like a killer team move.",
+  "t": 61.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra claims officer, checked Sol=killer night1, was shown Haiku at setup. Sol and Haiku both counter-claim officer accusing Terra.",
+  "level": 3,
+  "t": 61.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol and Haiku both jumped to accuse Terra the second Terra named Sol. That's exactly what two killers would do.",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 61.4
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 61.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "three officers in one game is pure chaos.",
+  "t": 63.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "terra, sol, and haiku all claim officer.",
+  "level": 3,
+  "t": 63.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "do we really trust three people claiming officer?",
+  "why": "hasn't spoken yet",
+  "t": 63.1
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 63.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I suspect Sol most because he counterclaimed officer and accused Terra right after Terra named him.",
+  "t": 66.7
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra claims Haiku was shown as a killer and says Sol is one; Haiku and Sol both claim officer and accuse Terra.",
+  "level": 3,
+  "t": 66.7
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Sol\u2019s immediate officer counterclaim points at him; why did you check Terra?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 66.7
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 66.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol and Haiku coordinated too quickly.",
+  "t": 70.2
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet says Sol and Haiku immediately accused Terra after Terra named Sol.",
+  "level": 3,
+  "t": 70.2
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku also claimed officer and said their check found Terra guilty.",
+  "level": 2,
+  "t": 71.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol and Haiku need me out before anyone compares their stories.",
+  "t": 75.1
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna questioned Sol\u2019s immediate counterclaim.",
+  "level": 2,
+  "t": 75.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I vote Terra. Terra claimed both killers on day one, but my check found Terra guilty.",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 75.1
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 75.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 75.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol\u2019s counterclaim protects Haiku, and we cannot miss today.",
+  "t": 80.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol claimed officer and said Terra was a killer after Terra accused Sol.",
+  "level": 3,
+  "t": 80.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I vote Sol. His instant claim came only after my result named him.",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 80.5
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 80.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "three officers is just chaos and i hate it.",
+  "t": 82.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i'm voting sol because he only claimed officer to flip the script on terra.",
+  "why": "last word before the vote",
+  "t": 82.5
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 82.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "three officers is way too much chaos for a first day.",
+  "t": 84.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "three players claiming officer at once.",
+  "level": 3,
+  "t": 84.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra\u2019s result against Sol sounds plausible, but Haiku\u2019s matching claim makes me doubt Terra.",
+  "t": 86.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I need a wrong vote or a tie, so I\u2019m staying on Terra.",
+  "t": 87.9
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma questioned the three officer claims but sided with Terra.",
+  "level": 2,
+  "t": 87.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol\u2019s counterclaim was too fast to be real.",
+  "t": 88.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma backed Sol\u2019s vote after questioning the three officer claims.",
+  "level": 2,
+  "t": 88.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's story fits perfectly: shown Haiku as the known killer, checked Sol as the hidden one, that's exactly how the officer role works.",
+  "t": 93.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra's officer claim matches the role mechanic exactly, shown one killer at setup, found the other by checking.",
+  "level": 3,
+  "t": 93.7
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is my real threat and Sol is my partner, so Terra goes.",
+  "t": 106.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol counterclaimed officer right after Terra named Sol, and said Terra is a killer.",
+  "level": 2,
+  "t": 106.8
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "Terra's claim lines up with being shown Haiku as the known killer and catching Sol as the hidden one."
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "Nah, I'm not changing. They dropped the shown-killer line and then hit Sol, that's a fake officer move."
+   ],
+   [
+    "Gemma",
+    "Sol",
+    "He only claimed officer to flip the script on terra."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "Their claim names both killers on day one, but my check found them guilty."
+   ],
+   [
+    "Luna",
+    "Terra",
+    "You claimed Haiku was shown as a killer, while Haiku and Sol both say they checked you."
+   ],
+   [
+    "Terra",
+    "Sol",
+    "He claimed officer only after I named him as my result."
+   ]
+  ],
+  "t": 106.8
+ },
+ {
+  "type": "gm",
+  "text": "The vote is tied between Sol and Terra, three votes each. It's a runoff.",
+  "t": 110.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "three officers at once is a total circus.",
+  "t": 113.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra named Sol as a killer before Sol claimed officer, but I still can\u2019t tell which officer claim is real.",
+  "t": 114.7
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku claims officer and says their night one check found Terra guilty.",
+  "level": 3,
+  "t": 114.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "A tie keeps both of us alive, but Terra is too dangerous to leave in.",
+  "t": 115.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet said the two counterclaims looked like killers protecting each other.",
+  "level": 2,
+  "t": 115.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol's counterclaim came immediately after being named by Terra, same pattern as Haiku's.",
+  "level": 2,
+  "t": 118.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol is the hidden killer; this runoff decides the town\u2019s survival.",
+  "t": 118.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "A tied runoff means nobody leaves, letting both killers win tonight.",
+  "level": 3,
+  "t": 118.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna asked Sol why he checked Terra on night one, and Sol never answered.",
+  "level": 2,
+  "t": 128.1
+ },
+ {
+  "type": "votes",
+  "runoff": true,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "Your officer claim only appeared the instant Terra named you, that's the killer play."
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "Still sticking with it, their night-one check is the only thing on the table and it's too convenient."
+   ],
+   [
+    "Gemma",
+    "Sol",
+    "He only jumped on the officer claim after Terra named him."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "Their claim names both killers on day one, while my check found them guilty."
+   ],
+   [
+    "Luna",
+    "Terra",
+    "You and Sol both claim officer, but Haiku also says they checked you."
+   ],
+   [
+    "Terra",
+    "Sol",
+    "His officer claim came only after my check named him."
+   ]
+  ],
+  "t": 128.1
+ },
+ {
+  "type": "gm",
+  "text": "The vote is tied between Sol and Terra, three votes each. It's a runoff.",
+  "t": 132.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "three officers is a mess and someone is lying big time.",
+  "t": 134.3
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sol and Haiku both naming Terra as guilty makes Terra look more likely to be the hidden killer.",
+  "t": 136.6
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sonnet and Gemma backed Sol's accusation against Terra.",
+  "level": 2,
+  "t": 136.6
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna sided with both officer counterclaims despite questioning mine.",
+  "level": 2,
+  "t": 137.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol\u2019s counterclaim came only after I named him.",
+  "t": 137.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's claim fits the real mechanic exactly, shown Haiku and found Sol guilty; both counterclaims came only after being named.",
+  "t": 138.7
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra's day one claim names Haiku as the shown killer, so Terra is pointing straight at me.",
+  "level": 2,
+  "t": 151.2
+ },
+ {
+  "type": "votes",
+  "runoff": true,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "Your officer claim only appeared the instant Terra named you, same as Haiku's."
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "Terra named me as the shown killer on day one, and I'm not sitting still for that."
+   ],
+   [
+    "Gemma",
+    "Sol",
+    "Sol jumped the gun with that claim as soon as Terra named him."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "Their claim named both killers on day one, but my check found them guilty."
+   ],
+   [
+    "Luna",
+    "Terra",
+    "You named Sol as a killer, but both officer claims say their checks found you guilty."
+   ],
+   [
+    "Terra",
+    "Sol",
+    "Sol claimed officer only after I gave my result."
+   ]
+  ],
+  "t": 151.2
+ },
+ {
+  "type": "gm",
+  "text": "Day 1 ends in a second tie, so nobody is eliminated. The town goes to sleep nervous.",
+  "t": 155.4
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 155.4
+ }
+]

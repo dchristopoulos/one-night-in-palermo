@@ -1,0 +1,623 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "killer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "citizen",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "officer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "doctor",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": true
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i hope nobody notices i'm actually uncomfortable.",
+  "t": 2.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have no clues yet.",
+  "t": 4.2
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "This chair feels a little wobbly.",
+  "t": 4.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I should sound ordinary.",
+  "t": 4.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Just need to seem relaxed before the real work starts tonight.",
+  "t": 5.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Nobody has said anything yet, so I'm just going on gut and want this started.",
+  "t": 9.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "That one pop song with the whistling hook has been looping in my head all morning, no idea why.",
+  "why": "introduces themselves",
+  "t": 9.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Coffee, black, no sugar. Tea is for people who are waiting for something. Who's up first?",
+  "why": "introduces themselves",
+  "t": 9.9
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "is it just me or is this chair actively trying to kill me?",
+  "why": "introduces themselves",
+  "t": 9.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I slept well, though I woke up earlier than I wanted.",
+  "why": "introduces themselves",
+  "t": 9.9
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "This chair feels a little wobbly.",
+  "why": "introduces themselves",
+  "t": 9.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "This chair is a little wobbly.",
+  "why": "introduces themselves",
+  "t": 9.9
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 9.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i know terra is one of them.",
+  "t": 11.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "The killers may target the quietest player, but there\u2019s no clear clue yet.",
+  "t": 13.5
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra echoed my chair comment.",
+  "level": 1,
+  "t": 13.5
+ },
+ {
+  "type": "night_action",
+  "name": "Luna",
+  "action": "save",
+  "target": "Luna",
+  "t": 13.5
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "check",
+  "target": "Sol",
+  "result": "NOT a killer",
+  "t": 13.5
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 13.5
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 13.5
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 10,
+  "seconds": 10,
+  "t": 13.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Nobody has said anything useful yet, and the two chair complaints from Luna and Terra sound too alike.",
+  "t": 18.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna and Terra both said nearly the same thing about the wobbly chair on Day 1.",
+  "level": 1,
+  "t": 18.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma and Sol, one of you say something real. Luna and Terra, did you two just copy each other about the chair?",
+  "why": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 18.1
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 10,
+  "seconds": 10,
+  "t": 18.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i know terra is a killer but i need to play it cool.",
+  "t": 20.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Luna and Terra both mentioned the wobbly chair.",
+  "level": 2,
+  "t": 20.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "The matching chair comments could mean something, but there\u2019s little to go on.",
+  "t": 22.8
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna and Terra both mentioned a wobbly chair before night.",
+  "level": 1,
+  "t": 22.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "maybe the chair is a sign from the heavens? \nLuna and Terra, that was a suspiciously identical observation.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 22.8
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 10,
+  "seconds": 10,
+  "t": 22.8
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Luna, Terra repeated your chair comment. What did you make of that?",
+  "why": "answers Luna",
+  "reply_to": "Luna",
+  "t": 22.8
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 10,
+  "seconds": 10,
+  "t": 22.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra copying me feels odd, but it may just be a shared chair complaint.",
+  "t": 27.7
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku called out my and Terra\u2019s matching chair comments.",
+  "level": 1,
+  "t": 27.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol is using the chair comment to make an easy early case.",
+  "t": 28.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol pushed Terra over the matching chair comment.",
+  "level": 2,
+  "t": 28.9
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Terra, why did you repeat my chair comment?",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 28.9
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 10,
+  "seconds": 10,
+  "t": 28.9
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sol, why focus on me before Gemma answers Haiku?",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 28.9
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 10,
+  "seconds": 10,
+  "t": 28.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra dodging the question is risky, but I can use it to look sharp without committing to voting them.",
+  "t": 40.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra deflected Sol's chair question by firing a question back instead of answering.",
+  "level": 2,
+  "t": 40.4
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Terra, Sol asked a direct question and you answered with another question. That's a dodge.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 40.4
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 10,
+  "seconds": 10,
+  "t": 40.4
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sonnet is pushing too hard.",
+  "t": 43.9
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet called Terra\u2019s response a dodge.",
+  "level": 2,
+  "t": 43.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra\u2019s dodge worries me, but one odd answer is thin evidence.",
+  "t": 45.2
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra answered my question about the repeated chair comment with a question about Gemma.",
+  "level": 2,
+  "t": 45.2
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I answered Sol\u2019s accusation; Haiku\u2019s pressure on Gemma and Sol still matters.",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 45.2
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 10,
+  "seconds": 10,
+  "t": 45.2
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I asked Terra about the repeated comment. With no one out overnight, the doctor may have saved someone.",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 45.2
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 10,
+  "seconds": 10,
+  "t": 45.2
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol keeps building a case from nothing.",
+  "t": 52.8
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol said no overnight death may mean the doctor saved someone.",
+  "level": 2,
+  "t": 52.8
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I vote Sol; he made the chair comment into the whole case.",
+  "why": "answers Sol",
+  "reply_to": "Sol",
+  "t": 52.8
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 10,
+  "seconds": 10,
+  "t": 52.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra copied Luna and dodged Sol, and that looks more like a killer hiding than Sol being wrong.",
+  "t": 62.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma called the chair \"a sign from the heavens\" when I asked a direct question, so that was a dodge too.",
+  "level": 1,
+  "t": 62.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, I vote Terra. Copied Luna's chair line word for word, then dodged Sol with a question.",
+  "why": "last word before the vote",
+  "t": 62.8
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 10,
+  "seconds": 10,
+  "t": 62.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "terra is definitely one of them.",
+  "t": 64.9
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "terra copied luna's chair comment and dodged a direct question.",
+  "level": 2,
+  "t": 64.9
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra\u2019s identical chair comment looks suspicious, though Sol focused on it first.",
+  "t": 66.8
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku pressed Gemma and Sol to say something real before backing a vote against Terra.",
+  "level": 2,
+  "t": 66.8
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet also called Terra's answer a dodge.",
+  "level": 2,
+  "t": 66.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is likely the officer steering hard at me.",
+  "t": 68.2
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pushed Terra hard after the officer likely saw Terra.",
+  "level": 3,
+  "t": 68.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra is my partner and getting hunted hard; I need to pull votes away without looking like I'm protecting them.",
+  "t": 78.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku voted Terra for the copied chair line and the dodge against Sol.",
+  "level": 2,
+  "t": 78.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra copied Luna's chair line and dodged Sol, but Sol is the one who turned the chair into a case, so I could be wrong.",
+  "t": 82.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra answered Sol's direct question with a counter-question and then voted Sol for asking it.",
+  "level": 1,
+  "t": 82.3
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "Sol kept fixating on the chair comment and never answered Haiku's original question about saying something real."
+   ],
+   [
+    "Haiku",
+    "Terra",
+    "Terra copied Luna's chair line and dodged Sol with a question, and I still think that's the tell."
+   ],
+   [
+    "Gemma",
+    "Terra",
+    "you dodged sol's question and then tried to deflect to haiku."
+   ],
+   [
+    "Sol",
+    "Terra",
+    "You answered a direct question with a question about Gemma."
+   ],
+   [
+    "Luna",
+    "Terra",
+    "You repeated my chair comment and shifted attention when Sol asked about it."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "You made a copied chair comment into a killer case too quickly."
+   ]
+  ],
+  "t": 82.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku likely knows I am a killer.",
+  "t": 87.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I was a citizen. Haiku drove this too quickly; watch who follows them.",
+  "why": "last words",
+  "t": 87.5
+ },
+ {
+  "type": "death",
+  "name": "Terra",
+  "role": "killer",
+  "how": "vote",
+  "t": 87.5
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Terra is out. Terra shows the card: killer.",
+  "t": 87.5
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 87.5
+ }
+]

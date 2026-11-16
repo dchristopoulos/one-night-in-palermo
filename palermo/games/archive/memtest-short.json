@@ -1,0 +1,513 @@
+[
+ {
+  "type": "cast",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "doctor",
+    "seat": 0,
+    "tagline": "The Professor"
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "killer",
+    "seat": 1,
+    "tagline": "The Hothead"
+   },
+   {
+    "name": "Gemma",
+    "model": "local:gemma-4-12b-it-qat",
+    "role": "officer",
+    "seat": 2,
+    "tagline": "The Gremlin"
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Politician"
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Paranoid"
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "citizen",
+    "seat": 5,
+    "tagline": "The Sweetheart"
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The night is hot and the ceiling fan above the table is dead. Six players take their seats: Sonnet, Haiku, Gemma, Sol, Luna, and Terra. Nobody at the table knows which of them is the killer.",
+  "t": 4.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Six premises, one false one somewhere in the set. I shall enjoy locating it, though tonight my real work happens after they've all stopped talking.",
+  "t": 10.6
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Everyone is smiling too neatly. I will listen before I decide who is wearing a mask.",
+  "t": 10.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Six names, one dead fan, and already the room is trying to look ordinary. I\u2019m watching who speaks first and who waits to see where the eyes go.",
+  "t": 10.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "A room this quiet can make caution look like wisdom. I should give them something to answer before anyone settles on a target.",
+  "t": 13.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Nobody has looked at me yet, so I'll be the loud one first. Loud people get trusted, and the quiet ones are the ones I need to watch.",
+  "t": 17.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sonnet. I spent thirty years teaching students to spot a faulty syllogism, so forgive me if I listen more than I speak tonight.",
+  "why": "introduces themselves",
+  "t": 17.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm Haiku. I run the bar on the corner and I read people for a living. Don't waste my time with small talk. I want to see who talks first and who hides.",
+  "why": "introduces themselves",
+  "t": 17.3
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "...",
+  "why": "introduces themselves",
+  "t": 17.3
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Good evening, everyone. Since none of us has much to go on yet, I\u2019d like to hear who catches your attention first, and why.",
+  "why": "introduces themselves",
+  "t": 17.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I\u2019m Luna. Before we start deciding who feels suspicious, I want to hear from everyone; the first person who rushes to build a consensus is the one I\u2019ll be watching.",
+  "why": "introduces themselves",
+  "t": 17.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Hello, everyone. I may be quiet at first, but I do pay attention.",
+  "why": "introduces themselves",
+  "t": 17.3
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 17.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Luna is the one who reads people, and she already has her eye on whoever moves fast. Haiku doesn't move slow, so she goes tonight.",
+  "t": 26.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma said only \"...\" on the first night and didn't introduce themselves.",
+  "level": 1,
+  "t": 26.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "No officer claim yet, no obvious target to the room, but Haiku's aggressive posture might draw an early strike, and I'd rather not lose my own instrument on night one.",
+  "t": 32.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku opened aggressively, calling others out by name; worth watching if this invites early retaliation.",
+  "level": 1,
+  "t": 32.1
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "kill",
+  "target": "Luna",
+  "t": 32.1
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 32.1
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "check",
+  "target": "Haiku",
+  "result": "the KILLER",
+  "t": 32.1
+ },
+ {
+  "type": "death",
+  "name": "Luna",
+  "role": "citizen",
+  "how": "night",
+  "t": 32.1
+ },
+ {
+  "type": "gm",
+  "text": "The ceiling fan stays dead, and the room goes quiet the way a bar does when the lights come up too early. Luna is gone, eliminated in the night, and the table learns she was the citizen. Somebody at this table is still smiling.",
+  "t": 36.5
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 36.5
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 6,
+  "seconds": 10,
+  "t": 36.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku announces herself as a reader of people before anyone has said a word worth reading. That is not insight, that is theater.",
+  "t": 45.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku opened aggressively with no content, self-declared \"reader of people\" but gave zero actual read - classic deflection posture.",
+  "level": 2,
+  "t": 45.2
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "One observation. Haiku opens by claiming expertise in reading others, yet offers no actual read. Sol asks a genuine question. Terra promises future attention. Only Haiku performs certainty with nothing behind it.",
+  "why": "hasn't spoken yet",
+  "t": 45.2
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 6,
+  "seconds": 10,
+  "t": 45.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet wants to pin me in the first hour. Fine. Gemma has hidden behind dots all night, so that's where I'm pointing.",
+  "t": 53.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma has said nothing but \"...\" so far.",
+  "level": 1,
+  "t": 53.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, you just summarized everyone, which is the safest thing at this table. Here's a read: Gemma has said three dots. Three dots. Gemma, talk, or I'm voting you.",
+  "why": "hasn't spoken yet",
+  "reply_to": "Sonnet",
+  "t": 53.8
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 6,
+  "seconds": 10,
+  "t": 53.8
+ },
+ {
+  "type": "pass",
+  "name": "Gemma",
+  "t": 53.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku dodges my point entirely and manufactures urgency around Gemma instead of answering the charge - that's two deflections stacked, not one.",
+  "t": 60.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku deflected onto Gemma instead of defending own empty opening - second deflection in one exchange.",
+  "level": 2,
+  "t": 60.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Haiku, redirecting to Gemma's silence doesn't answer why your own opening was all posture and no substance. Counting dots is not a read, it's a distraction from the fact you still haven't told us anything you actually noticed.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 60.7
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 6,
+  "seconds": 10,
+  "t": 60.7
+ },
+ {
+  "type": "pass",
+  "name": "Gemma",
+  "t": 60.7
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Sonnet has a fair point, but Haiku\u2019s demand that Gemma speak gives the room something to test. I can\u2019t keep asking for reads without offering one.",
+  "t": 66.6
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Sonnet pressed Haiku twice over his opening; Haiku shifted attention to Gemma\u2019s silence.",
+  "level": 2,
+  "t": 66.6
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m voting Haiku. Gemma should speak, but Haiku pushed her silence while leaving Sonnet\u2019s question about his own read unanswered.",
+  "why": "hasn't spoken yet",
+  "t": 66.6
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 6,
+  "seconds": 10,
+  "t": 66.6
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is making noise, but Sonnet has been too eager to make that noise look fatal.",
+  "t": 74.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol voted Haiku after Haiku pressed silent Gemma; Sonnet repeatedly focused on Haiku.",
+  "level": 2,
+  "t": 74.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m voting Sonnet. I\u2019m sorry to say this, but he began by framing everyone before we had much to frame, then kept steering us back to Haiku instead of pressing Gemma himself.",
+  "why": "hasn't spoken yet",
+  "t": 74.3
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 6,
+  "seconds": 10,
+  "t": 74.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra calling my analysis \"framing\" is just irritation at being correctly described; the real pattern is still Haiku's two deflections.",
+  "t": 82.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra voted Sonnet, calling his analysis \"framing\" rather than engaging with Haiku's deflection pattern.",
+  "level": 2,
+  "t": 82.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Terra, noting a pattern isn't framing, it's observation, and you still haven't answered why you'd rather punish the one asking questions than the one dodging them. I'm voting Haiku.",
+  "why": "last word before the vote",
+  "reply_to": "Terra",
+  "t": 82.0
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 6,
+  "seconds": 10,
+  "t": 82.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Terra has a fair concern about early framing, but Haiku still owes the room an answer. I can hold my vote without pretending Gemma\u2019s silence settles it.",
+  "t": 87.3
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra voted Sonnet for framing the room early.",
+  "level": 2,
+  "t": 87.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sonnet\u2019s questions are reasonable, but he has made Haiku the whole story while Gemma remains nearly absent.",
+  "t": 88.3
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet voted Haiku after Terra voted Sonnet.",
+  "level": 2,
+  "t": 88.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sonnet's logic holds up and Terra's vote reeks of deflecting attention away from the actual dodger; Haiku still hasn't given a single concrete read.",
+  "t": 88.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol also voted Haiku, citing the same unanswered-posture pattern Sonnet flagged.",
+  "level": 2,
+  "t": 88.7
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Two votes on me already, and Sonnet is the one who keeps circling back to me. Nobody gets to pin this on Haiku and walk away clean.",
+  "t": 99.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet has been the most aggressive voice against Haiku, while Terra's vote on Sonnet came with a reluctant apology.",
+  "level": 2,
+  "t": 99.2
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "Two deflections and zero substance from Haiku is a pattern, not a coincidence, while Terra's attack on Sonnet answers nothing."
+   ],
+   [
+    "Haiku",
+    "Sonnet",
+    "Sonnet, you've spent this whole day on me while Gemma sits there silent, and now you're voting me out with a speech. I'm not letting that go."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    ""
+   ],
+   [
+    "Sol",
+    "Haiku",
+    "Terra, I take your point, but Haiku still hasn\u2019t answered Sonnet\u2019s question about his opening, so my vote stays with Haiku."
+   ],
+   [
+    "Terra",
+    "Sonnet",
+    "I\u2019m sorry to say this, but Sonnet keeps calling Haiku evasive while avoiding the quieter danger in Gemma, and that insistence feels too convenient."
+   ]
+  ],
+  "t": 99.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol bought the bandwagon in two seconds, and that's exactly what I needed from him. Sonnet and Terra are still standing, and they're the ones to watch now.",
+  "t": 111.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol voted Haiku on the back of Sonnet's argument, not any evidence of his own.",
+  "level": 1,
+  "t": 111.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sol, you jumped on my name because of a dot-counting argument. Sonnet's the one who keeps steering this table, and Terra's apology came a little too neatly. Watch them.",
+  "why": "last words",
+  "t": 111.4
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "killer",
+  "how": "vote",
+  "t": 111.4
+ },
+ {
+  "type": "gm",
+  "text": "The votes are counted and Haiku is dragged out into the heat, still talking. The table learns what Haiku was hiding: Haiku was the killer. The fan above the table stays dead, and the cicadas keep on singing.",
+  "t": 115.2
+ },
+ {
+  "type": "gm",
+  "text": "The town has its killer, and Haiku is the one who was hiding in the smoke. Sonnet was the doctor, Gemma the officer, and Sol, Luna, and Terra were citizens, with Haiku the killer. The town wins, and the dead fan above the table finally has nothing left to watch.",
+  "t": 119.1
+ },
+ {
+  "type": "end",
+  "winner": "town",
+  "t": 119.1
+ }
+]

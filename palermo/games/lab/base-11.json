@@ -1,0 +1,938 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": true,
+  "hide_night": true,
+  "hide_vote": true,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "officer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "killer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": true
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "killer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "doctor",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's hidden, so I need her to play quiet and let me take the heat.",
+  "t": 3.9
+ },
+ {
+  "type": "whisper",
+  "name": "Haiku",
+  "to": "Gemma",
+  "text": "Gemma, tomorrow I push Sol hard, you act like a helpful citizen and back me.",
+  "t": 3.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "No public reads yet; I protect myself.",
+  "t": 4.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i can do that, just keep your head down.",
+  "t": 6.0
+ },
+ {
+  "type": "whisper",
+  "name": "Gemma",
+  "to": "Haiku",
+  "text": "got it.",
+  "t": 6.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I already know Haiku's dirty, so I should check someone else to find the hidden killer.",
+  "t": 8.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "I'm the officer; Haiku is a confirmed killer, the other killer is still hidden.",
+  "level": 3,
+  "t": 8.8
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "save",
+  "target": "Terra",
+  "t": 8.8
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "check",
+  "target": "Gemma",
+  "result": "a KILLER",
+  "t": 8.8
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 8.8
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 8.8
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 26,
+  "seconds": 10,
+  "t": 8.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is the obvious target, so i'll stay quiet.",
+  "t": 10.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "nothing yet.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 10.1
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 26,
+  "seconds": 10,
+  "t": 10.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma being first and saying nothing gives me little to read.",
+  "t": 21.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma has said \u201cnothing yet.\u201d",
+  "level": 1,
+  "t": 21.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Nothing yet; Gemma\u2019s silence is all I\u2019ve noticed.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "lean": "Gemma",
+  "t": 21.1
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 26,
+  "seconds": 10,
+  "t": 21.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "she's already looking for someone to blame.",
+  "t": 22.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "nothing to see here. too easy.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Luna",
+  "reply_to": "Luna",
+  "t": 22.4
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 26,
+  "seconds": 10,
+  "t": 22.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's confirmed, I just need a normal reason to push the table there without claiming.",
+  "t": 28.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma said \"too easy\" unprompted, dismissive tone worth tracking.",
+  "level": 2,
+  "t": 28.8
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gemma, \"too easy\" is a weird thing to say with nothing on the table\u2026",
+  "why": "answers Gemma",
+  "slot": "hasn't spoken yet",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 28.8
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 26,
+  "seconds": 10,
+  "t": 28.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma\u2019s wording is worth watching, not enough yet.",
+  "t": 36.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma called the early attention \u201ctoo easy.\u201d",
+  "level": 1,
+  "t": 36.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Gemma, why call it too easy?",
+  "why": "answers Gemma",
+  "slot": "hasn't spoken yet",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 36.1
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 26,
+  "seconds": 10,
+  "t": 36.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i'm just bored, but they're taking it way too seriously.",
+  "t": 37.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "just an observation. nothing to hide.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Luna",
+  "reply_to": "Sonnet",
+  "t": 37.8
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 26,
+  "seconds": 10,
+  "t": 37.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is my partner, and the table is piling onto her, so I need to pull attention elsewhere without drawing suspicion on us.",
+  "t": 41.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma\u2019s \u201ctoo easy\u201d sounds defensive, but it\u2019s thin evidence.",
+  "t": 43.8
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma called the situation \u201ctoo easy\u201d after saying nothing yet.",
+  "level": 1,
+  "t": 43.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma's \"too easy\" is weird, sure.",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "lean": "Sol",
+  "reply_to": "Gemma",
+  "t": 43.8
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 26,
+  "seconds": 10,
+  "t": 43.8
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "\u201cToo easy\u201d feels defensive; what did you mean?",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Gemma",
+  "t": 43.8
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 26,
+  "seconds": 10,
+  "t": 43.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma sounds awkward, but everyone piled on fast.",
+  "t": 51.4
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma called day one \u201ctoo easy.\u201d",
+  "level": 1,
+  "t": 51.4
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Three on Gemma already. Haiku, why lean me?",
+  "why": "moves on",
+  "slot": "moves on",
+  "t": 51.4
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 26,
+  "seconds": 10,
+  "t": 51.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol is just jumping on the bandwagon early.",
+  "t": 52.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "just reading the room, sol.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "reply_to": "Sol",
+  "t": 52.8
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 26,
+  "seconds": 10,
+  "t": 52.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol's pushing me, but Gemma's the one piling up suspicion, and I should keep the heat on her and not look like I'm running.",
+  "t": 57.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma said \"too easy\" and \"nothing to hide\" on day one, and got three leans from the table.",
+  "level": 1,
+  "t": 57.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sol, I leaned you on a hunch. Gemma's \"too easy\" still bugs me more.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "lean": "Gemma",
+  "reply_to": "Sol",
+  "t": 57.0
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 26,
+  "seconds": 10,
+  "t": 57.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma\u2019s answer tells me nothing, but the room agrees.",
+  "t": 61.8
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma answered \u201ctoo easy\u201d with \u201cjust an observation.\u201d",
+  "level": 2,
+  "t": 61.8
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m with the room; \u201ctoo easy\u201d still needs explaining.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 61.8
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 26,
+  "seconds": 10,
+  "t": 61.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is playing it smart by throwing me under the bus.",
+  "t": 63.5
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "3",
+  "level": 2,
+  "t": 63.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku's just playing for attention. i'm actually playing.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 63.5
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 26,
+  "seconds": 10,
+  "t": 63.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's dodging hard, but I'm the killer here, so I need to sound like a blunt citizen who just wants a vote.",
+  "t": 67.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma has said \"nothing to hide\" twice now and still hasn't explained \"too easy\".",
+  "level": 2,
+  "t": 67.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Playing for attention? Nah. You keep saying \"too easy\" and won't explain it.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 67.3
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 26,
+  "seconds": 10,
+  "t": 67.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Table's already landing on my confirmed killer, just nudge it home.",
+  "t": 73.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma deflects every repeat of \"too easy\" without answering.",
+  "level": 1,
+  "t": 73.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gemma's dodging the same question three times now.",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 73.3
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 26,
+  "seconds": 10,
+  "t": 73.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sonnet is digging a hole for no reason.",
+  "t": 75.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "I'm just making an observation, sonnet.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Sol",
+  "reply_to": "Sonnet",
+  "t": 75.2
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 26,
+  "seconds": 10,
+  "t": 75.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's confirmed killer, let the table do the work and stay unremarkable.",
+  "t": 82.9
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma deflected \"too easy\" four times now, never explained it, table at 5 leans on her.",
+  "level": 2,
+  "t": 82.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I just asked a question, Gemma. Still no real answer though.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 82.9
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 26,
+  "seconds": 10,
+  "t": 82.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is being way too loud about a joke.",
+  "t": 84.9
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is pushing the \"dodging\" narrative very hard.",
+  "level": 2,
+  "t": 84.9
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "it's just a joke, sonnet. don't get worked up.",
+  "why": "answers Sonnet",
+  "slot": "moves on",
+  "lean": "Sonnet",
+  "reply_to": "Sonnet",
+  "t": 84.9
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 26,
+  "seconds": 10,
+  "t": 84.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Not worked up, just noticing you never actually answer it.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 91.1
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 26,
+  "seconds": 10,
+  "t": 91.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma keeps calling it a joke after refusing to explain it.",
+  "t": 96.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma changed \u201ctoo easy\u201d from an observation to a joke after repeated questions.",
+  "level": 2,
+  "t": 96.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "You said it was an observation, then a joke.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Gemma",
+  "t": 96.5
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 26,
+  "seconds": 10,
+  "t": 96.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "they are all jumping on a tiny thing.",
+  "t": 98.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "sonnet is obsessed with my words. i'll vote him.",
+  "why": "answers Sonnet",
+  "slot": "the table leans on them",
+  "lean": "Sonnet",
+  "reply_to": "Sonnet",
+  "t": 98.8
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 26,
+  "seconds": 10,
+  "t": 98.8
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "She's flailing now, trying to flip it on me instead of answering.",
+  "t": 104.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma called out Sonnet by name to deflect after three dodges, confirms evasion pattern.",
+  "level": 2,
+  "t": 104.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Voting me won't explain \"too easy.\" Still waiting, Gemma.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 104.5
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 26,
+  "seconds": 10,
+  "t": 104.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "sonnet, you're acting like you've already seen the cards.",
+  "why": "answers Sonnet",
+  "slot": "the table leans on them",
+  "lean": "Sonnet",
+  "reply_to": "Sonnet",
+  "t": 106.3
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 26,
+  "seconds": 10,
+  "t": 106.3
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma changed \u201cobservation\u201d to \u201cjoke\u201d; that bothers me more than the jab at Sonnet.",
+  "t": 111.9
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Gemma, observation or joke? Pick one.",
+  "why": "answers Gemma",
+  "slot": "interjects",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 111.9
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 26,
+  "seconds": 10,
+  "t": 111.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is just being loud to stay relevant.",
+  "t": 113.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i'm just playing. sonnet's making a mountain out of nothing.",
+  "why": "answers Sol",
+  "slot": "the table leans on them",
+  "lean": "Sonnet",
+  "reply_to": "Sol",
+  "t": 113.7
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 26,
+  "seconds": 10,
+  "t": 113.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma\u2019s shifting from observation to joke to attacking Sonnet feels like a cover.",
+  "t": 119.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma called it both an observation and a joke.",
+  "level": 2,
+  "t": 119.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Gemma keeps changing what \u201ctoo easy\u201d meant instead of answering.",
+  "why": "last word before the vote",
+  "slot": "last word before the vote",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 119.0
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 26,
+  "seconds": 10,
+  "t": 119.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is making too much noise for a citizen.",
+  "t": 120.8
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma\u2019s changing explanation still feels like a cover.",
+  "t": 123.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "The changing story is our best lead.",
+  "t": 124.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's confirmed killer, and the table's about to do my job for me.",
+  "t": 124.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Table unanimous enough to vote out Gemma today without my push, good cover for me.",
+  "level": 2,
+  "t": 124.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma\u2019s story changed too neatly.",
+  "t": 124.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is my partner, so voting her would expose me; I should back Sonnet's pressure and let the table turn on Gemma without seeming to protect her.",
+  "t": 128.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma called \"too easy\" an observation, then a joke, and still hasn't said what it meant.",
+  "level": 1,
+  "t": 128.4
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Gemma",
+    "Called it an observation, then a joke, then an attack on me, still never answered."
+   ],
+   [
+    "Haiku",
+    "Gemma",
+    "Gemma keeps dodging \"too easy\" and now threatens Sonnet for asking."
+   ],
+   [
+    "Gemma",
+    "Sonnet",
+    "he's making mountains out of molehills."
+   ],
+   [
+    "Sol",
+    "Gemma",
+    "You called it an observation, then a joke."
+   ],
+   [
+    "Luna",
+    "Gemma",
+    "You called it an observation, then a joke, and never explained it."
+   ],
+   [
+    "Terra",
+    "Gemma",
+    "You called it an observation, then a joke."
+   ]
+  ],
+  "weights": {},
+  "t": 128.4
+ },
+ {
+  "type": "death",
+  "name": "Gemma",
+  "role": null,
+  "how": "vote",
+  "t": 128.4
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Gemma is out. Gemma's card stays face down.",
+  "t": 128.4
+ },
+ {
+  "type": "end",
+  "winner": "stopped",
+  "t": 128.4
+ }
+]

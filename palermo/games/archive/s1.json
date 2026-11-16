@@ -1,0 +1,730 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "killer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": true
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "officer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:gemma-4-12b-it-qat",
+    "role": "doctor",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "killer",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "The town gathers",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Six players take their seats: Sonnet, Haiku, Gemma, Sol, Luna, and Terra. Nobody at the table knows who the killers are.",
+  "t": 3.2
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "This chair is a little too hard for a long night.",
+  "t": 6.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I need to stay quiet enough to be useful but loud enough not to look like a target.",
+  "t": 6.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I should sound ordinary.",
+  "t": 7.9
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I\u2019ll keep this light and listen to everyone.",
+  "t": 8.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Just small talk, nothing to give away here.",
+  "t": 8.6
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is my known killer, so I need to keep quiet about it and act like I know nothing.",
+  "t": 12.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Watched this documentary on deep sea creatures last night, bioluminescence is wild.",
+  "why": "introduces themselves",
+  "t": 12.7
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Ugh, it's muggy as heck in here today. Can we just get going already? Who's gonna start?",
+  "why": "introduces themselves",
+  "t": 12.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "my coffee is basically just bean juice and sadness today.",
+  "why": "introduces themselves",
+  "t": 12.7
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I fixed a squeaky door this week, and now it closes without waking anyone.",
+  "why": "introduces themselves",
+  "t": 12.7
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "This chair is a little too hard for a long night.",
+  "why": "introduces themselves",
+  "t": 12.7
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I have \u201cDancing Queen\u201d stuck in my head.",
+  "why": "introduces themselves",
+  "t": 12.7
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 12.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Everyone is being way too normal, which makes it harder to pick a target.",
+  "t": 16.5
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Everyone is just making small talk for now.",
+  "level": 1,
+  "t": 16.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "No real info yet, but Sol's \"fixing things quietly so nobody wakes\" line feels like protector flavor\u2014better safe than sorry.",
+  "t": 22.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol's intro line about fixing a door quietly could hint at doctor-type flavor, worth watching if they survive.",
+  "level": 1,
+  "t": 22.5
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "propose",
+  "target": "Sol",
+  "t": 22.5
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sol is as good a target as any before the first day.",
+  "t": 27.4
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Nobody has made a game-relevant claim yet.",
+  "level": 1,
+  "t": 27.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol's door story is weirdly specific and I need to know if Sol is the hidden killer.",
+  "t": 29.1
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "kill",
+  "target": "Sol",
+  "t": 29.1
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "kill",
+  "target": "Sol",
+  "t": 29.1
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "save",
+  "target": "Sonnet",
+  "t": 29.1
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Sol",
+  "result": "NOT a killer",
+  "t": 29.1
+ },
+ {
+  "type": "death",
+  "name": "Sol",
+  "role": "citizen",
+  "how": "night",
+  "t": 29.1
+ },
+ {
+  "type": "gm",
+  "text": "Night 1 ends with Sol eliminated. Sol was a citizen, so the table has lost an innocent player.",
+  "t": 34.0
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 34.0
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 8,
+  "seconds": 10,
+  "t": 34.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I need to steer eyes away from myself early without overplaying it.",
+  "t": 41.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku pushed to speed things up before discussion started.",
+  "level": 1,
+  "t": 41.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Haiku was pushing hardest to rush us along before anyone even talked, that's the kind of urgency that benefits someone wanting less scrutiny.",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 41.5
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 8,
+  "seconds": 10,
+  "t": 41.5
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet went after me in the first minute, and that's the first real move anyone's made, so I'm watching Sonnet.",
+  "t": 49.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet pushed hardest on Haiku right after the first messages, before anyone had facts.",
+  "level": 2,
+  "t": 49.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, that's weird. I made one joke about the heat and Sonnet turns it into a plot?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 49.4
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 8,
+  "seconds": 10,
+  "t": 49.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I need to see if Haiku is just impatient or actually trying to control the narrative.",
+  "t": 55.4
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Haiku pushed for urgency before anyone spoke.",
+  "level": 2,
+  "t": 55.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "why are you so eager to start, Haiku?",
+  "why": "hasn't spoken yet",
+  "t": 55.4
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 8,
+  "seconds": 10,
+  "t": 55.4
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Haiku rushing the start feels suspicious, but Sonnet may be turning one joke into an easy target.",
+  "t": 59.3
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sonnet accused Haiku over the early push, and Gemma echoed the pressure.",
+  "level": 2,
+  "t": 59.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Haiku, what made you push to get going before anyone had shared a read?",
+  "why": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 59.3
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 8,
+  "seconds": 10,
+  "t": 59.3
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sonnet started the Haiku pile-on quickly.",
+  "t": 63.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet first framed Haiku\u2019s urgency as suspicious.",
+  "level": 2,
+  "t": 63.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Sonnet, why did you turn Haiku\u2019s heat comment into your first suspicion?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 63.5
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 8,
+  "seconds": 10,
+  "t": 63.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's question actually helps me look independent, keep pushing Haiku.",
+  "t": 70.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is my killer, and I need the table to vote them out today.",
+  "t": 80.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma and Luna both pressed Haiku right after Sonnet's accusation, before anyone shared a real read.",
+  "level": 2,
+  "t": 80.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet started this, and Sonnet still hasn't answered Terra, so I want Sonnet to dig deeper.",
+  "t": 88.6
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet has dodged Terra's question about the heat comment so far.",
+  "level": 1,
+  "t": 88.6
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Fair, Terra, it's just the only thing that happened before the kill. I'm voting Haiku, that rush still bugs me.",
+  "why": "answers Terra",
+  "reply_to": "Terra",
+  "t": 88.6
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 8,
+  "seconds": 10,
+  "t": 88.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet, you still haven't answered Terra. Why'd you open with a documentary nobody asked about?",
+  "why": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 88.6
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 8,
+  "seconds": 10,
+  "t": 88.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Keep pressure on Haiku, small talk doesn't matter, don't give ground.",
+  "t": 94.6
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Haiku, the documentary comment was nothing, you rushing us before any reads happened is the actual red flag. Sticking with my vote on you.",
+  "why": "last word before the vote",
+  "reply_to": "Haiku",
+  "t": 94.6
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 8,
+  "seconds": 10,
+  "t": 94.6
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Sonnet\u2019s vote still feels too convenient, though Haiku\u2019s rush was small and I\u2019m unsure.",
+  "t": 99.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sonnet accused Haiku over the early push and kept defending that suspicion after Terra questioned it.",
+  "level": 2,
+  "t": 99.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Haiku is acting way too thirsty to start the game.",
+  "t": 100.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Keep pressure on Haiku, it draws fire away from Terra and me.",
+  "t": 100.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma and Luna both echoed suspicion of Haiku's urgency, could be useful leverage later.",
+  "level": 1,
+  "t": 100.7
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Haiku is the easiest wrong vote, and Sonnet needs cover.",
+  "t": 101.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna also pressured Haiku for wanting to start quickly.",
+  "level": 2,
+  "t": 101.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is the killer I was shown, and they're pinning me to cover themselves, so they go out today.",
+  "t": 111.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet's only pre-kill evidence against Haiku was the heat comment, and Sonnet kept the vote on Haiku anyway.",
+  "level": 2,
+  "t": 111.3
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "Pushed to rush things before anyone had a read, right before Sol got killed that night."
+   ],
+   [
+    "Haiku",
+    "Sonnet",
+    "Your first call came from one joke about the heat, and you're still voting on that same joke."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "You were pushing for urgency before anyone even spoke, which is a classic killer move."
+   ],
+   [
+    "Luna",
+    "Sonnet",
+    "You turned Haiku\u2019s heat comment into your first suspicion, then used it to keep pressing."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    "You never answered why you wanted us moving before anyone had a read."
+   ]
+  ],
+  "t": 111.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm out, Sonnet is the killer I saw, and the other one is still hiding.",
+  "t": 123.4
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet opened Day 1 with an unprompted documentary line, a possible tell.",
+  "level": 1,
+  "t": 123.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Ugh, fine. I'm the officer, and Sonnet is a killer. Find the other one. Gemma and Terra piled on me fast, so watch them.",
+  "why": "last words",
+  "t": 123.4
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "officer",
+  "how": "vote",
+  "t": 123.4
+ },
+ {
+  "type": "gm",
+  "text": "Haiku is eliminated by vote on Day 1, and Haiku's role is revealed as officer. The table now has one less player and one fewer detective, and the killers are still at large.",
+  "t": 127.1
+ },
+ {
+  "type": "gm",
+  "text": "The killers win. Sonnet and Terra were the killers, Haiku was the officer, Gemma was the doctor, and Sol and Luna were the citizens.",
+  "t": 136.6
+ },
+ {
+  "type": "vindicated",
+  "name": "Haiku",
+  "text": "Ugh, fine. I'm the officer, and Sonnet is a killer. Find the other one. Gemma and Terra piled on me fast, so watch them.",
+  "t": 136.7
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I regret voting Sonnet instead of trusting Haiku\u2019s officer claim enough to reconsider.",
+  "t": 140.9
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Haiku correctly identified Sonnet as a killer, and Terra was the hidden killer.",
+  "level": 3,
+  "t": 140.9
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Letting Haiku go without pushing back was the cleanest win.",
+  "t": 141.1
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku claimed officer and named Sonnet a killer.",
+  "level": 3,
+  "t": 141.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I wish I\u2019d had a chance to speak up.",
+  "t": 141.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Haiku never saw it coming, calling out Gemma and Terra as a last gasp got nobody.",
+  "t": 142.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I should have protected someone else instead of just letting the killers run wild.",
+  "t": 144.8
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sonnet and Terra were the killers.",
+  "level": 2,
+  "t": 144.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I called Sonnet right, but I rushed the day and gave Terra and Gemma an easy target.",
+  "t": 153.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet and Terra were the killers; Gemma was the doctor; Sol and Luna were citizens.",
+  "level": 3,
+  "t": 153.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Pinning the rush on Haiku before anyone had a read worked out better than I expected, honestly.",
+  "why": "confession",
+  "t": 153.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm proud I called Sonnet early, but I regret pushing everyone to rush before anyone had a read.",
+  "why": "confession",
+  "t": 153.3
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "I'm proud that I stayed quiet enough to keep my role hidden until the end.",
+  "why": "confession",
+  "t": 153.3
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I regret that we lost Haiku after they named Sonnet; that was our chance to catch a killer.",
+  "why": "confession",
+  "t": 153.3
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "I should have listened when Haiku named Sonnet as a killer; I\u2019m sorry I helped vote the officer out.",
+  "why": "confession",
+  "t": 153.3
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "I\u2019m proud I stayed quiet while everyone trusted the vote.",
+  "why": "confession",
+  "t": 153.3
+ },
+ {
+  "type": "recap",
+  "text": "Sonnet and Terra were the killers, and Sonnet opened by pinning a suspicion on Haiku for rushing the table, which only became a case once Haiku was voted out on Day 1. Sol was killed on Night 1 with no clues to go on, so the table had almost nothing to work with from the start. The turning point was the Day 1 vote: Gemma, Luna, and Terra all piled onto Haiku, and Haiku's last words named Sonnet as a killer and pointed at Gemma and Terra, but the table ignored it. The killers won because the one real lead was the officer's word, and that was voted out before anyone could act on it. Sonnet called the rush \"the actual red flag,\" and Terra stayed quiet, and that was enough.",
+  "t": 158.9
+ },
+ {
+  "type": "end",
+  "winner": "killer",
+  "t": 158.9
+ }
+]

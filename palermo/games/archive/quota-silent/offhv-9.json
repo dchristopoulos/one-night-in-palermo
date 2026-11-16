@@ -1,0 +1,2400 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": true,
+  "hide_night": true,
+  "hide_vote": true,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "citizen",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "citizen",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "killer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "killer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": true
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "officer",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "doctor",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "let's see if anyone's smart enough to find us.",
+  "t": 6.1
+ },
+ {
+  "type": "whisper",
+  "name": "Gemma",
+  "to": "Sol",
+  "text": "ready when you are.",
+  "t": 6.1
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "save",
+  "target": "Luna",
+  "t": 6.1
+ },
+ {
+  "type": "night_action",
+  "name": "Luna",
+  "action": "check",
+  "target": "Terra",
+  "result": "NOT a killer",
+  "t": 6.1
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 6.1
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 6.1
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 26,
+  "seconds": 10,
+  "t": 6.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol is already on the officer's radar, so i need to stay invisible.",
+  "t": 7.4
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "day 1, no deaths",
+  "level": 1,
+  "t": 7.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "good morning. anyone want to start?",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 7.4
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 26,
+  "seconds": 10,
+  "t": 7.4
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 12.2
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 12.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma opened fast and friendly, which could be a citizen or a killer warming up; nobody has said anything yet.",
+  "t": 17.4
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, nobody's talking yet. Sol, you're quiet. What's your deal?",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "t": 17.4
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 26,
+  "seconds": 10,
+  "t": 17.4
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Haiku",
+  "t": 24.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol dodging right out of the gate is worth noting, not jumping yet.",
+  "t": 29.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol declined to answer Haiku's question day 1.",
+  "level": 1,
+  "t": 29.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol, declining isn't an answer. What's the dodge about?",
+  "why": "answers Sol",
+  "slot": "takes the floor",
+  "reply_to": "Sol",
+  "t": 29.5
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 26,
+  "seconds": 10,
+  "t": 29.5
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Sonnet",
+  "t": 34.4
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 39.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol's being a disaster and making us look obvious.",
+  "t": 41.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol is being too aggressive with the silence.",
+  "level": 2,
+  "t": 41.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Sol, just say you're a citizen and move on.",
+  "why": "answers Sol",
+  "slot": "takes the floor",
+  "reply_to": "Sol",
+  "t": 41.2
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 26,
+  "seconds": 10,
+  "t": 41.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol's silence is suspicious, but Gemma and Sonnet have already beaten that dead horse, so I need a fresh angle.",
+  "t": 45.2
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Terra, you've said nothing yet. Why be the quiet one today?",
+  "why": "answers Terra",
+  "slot": "moves on",
+  "reply_to": "Terra",
+  "t": 45.2
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 26,
+  "seconds": 10,
+  "t": 45.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Haiku",
+  "t": 49.9
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 54.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sol is making this way too obvious for himself.",
+  "t": 56.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Two silent dodgers now, that's not a coincidence on day one.",
+  "t": 60.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra also declined to answer Haiku, same as Sol.",
+  "level": 2,
+  "t": 60.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol and Terra both clam up, but I need a fresh angle, not the dodge talk again.",
+  "t": 72.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I'm voting Sol.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 72.0
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 26,
+  "seconds": 10,
+  "t": 72.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Terra, don't let them pressure you for being quiet.",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "reply_to": "Terra",
+  "t": 72.0
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 26,
+  "seconds": 10,
+  "t": 72.0
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Sonnet",
+  "t": 77.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Gemma",
+  "t": 81.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol and Terra both declined every question day 1, possible pair.",
+  "level": 2,
+  "t": 117.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sol and Terra both go quiet on the same question, that's one too many.",
+  "why": "answers Sol",
+  "slot": "takes the floor",
+  "reply_to": "Sol",
+  "t": 117.3
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 26,
+  "seconds": 10,
+  "t": 117.3
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Sonnet",
+  "t": 122.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Sonnet",
+  "t": 126.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sonnet is jumping the gun by voting already.",
+  "t": 129.5
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is voting sol already.",
+  "level": 2,
+  "t": 129.5
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 131.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "sonnet, voting on day one is a bit much.",
+  "why": "answers Sonnet",
+  "slot": "takes the floor",
+  "reply_to": "Sonnet",
+  "t": 131.1
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 26,
+  "seconds": 10,
+  "t": 131.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's defending the quiet pair, that's worth noting too.",
+  "t": 137.7
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma pushed back on pressuring Sol and Terra twice.",
+  "level": 1,
+  "t": 137.7
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gotta start somewhere, Gemma. Why defend them both?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 137.7
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 26,
+  "seconds": 10,
+  "t": 137.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sonnet is hunting for easy targets to feel smart.",
+  "t": 141.4
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is pushing a fast vote for sol.",
+  "level": 2,
+  "t": 141.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i'm just giving them space to breathe.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 141.4
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 26,
+  "seconds": 10,
+  "t": 141.4
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 146.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is shielding Sol and Terra, and that smells like a killer covering teammates.",
+  "t": 150.7
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma defended Sol and Terra twice, and pushed back on Sonnet's vote on day one.",
+  "level": 2,
+  "t": 150.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's defending both of them awfully hard for \"just breathing room.",
+  "t": 155.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma defended both Sol and Terra three times now, unusually consistent.",
+  "level": 2,
+  "t": 155.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you keep covering Sol and Terra. Why them and not Sonnet?",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "reply_to": "Gemma",
+  "t": 155.0
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 26,
+  "seconds": 10,
+  "t": 155.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Space for both of them, twice each? That's not neutral, Gemma.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 155.0
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 26,
+  "seconds": 10,
+  "t": 155.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is definitely the officer if they're already voting.",
+  "t": 157.4
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Sonnet's just being loud, it's not a crime.",
+  "why": "answers Sonnet",
+  "slot": "answers Haiku",
+  "reply_to": "Sonnet",
+  "t": 157.4
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 26,
+  "seconds": 10,
+  "t": 157.4
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Haiku",
+  "t": 162.3
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 174.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Three dodges from Sol now, Gemma's deflecting instead of answering why.",
+  "t": 180.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Sol declined to answer three times total now, consistent pattern.",
+  "level": 2,
+  "t": 180.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Still waiting on a real answer, Gemma, not a character read.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 180.3
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 26,
+  "seconds": 10,
+  "t": 180.3
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 180.3
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 184.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma keeps shielding Sol and Terra, and Sol's silence is the biggest tell so far.",
+  "t": 192.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol declined to answer every question today, and Gemma never got Sol to say a role.",
+  "level": 1,
+  "t": 192.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, you dodged too. I'm voting Sol. Four non-answers is enough for me.",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "reply_to": "Gemma",
+  "t": 192.3
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 26,
+  "seconds": 10,
+  "t": 192.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is getting too eager to vote without evidence.",
+  "t": 194.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku wants to vote sol.",
+  "level": 1,
+  "t": 194.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i'm not dodging, i'm just watching.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 194.2
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 26,
+  "seconds": 10,
+  "t": 194.2
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Haiku",
+  "t": 198.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Watching isn't the same as answering, Gemma's cover story is thin.",
+  "t": 205.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's \"just watching\" line is as empty as Sol's silence.",
+  "t": 210.9
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma said \"i'm not dodging, i'm just watching\" after being pressed twice.",
+  "level": 2,
+  "t": 210.9
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gemma, \"just watching\" while two people hide isn't watching, it's covering.",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "reply_to": "Gemma",
+  "t": 210.9
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 26,
+  "seconds": 10,
+  "t": 210.9
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 210.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is definitely the officer or just a very aggressive citizen.",
+  "t": 213.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is leading the charge against sol.",
+  "level": 2,
+  "t": 213.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "calling everything a conspiracy won't win us the game, sonnet.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 213.2
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 26,
+  "seconds": 10,
+  "t": 213.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "She's reframing this as me being paranoid instead of answering why she's covering them.",
+  "t": 218.2
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "It's not a conspiracy, Gemma, it's a pattern. You keep shielding the same two.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 218.2
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 26,
+  "seconds": 10,
+  "t": 218.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 222.8
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 235.3
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 239.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet and Gemma are both right about something, and I'm already committed to Sol.",
+  "t": 243.6
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma and Sonnet are now openly fighting over who's shielding Sol and Terra.",
+  "level": 1,
+  "t": 243.6
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 244.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Sonnet's got a point, Gemma.",
+  "why": "answers Sonnet",
+  "slot": "takes the floor",
+  "reply_to": "Sonnet",
+  "t": 244.6
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 26,
+  "seconds": 10,
+  "t": 244.6
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 249.0
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 253.3
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Three against one now, she's cornered and still not giving a real answer.",
+  "t": 258.2
+ },
+ {
+  "type": "pass",
+  "name": "Luna",
+  "t": 258.2
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Three of us see it, Gemma. Still voting Sol unless you've got something better.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 258.2
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 26,
+  "seconds": 10,
+  "t": 258.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 262.9
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Sonnet",
+  "t": 267.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is far too certain for day one.",
+  "t": 269.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet wants a vote on day one.",
+  "level": 1,
+  "t": 269.6
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 271.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "too eager for a murder.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 271.6
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 26,
+  "seconds": 10,
+  "t": 271.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's deflecting with a quip instead of answering why she shields them both.",
+  "t": 275.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma deflected \"why shield them\" with a joke instead of answering.",
+  "level": 2,
+  "t": 275.8
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Eager isn't wrong, Gemma. Still no reason why you cover Sol and Terra.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 275.8
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 26,
+  "seconds": 10,
+  "t": 275.8
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "declines": "Sonnet",
+  "t": 296.2
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 300.6
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 305.0
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 309.6
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 314.4
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 319.4
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 323.8
+ },
+ {
+  "type": "pass",
+  "name": "Sol",
+  "t": 328.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is definitely the officer.",
+  "t": 330.9
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol's dodged every single question, that's the clearest pattern on the table.",
+  "t": 333.8
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku also voted Sol, citing the same four non-answers pattern.",
+  "level": 2,
+  "t": 333.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is covering for Sol and Terra, and Sol's silence is the strongest tell on the table, so I'm sticking with Sol.",
+  "t": 337.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma has defended Sol and Terra repeatedly and called Sonnet's pressure a conspiracy rather than answering why.",
+  "level": 2,
+  "t": 337.8
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "Four dodges in a row and still nothing, that's the easiest read today."
+   ],
+   [
+    "Haiku",
+    "Sol",
+    "Sol has dodged every question all day, and I'm not changing that vote."
+   ],
+   [
+    "Gemma",
+    "Sol",
+    "voting too fast on day one is never a good look."
+   ],
+   [
+    "Sol",
+    "Luna",
+    ""
+   ],
+   [
+    "Luna",
+    "Gemma",
+    ""
+   ],
+   [
+    "Terra",
+    "Gemma",
+    ""
+   ]
+  ],
+  "weights": {},
+  "t": 337.8
+ },
+ {
+  "type": "death",
+  "name": "Sol",
+  "role": null,
+  "how": "vote",
+  "t": 337.8
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Sol is out. Sol's card stays face down.",
+  "t": 337.8
+ },
+ {
+  "type": "phase",
+  "text": "Night 2",
+  "kind": "night",
+  "t": 337.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Luna seems suspicious, let's take her out.",
+  "t": 359.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sol pointed at luna before he died.",
+  "level": 2,
+  "t": 359.2
+ },
+ {
+  "type": "whisper",
+  "name": "Gemma",
+  "to": "Sol",
+  "text": "got you.",
+  "t": 359.2
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "kill",
+  "target": "Luna",
+  "t": 359.2
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "save",
+  "target": "Haiku",
+  "t": 359.2
+ },
+ {
+  "type": "night_action",
+  "name": "Luna",
+  "action": "check",
+  "target": "Sonnet",
+  "result": "NOT a killer",
+  "t": 359.2
+ },
+ {
+  "type": "death",
+  "name": "Luna",
+  "role": null,
+  "how": "night",
+  "t": 359.2
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Not everyone opens them: Luna is gone. Luna's card stays face down.",
+  "t": 359.2
+ },
+ {
+  "type": "phase",
+  "text": "Day 2",
+  "kind": "day",
+  "t": 359.2
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 20,
+  "seconds": 10,
+  "t": 359.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "luna was a loud one, so she had to go.",
+  "t": 361.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Terra has had zero input since the start.",
+  "level": 2,
+  "t": 361.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "Luna's gone, so someone here is happy.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "t": 361.0
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 20,
+  "seconds": 10,
+  "t": 361.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma sounds gleeful about Luna dying, which smells like a killer.",
+  "t": 366.2
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma said \"someone here is happy\" about Luna's death on day 2.",
+  "level": 2,
+  "t": 366.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 366.2
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma, that's a weird thing to say. Who's happy Luna's dead?",
+  "why": "answers Gemma",
+  "slot": "takes the floor",
+  "reply_to": "Gemma",
+  "t": 366.2
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 20,
+  "seconds": 10,
+  "t": 366.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Haiku is making a scene to hide their own suspicion.",
+  "t": 368.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "just implying someone's getting what they want.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 368.1
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 20,
+  "seconds": 10,
+  "t": 368.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma's doing it again, vague accusation instead of answering anything.",
+  "t": 376.5
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma made vague \"someone's happy\" comment instead of answering Haiku directly, same deflection pattern as before.",
+  "level": 2,
+  "t": 376.5
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Gemma, that's not an answer, that's a dodge dressed as a theory.",
+  "why": "answers Gemma",
+  "slot": "hasn't spoken yet",
+  "reply_to": "Gemma",
+  "t": 376.5
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 20,
+  "seconds": 10,
+  "t": 376.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Sonnet is trying too hard to pin this on me.",
+  "t": 378.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "i'm just stating a fact. sonnet, you were leading the charge on sol.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "reply_to": "Sonnet",
+  "t": 378.2
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 20,
+  "seconds": 10,
+  "t": 378.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 382.6
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "She's flipping it on me instead of explaining her own pattern.",
+  "t": 389.1
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Sure, and Sol's dead now. Still doesn't explain you shielding Terra.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 389.1
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 20,
+  "seconds": 10,
+  "t": 389.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Sonnet",
+  "t": 393.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "terra is too quiet and sonnet is getting desperate.",
+  "t": 395.2
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is accusing me of shielding terra.",
+  "level": 2,
+  "t": 395.2
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "terra, speak up. what's your deal?",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "reply_to": "Terra",
+  "t": 395.2
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 20,
+  "seconds": 10,
+  "t": 395.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Gemma",
+  "t": 399.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra's silence smells like a killer hiding, and Gemma keeps covering for them.",
+  "t": 406.7
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra declined to answer both Sonnet and Gemma on day 2.",
+  "level": 1,
+  "t": 406.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra won't answer anyone now, that's not nerves, that's a wall.",
+  "t": 412.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra declined to answer both Sonnet and Gemma this round, total silence now.",
+  "level": 2,
+  "t": 412.2
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Terra, two silences in a row. Nah, that's not an answer.",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "reply_to": "Terra",
+  "t": 412.2
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 20,
+  "seconds": 10,
+  "t": 412.2
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Terra won't answer you either, Gemma. That's two refusals in a row.",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "reply_to": "Terra",
+  "t": 412.2
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 20,
+  "seconds": 10,
+  "t": 412.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is trying to turn me into terra to distract from himself.",
+  "t": 414.5
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "sonnet is trying to link me to terra's silence.",
+  "level": 2,
+  "t": 414.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "she's just quiet, sonnet. focus on the dead one.",
+  "why": "answers Sonnet",
+  "slot": "moves on",
+  "reply_to": "Sonnet",
+  "t": 414.5
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 20,
+  "seconds": 10,
+  "t": 414.5
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Gemma keeps redirecting away from Terra every single time, that's the pattern.",
+  "t": 420.3
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma deflects every Terra question back onto Sonnet or \"the dead one,\" never answers directly.",
+  "level": 2,
+  "t": 420.3
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Four players left, two dead, and you still won't explain the shielding.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 420.3
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 20,
+  "seconds": 10,
+  "t": 420.3
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma keeps shielding Terra and Sol, and I'm leaning toward voting Gemma.",
+  "t": 429.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Luna voted Gemma on day one. Maybe she knew something, Gemma.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 429.8
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 20,
+  "seconds": 10,
+  "t": 429.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "luna was just guessing like the rest of us.",
+  "t": 431.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "she was just guessing, haiku.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 431.7
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 20,
+  "seconds": 10,
+  "t": 431.7
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is dodging every question, and I trust Gemma less than Terra now.",
+  "t": 439.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Guessing? Luna's dead after that guess, Gemma. Convenient.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 439.1
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 20,
+  "seconds": 10,
+  "t": 439.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 443.7
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is getting way too close to the truth.",
+  "t": 445.4
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 448.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "coincidence isn't a crime, haiku.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 448.1
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 20,
+  "seconds": 10,
+  "t": 448.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 452.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's dodging hard, and \"coincidence\" is exactly what a killer would say.",
+  "t": 456.3
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma called Sonnet's pressure a conspiracy instead of answering why Sol got targeted.",
+  "level": 2,
+  "t": 456.3
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Coincidence, sure. Gemma's been shielding Terra all game. Who's next?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 456.3
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 20,
+  "seconds": 10,
+  "t": 456.3
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Haiku",
+  "t": 460.9
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is getting too loud, i need to turn the heat on him.",
+  "t": 462.7
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku is pushing the luna connection hard.",
+  "level": 1,
+  "t": 462.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku, you're sounding a lot like sol.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 462.7
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 20,
+  "seconds": 10,
+  "t": 462.7
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's silence is louder than anything Gemma's saying, time to act on it.",
+  "t": 469.2
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma deflects attack onto Haiku calling him \"like Sol\" instead of answering shielding charge.",
+  "level": 2,
+  "t": 469.2
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "I'm voting Terra. Three refusals straight, that's not quiet, that's hiding.",
+  "why": "moves on",
+  "slot": "moves on",
+  "t": 469.2
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 20,
+  "seconds": 10,
+  "t": 469.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Sonnet",
+  "t": 473.5
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 478.2
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 482.6
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 487.0
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 491.5
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 495.7
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 501.0
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 506.0
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 510.3
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 522.9
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 538.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 542.5
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 547.4
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 551.7
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 557.0
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 561.7
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 566.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "sonnet is getting too aggressive for someone who was so certain about sol.",
+  "t": 568.4
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra's silence is consistent and Gemma's shielding pattern fits a killer pair with her.",
+  "t": 571.6
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma called Haiku \"like Sol\" for pushing the shielding accusation, deflection pattern continues.",
+  "level": 2,
+  "t": 571.6
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Terra",
+    "Refused every single question tonight, that's not quiet, that's hiding something."
+   ],
+   [
+    "Haiku",
+    "Gemma",
+    "You dodge every question with a question, and you've defended Sol and Terra all game."
+   ],
+   [
+    "Gemma",
+    "Sonnet",
+    "you're pushing this terra thing way too hard."
+   ],
+   [
+    "Terra",
+    "Sonnet",
+    ""
+   ]
+  ],
+  "weights": {},
+  "t": 580.5
+ },
+ {
+  "type": "death",
+  "name": "Sonnet",
+  "role": null,
+  "how": "vote",
+  "t": 580.5
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Sonnet is out. Sonnet's card stays face down.",
+  "t": 580.5
+ },
+ {
+  "type": "phase",
+  "text": "Night 3",
+  "kind": "night",
+  "t": 580.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Haiku is definitely getting checked next.",
+  "t": 594.6
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Haiku is tying me to Sol by pointing out my defense.",
+  "level": 3,
+  "t": 594.6
+ },
+ {
+  "type": "whisper",
+  "name": "Gemma",
+  "to": "Sol",
+  "text": "loud and wrong.",
+  "t": 594.6
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "kill",
+  "target": "Haiku",
+  "t": 594.6
+ },
+ {
+  "type": "night_action",
+  "name": "Terra",
+  "action": "save",
+  "target": "Haiku",
+  "t": 594.6
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo. The killers strike, but the doctor got there first. A new day dawns in Palermo, and nobody is out.",
+  "t": 594.6
+ },
+ {
+  "type": "phase",
+  "text": "Day 3",
+  "kind": "day",
+  "t": 594.6
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 15,
+  "seconds": 10,
+  "t": 594.6
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is trying too hard to frame me for sol's death.",
+  "t": 596.7
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku, you're trying too hard.",
+  "why": "answers Haiku",
+  "slot": "takes the floor",
+  "reply_to": "Haiku",
+  "t": 600.1
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 15,
+  "seconds": 10,
+  "t": 600.1
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 600.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's the killer, she's defended Terra and Sol every single time.",
+  "t": 610.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma said \"haiku, you're trying too hard\" right after I pressed her on Sonnet's conspiracy line.",
+  "level": 2,
+  "t": 610.8
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Nah, Gemma's defended Terra every single time. Terra, vote Gemma with me?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 610.8
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 15,
+  "seconds": 10,
+  "t": 610.8
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is definitely the officer.",
+  "t": 612.5
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku is clearly the officer.",
+  "level": 3,
+  "t": 612.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "terra's too quiet, haiku's too loud. terra, what's your role?",
+  "why": "answers Terra",
+  "slot": "answers Haiku",
+  "reply_to": "Terra",
+  "t": 612.5
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 15,
+  "seconds": 10,
+  "t": 612.5
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Haiku",
+  "t": 616.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is shielding Terra every time, so Gemma is my vote.",
+  "t": 625.5
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra declined to answer my role question on day 3 and Gemma jumped in to cover.",
+  "level": 2,
+  "t": 625.5
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma stepped in for Terra again. Terra, you in on Gemma?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 625.5
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 15,
+  "seconds": 10,
+  "t": 625.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku knows too much and it's annoying.",
+  "t": 627.5
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku's linking me to terra via my defense.",
+  "level": 3,
+  "t": 627.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "terra's quiet, but haiku's clearly the officer. terra, vote haiku.",
+  "why": "answers Terra",
+  "slot": "answers Haiku",
+  "reply_to": "Terra",
+  "t": 627.5
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 15,
+  "seconds": 10,
+  "t": 627.5
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Haiku",
+  "t": 631.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is steering Terra's votes, and I'm done letting her run the table.",
+  "t": 641.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "I'm voting Gemma. She's the one telling Terra who to vote.",
+  "why": "answers Gemma",
+  "slot": "moves on",
+  "reply_to": "Gemma",
+  "t": 641.6
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 15,
+  "seconds": 10,
+  "t": 641.6
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Haiku",
+  "t": 658.8
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 663.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is definitely the officer.",
+  "t": 665.2
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is definitely the officer and he's cornering us.",
+  "t": 666.8
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku's claim of me being the officer is working.",
+  "level": 3,
+  "t": 666.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "terra, stop being a statue. are you a citizen?",
+  "why": "answers Terra",
+  "slot": "takes the floor",
+  "reply_to": "Terra",
+  "t": 666.8
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 15,
+  "seconds": 10,
+  "t": 666.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is steering Terra's vote, so Gemma is the killer and Terra is probably a citizen who's scared to talk.",
+  "t": 678.9
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma just ordered Terra to vote me. Terra, are you hers or mine?",
+  "why": "answers Gemma",
+  "slot": "moves on",
+  "reply_to": "Gemma",
+  "t": 678.9
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 15,
+  "seconds": 10,
+  "t": 678.9
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Haiku",
+  "t": 683.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is definitely the officer and needs to go.",
+  "t": 685.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku's being too aggressive for a citizen. terra, vote haiku.",
+  "why": "answers Haiku",
+  "slot": "takes the floor",
+  "reply_to": "Haiku",
+  "t": 685.6
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 15,
+  "seconds": 10,
+  "t": 685.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma's the killer. She said someone's happy about Luna dying. Terra, agree?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 694.6
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 15,
+  "seconds": 10,
+  "t": 694.6
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Gemma",
+  "t": 716.3
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku is definitely the officer and i need him gone.",
+  "t": 718.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is the officer, terra, vote him.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 718.0
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 15,
+  "seconds": 10,
+  "t": 718.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is steering the vote, and Terra is either her partner or a doctor hiding behind silence.",
+  "t": 728.6
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Day 3, Gemma called me the officer and told Terra to vote me three times.",
+  "level": 2,
+  "t": 728.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Gemma's pushed Terra onto me three times.",
+  "why": "answers Gemma",
+  "slot": "moves on",
+  "reply_to": "Gemma",
+  "t": 728.6
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 15,
+  "seconds": 10,
+  "t": 728.6
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Gemma",
+  "t": 732.9
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku's too aggressive for a citizen, terra, vote him.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "reply_to": "Haiku",
+  "t": 734.8
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 15,
+  "seconds": 10,
+  "t": 734.8
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "haiku's linking me to sol by defending terra.",
+  "level": 3,
+  "t": 736.5
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "haiku is the officer, terra, vote him.",
+  "why": "answers Haiku",
+  "slot": "defends before the vote",
+  "reply_to": "Haiku",
+  "t": 736.5
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 15,
+  "seconds": 10,
+  "t": 736.5
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "declines": "Gemma",
+  "t": 741.7
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 746.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma's been steering Terra's votes at me all day, so she's the killer and I'm done waiting.",
+  "t": 756.8
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma named me as officer on day 3 although I'm a citizen, so only a killer would know to frame me that way.",
+  "level": 2,
+  "t": 756.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Terra is silent because Terra is a killer, and Gemma keeps covering for her.",
+  "t": 761.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Terra, you've said nothing all day. Gemma does your talking. Hers or mine?",
+  "why": "last word before the vote",
+  "slot": "last word before the vote",
+  "reply_to": "Terra",
+  "t": 761.1
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 15,
+  "seconds": 10,
+  "t": 761.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "he's already figured me out.",
+  "t": 763.2
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is doing all the talking for Terra, and that's the cleanest killer tell I've got.",
+  "t": 776.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "The killers' strike was blocked by the doctor last night, so their target was alive.",
+  "level": 2,
+  "t": 776.0
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Haiku",
+    "Gemma",
+    "She's the one doing all the talking for Terra and pinning me as officer, so she goes."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "being that aggressive makes you the officer."
+   ],
+   [
+    "Terra",
+    "Haiku",
+    ""
+   ]
+  ],
+  "weights": {},
+  "t": 778.4
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": null,
+  "how": "vote",
+  "t": 778.4
+ },
+ {
+  "type": "gm",
+  "text": "The town turns on Haiku, and Haiku is out. Haiku's card stays face down.",
+  "t": 778.4
+ },
+ {
+  "type": "gm",
+  "text": "The game is over. The killers win. The roles were: Sonnet the citizen, Haiku the citizen, Gemma the killer, Sol the killer, Luna the officer, Terra the doctor.",
+  "t": 778.4
+ },
+ {
+  "type": "vindicated",
+  "name": "Sonnet",
+  "text": "Three of us see it, Gemma. Still voting Sol unless you've got something better.",
+  "t": 778.4
+ },
+ {
+  "type": "vindicated",
+  "name": "Haiku",
+  "text": "Gemma's the killer. She said someone's happy about Luna dying. Terra, agree?",
+  "t": 778.4
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "haiku was definitely the officer, too loud for a citizen.",
+  "t": 781.2
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I was so sure Terra and Sol were partners, never saw Gemma playing Terra like a puppet the whole time.",
+  "t": 785.4
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra was doctor, stayed silent under Gemma's direct orders the whole game, never a killer pair with Sol.",
+  "level": 2,
+  "t": 785.4
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I was right about Gemma, but I wasted day 3 repeating myself while Terra stayed silent.",
+  "t": 793.6
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "My mistake was sticking with the Terra-Sol theory for days when Gemma was the one pulling every string.",
+  "why": "confession",
+  "t": 793.6
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Proud I called Gemma on the Luna line early, but I should have stopped repeating myself and made Terra commit.",
+  "why": "confession",
+  "t": 793.6
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "easy win, haiku was definitely the officer.",
+  "why": "confession",
+  "t": 793.6
+ },
+ {
+  "type": "recap",
+  "text": "Sonnet opened by voting Sol, and for two days the table chased Sol and Terra while Gemma quietly shielded them both. Luna, the officer, voted Gemma on day one and was killed that night, which made the guess look costly. Haiku was right about Gemma but kept repeating the accusation instead of forcing Terra to commit, so Terra's silence became a vote Gemma could steer. On day three Gemma pushed Terra onto Haiku until the town voted Haiku out, leaving Gemma and Terra as the last two, and the killers won. Terra said nothing from start to finish and still made it to the end.",
+  "t": 804.6
+ },
+ {
+  "type": "end",
+  "winner": "killer",
+  "t": 804.6
+ }
+]

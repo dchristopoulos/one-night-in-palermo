@@ -1,0 +1,1811 @@
+[
+ {
+  "type": "cast",
+  "dry": true,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": true,
+  "hide_night": false,
+  "hide_vote": false,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "killer",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": true
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "officer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "doctor",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": false
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "citizen",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "citizen",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "citizen",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   },
+   {
+    "name": "Opus",
+    "model": "claude:opus",
+    "role": "killer",
+    "seat": 6,
+    "tagline": "The Veteran",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Seven players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra, Opus. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Terra is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Terra might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra pushed Haiku hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol pushed Terra hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma pushed Luna hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "whisper",
+  "name": "Sonnet",
+  "to": "Opus",
+  "text": "Look. Terra, answer the question. Where were you?",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "If I push Sonnet, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Sonnet pushed Gemma hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "whisper",
+  "name": "Opus",
+  "to": "Sonnet",
+  "text": "Vote Sonnet. I said what I said.",
+  "t": 0.0
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "save",
+  "target": "Opus",
+  "t": 0.0
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Opus",
+  "result": "a KILLER",
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Sol is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Sol pushed Terra hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "I'm just a citizen, stop looking at me.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Haiku pushed Gemma hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Okay so. Vote Haiku. I said what I said.",
+  "why": "hasn't spoken yet",
+  "slot": "hasn't spoken yet",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna pushed Terra hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Come on. I believe Terra. Luna, not so much.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "reply_to": "Sol",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "If I push Haiku, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pushed Gemma hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Well. Vote Haiku. I said what I said.",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Haiku",
+  "reply_to": "Haiku",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "If I push Gemma, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma pushed Terra hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. Gemma and Terra keep agreeing. Suspicious.",
+  "why": "answers Gemma",
+  "slot": "answers Haiku",
+  "reply_to": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sonnet is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet pushed Opus hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Come on. If Sonnet is innocent I'll eat my hat.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Sonnet",
+  "reply_to": "Terra",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Luna might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sonnet pushed Luna hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but Sonnet, why so quiet? Quiet people worry me.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "reply_to": "Luna",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "If I push Luna, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Luna pushed Haiku hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Look. Luna, why so quiet? Quiet people worry me.",
+  "why": "answers Luna",
+  "slot": "answers Haiku",
+  "reply_to": "Luna",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. I believe Gemma. Terra, not so much.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Terra",
+  "reply_to": "Sonnet",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "If I push Sol, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol pushed Sonnet hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but I don't trust Sol. Something is off.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Sol",
+  "reply_to": "Luna",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sol pushed Gemma hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Well. I'm just a citizen, stop looking at me.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Sol",
+  "reply_to": "Luna",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Opus might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Gemma pushed Opus hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Okay so. Gemma, answer the question. Where were you?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 14,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "If I push Terra, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Terra pushed Luna hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but I believe Luna. Terra, not so much.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "reply_to": "Sol",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 13,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Opus pushed Haiku hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. Opus, answer the question. Where were you?",
+  "why": "answers Opus",
+  "slot": "answers Gemma",
+  "reply_to": "Opus",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 12,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma pushed Luna hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Well. Gemma, why so quiet? Quiet people worry me.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 11,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Gemma is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Terra is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Terra pushed Gemma hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "pass",
+  "name": "Opus",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Opus is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus pushed Sol hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but Opus, why so quiet? Quiet people worry me.",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Opus",
+  "reply_to": "Terra",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 10,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "If Sonnet is innocent I'll eat my hat.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 9,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "Sol might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Terra pushed Sol hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "pass",
+  "name": "Sonnet",
+  "declines": "Opus",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Gemma pushed Opus hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. I don't trust Gemma. Something is off.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 8,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus pushed Haiku hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but I believe Haiku. Opus, not so much.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Opus",
+  "reply_to": "Luna",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 7,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sol pushed Gemma hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Come on. I'm just a citizen, stop looking at me.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "reply_to": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 6,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "If I push Terra, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Terra pushed Sonnet hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "pass",
+  "name": "Opus",
+  "declines": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Haiku pushed Sonnet hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Luna pushed Haiku hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "pass",
+  "name": "Terra",
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. Opus, why so quiet? Quiet people worry me.",
+  "why": "answers Opus",
+  "slot": "takes the floor",
+  "lean": "Opus",
+  "reply_to": "Opus",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 5,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Luna might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Gemma pushed Luna hard",
+  "level": 3,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Gemma, answer the question. Where were you?",
+  "why": "answers Gemma",
+  "slot": "answers Luna",
+  "reply_to": "Gemma",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 4,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol pushed Luna hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but Sol, answer the question. Where were you?",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "reply_to": "Opus",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 3,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "If I push Terra, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Terra pushed Luna hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Okay so. Terra, answer the question. Where were you?",
+  "why": "answers Terra",
+  "slot": "answers Gemma",
+  "lean": "Terra",
+  "reply_to": "Terra",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 2,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Sonnet is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet pushed Sol hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Well. I believe Sol. Sonnet, not so much.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "lean": "Sonnet",
+  "reply_to": "Sol",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 1,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Opus pushed Terra hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. I believe Terra. Opus, not so much.",
+  "why": "last word before the vote",
+  "slot": "last word before the vote",
+  "t": 0.0
+ },
+ {
+  "type": "clock",
+  "left": 0,
+  "total": 26,
+  "seconds": 10,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I have no idea. Act confident.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "If I push Sonnet, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Terra might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Haiku pushed Terra hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Sonnet might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Gemma might actually be on my side.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Opus is lying, I can feel it.",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "If I push Sonnet, nobody looks at me.",
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Sonnet pushed Gemma hard",
+  "level": 2,
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sonnet pushed Terra hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Sol",
+  "text": "Luna pushed Sonnet hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Opus pushed Sonnet hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Sonnet pushed Luna hard",
+  "level": 1,
+  "t": 0.0
+ },
+ {
+  "type": "votes",
+  "runoff": false,
+  "votes": [
+   [
+    "Sonnet",
+    "Sol",
+    "Look. I vote Sol."
+   ],
+   [
+    "Haiku",
+    "Sol",
+    "Come on. I vote Sol."
+   ],
+   [
+    "Gemma",
+    "Haiku",
+    "ok but I vote Haiku."
+   ],
+   [
+    "Sol",
+    "Gemma",
+    "Okay so. I vote Gemma."
+   ],
+   [
+    "Luna",
+    "Haiku",
+    "Hm. I vote Haiku."
+   ],
+   [
+    "Terra",
+    "Luna",
+    "Well. I vote Luna."
+   ],
+   [
+    "Opus",
+    "Luna",
+    "I vote Luna."
+   ]
+  ],
+  "weights": {},
+  "t": 0.1
+ },
+ {
+  "type": "gm",
+  "text": "The vote is tied between Sol and Haiku and Luna. Palermo votes again.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "If I push Terra, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "If I push Luna, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "If I push Sonnet, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Luna pushed Sol hard",
+  "level": 3,
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sonnet pushed Haiku hard",
+  "level": 2,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Okay so. I don't trust Terra. Something is off.",
+  "why": "defends before the vote",
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Come on. If Luna is innocent I'll eat my hat.",
+  "why": "defends before the vote",
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. I don't trust Sonnet. Something is off.",
+  "why": "defends before the vote",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "If I push Gemma, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Sol is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma pushed Sol hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Luna might actually be on my side.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Sonnet is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra pushed Sonnet hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet pushed Luna hard",
+  "level": 3,
+  "t": 0.1
+ },
+ {
+  "type": "votes",
+  "runoff": true,
+  "votes": [
+   [
+    "Sonnet",
+    "Haiku",
+    "Look. I vote Haiku."
+   ],
+   [
+    "Haiku",
+    "Sol",
+    "Come on. I vote Sol."
+   ],
+   [
+    "Gemma",
+    "Luna",
+    "ok but I vote Luna."
+   ],
+   [
+    "Sol",
+    "Luna",
+    "Okay so. I vote Luna."
+   ],
+   [
+    "Luna",
+    "Sol",
+    "Hm. I vote Sol."
+   ],
+   [
+    "Terra",
+    "Sol",
+    "Well. I vote Sol."
+   ],
+   [
+    "Opus",
+    "Haiku",
+    "I vote Haiku."
+   ]
+  ],
+  "weights": {},
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "Okay so. I don't trust Gemma. Something is off.",
+  "why": "last words",
+  "t": 0.1
+ },
+ {
+  "type": "death",
+  "name": "Sol",
+  "role": "citizen",
+  "how": "vote",
+  "t": 0.1
+ },
+ {
+  "type": "gm",
+  "text": "Palermo has voted: Sol is out. Sol shows the card: citizen.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Opus is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "ghost",
+  "name": "Sol",
+  "text": "Okay so. I don't trust Opus. Something is off.",
+  "t": 0.1
+ },
+ {
+  "type": "phase",
+  "text": "Night 2",
+  "kind": "night",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "If I push Opus, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "Haiku might actually be on my side.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "If I push Terra, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Opus pushed Haiku hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Terra pushed Haiku hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Terra pushed Sonnet hard",
+  "level": 3,
+  "t": 0.1
+ },
+ {
+  "type": "whisper",
+  "name": "Sonnet",
+  "to": "Opus",
+  "text": "Terra talks too much.",
+  "t": 0.1
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "propose",
+  "target": "Terra",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "If I push Gemma, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "whisper",
+  "name": "Opus",
+  "to": "Sonnet",
+  "text": "Haiku talks too much.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "whisper",
+  "name": "Sonnet",
+  "to": "Opus",
+  "text": "Look. I'm just a citizen, stop looking at me.",
+  "t": 0.1
+ },
+ {
+  "type": "night_action",
+  "name": "Sonnet",
+  "action": "kill",
+  "target": "Haiku",
+  "t": 0.1
+ },
+ {
+  "type": "night_action",
+  "name": "Opus",
+  "action": "kill",
+  "target": "Haiku",
+  "t": 0.1
+ },
+ {
+  "type": "night_action",
+  "name": "Gemma",
+  "action": "save",
+  "target": "Gemma",
+  "t": 0.1
+ },
+ {
+  "type": "night_action",
+  "name": "Haiku",
+  "action": "check",
+  "target": "Terra",
+  "result": "NOT a killer",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Haiku",
+  "text": "Gemma pushed Opus hard",
+  "level": 2,
+  "t": 0.1
+ },
+ {
+  "type": "death",
+  "name": "Haiku",
+  "role": "officer",
+  "how": "night",
+  "t": 0.1
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. Not everyone opens them: Haiku is gone. Haiku was the officer.",
+  "t": 0.1
+ },
+ {
+  "type": "note",
+  "name": "Haiku",
+  "text": "Come on. Gemma, answer the question. Where were you?",
+  "t": 0.1
+ },
+ {
+  "type": "phase",
+  "text": "Day 2",
+  "kind": "day",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra might actually be on my side.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Opus pushed Terra hard",
+  "level": 2,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Opus is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Opus pushed Sonnet hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. I'm just a citizen, stop looking at me.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Opus",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Luna might actually be on my side.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Terra pushed Luna hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "Gemma and Luna keep agreeing. Suspicious.",
+  "why": "answers Gemma",
+  "slot": "hasn't spoken yet",
+  "reply_to": "Gemma",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Opus pushed Terra hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but Opus and Terra keep agreeing. Suspicious.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "reply_to": "Opus",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "Terra is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Terra pushed Sonnet hard",
+  "level": 2,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. If Terra is innocent I'll eat my hat.",
+  "why": "answers Opus",
+  "slot": "answers Opus",
+  "lean": "Terra",
+  "reply_to": "Opus",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Luna might actually be on my side.",
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "If Terra is innocent I'll eat my hat.",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Terra",
+  "reply_to": "Gemma",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "If I push Sonnet, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Sonnet pushed Gemma hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Well. If Sonnet is innocent I'll eat my hat.",
+  "why": "answers Luna",
+  "slot": "answers Luna",
+  "lean": "Sonnet",
+  "reply_to": "Luna",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 19,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Sonnet",
+  "text": "Gemma pushed Opus hard",
+  "level": 2,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Sonnet",
+  "text": "Look. Gemma and Opus keep agreeing. Suspicious.",
+  "why": "answers Gemma",
+  "slot": "answers Terra",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 18,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "If I push Luna, nobody looks at me.",
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "ok but Vote Luna. I said what I said.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Luna",
+  "reply_to": "Sonnet",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 17,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Opus",
+  "text": "Luna is lying, I can feel it.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Opus",
+  "text": "Luna pushed Sonnet hard",
+  "level": 1,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Opus",
+  "text": "I don't trust Luna. Something is off.",
+  "why": "answers Sonnet",
+  "slot": "answers Sonnet",
+  "lean": "Luna",
+  "reply_to": "Sonnet",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 16,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "I have no idea. Act confident.",
+  "t": 0.1
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Sonnet pushed Gemma hard",
+  "level": 2,
+  "t": 0.1
+ },
+ {
+  "type": "say",
+  "name": "Luna",
+  "text": "Hm. Sonnet, why so quiet? Quiet people worry me.",
+  "why": "answers Sonnet",
+  "slot": "answers Gemma",
+  "reply_to": "Sonnet",
+  "t": 0.1
+ },
+ {
+  "type": "clock",
+  "left": 15,
+  "total": 25,
+  "seconds": 10,
+  "t": 0.1
+ },
+ {
+  "type": "thought",
+  "name": "Sonnet",
+  "text": "If I push Terra, nobody looks at me.",
+  "t": 0.1
+ }
+]

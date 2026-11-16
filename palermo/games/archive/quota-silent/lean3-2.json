@@ -1,0 +1,308 @@
+[
+ {
+  "type": "cast",
+  "dry": false,
+  "roles": "killer=2,officer,doctor",
+  "outnumber": true,
+  "hide_night": true,
+  "hide_vote": true,
+  "players": [
+   {
+    "name": "Sonnet",
+    "model": "claude:sonnet",
+    "role": "citizen",
+    "seat": 0,
+    "tagline": "The Analyst",
+    "shown": false
+   },
+   {
+    "name": "Haiku",
+    "model": "claude:claude-haiku-5-5",
+    "role": "killer",
+    "seat": 1,
+    "tagline": "The Gut Player",
+    "shown": false
+   },
+   {
+    "name": "Gemma",
+    "model": "local:google/gemma-4-26b-a4b-qat",
+    "role": "killer",
+    "seat": 2,
+    "tagline": "The Joker",
+    "shown": true
+   },
+   {
+    "name": "Sol",
+    "model": "codex:gpt-6-sol",
+    "role": "officer",
+    "seat": 3,
+    "tagline": "The Diplomat",
+    "shown": false
+   },
+   {
+    "name": "Luna",
+    "model": "codex:gpt-6-luna",
+    "role": "doctor",
+    "seat": 4,
+    "tagline": "The Suspicious One",
+    "shown": false
+   },
+   {
+    "name": "Terra",
+    "model": "codex:gpt-5.6-terra",
+    "role": "citizen",
+    "seat": 5,
+    "tagline": "The Quiet One",
+    "shown": false
+   }
+  ],
+  "t": 0.0
+ },
+ {
+  "type": "gm",
+  "text": "The game begins. Six players sit down at the table: Sonnet, Haiku, Gemma, Sol, Luna, Terra. Nobody knows who the killers are.",
+  "t": 0.0
+ },
+ {
+  "type": "phase",
+  "text": "Night 1",
+  "kind": "night",
+  "t": 0.0
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "let them search for a shadow.",
+  "t": 1.1
+ },
+ {
+  "type": "whisper",
+  "name": "Gemma",
+  "to": "Haiku",
+  "text": "play the helpful one.",
+  "t": 1.1
+ },
+ {
+  "type": "thought",
+  "name": "Luna",
+  "text": "No one has given anything away yet, so I\u2019ll protect myself.",
+  "t": 3.8
+ },
+ {
+  "type": "memory",
+  "name": "Luna",
+  "text": "Night one has no public information.",
+  "level": 1,
+  "t": 3.8
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Gemma is a killer; I need to find her partner.",
+  "t": 3.9
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "Gemma is shown, I'm hidden, so I play the blunt one who looks like a citizen.",
+  "t": 5.8
+ },
+ {
+  "type": "whisper",
+  "name": "Haiku",
+  "to": "Gemma",
+  "text": "Fine, but I'm not going to be the nice one. Just watch who's quiet.",
+  "t": 5.8
+ },
+ {
+  "type": "night_action",
+  "name": "Luna",
+  "action": "save",
+  "target": "Luna",
+  "t": 5.8
+ },
+ {
+  "type": "night_action",
+  "name": "Sol",
+  "action": "check",
+  "target": "Sonnet",
+  "result": "NOT a killer",
+  "t": 5.8
+ },
+ {
+  "type": "gm",
+  "text": "Night falls on Palermo and everyone closes their eyes. The killers meet in the dark, and the officer is shown one of them. A new day dawns in Palermo. Nobody is out.",
+  "t": 5.8
+ },
+ {
+  "type": "phase",
+  "text": "Day 1",
+  "kind": "day",
+  "t": 5.8
+ },
+ {
+  "type": "clock",
+  "left": 26,
+  "total": 26,
+  "seconds": 10,
+  "t": 5.8
+ },
+ {
+  "type": "thought",
+  "name": "Haiku",
+  "text": "I'm a killer with Gemma, so I need to look like the most helpful citizen and not draw suspicion.",
+  "t": 10.0
+ },
+ {
+  "type": "say",
+  "name": "Haiku",
+  "text": "Day one, nobody's said anything. Sol, you've been quiet. Talk to us.",
+  "why": "takes the floor",
+  "slot": "takes the floor",
+  "lean": "Sol",
+  "t": 10.0
+ },
+ {
+  "type": "clock",
+  "left": 25,
+  "total": 26,
+  "seconds": 10,
+  "t": 10.0
+ },
+ {
+  "type": "thought",
+  "name": "Sol",
+  "text": "Haiku\u2019s push is harmless; I need Gemma out without giving away my role.",
+  "t": 14.1
+ },
+ {
+  "type": "say",
+  "name": "Sol",
+  "text": "I\u2019m here. Gemma, what\u2019s your read so far?",
+  "why": "answers Haiku",
+  "slot": "answers Haiku",
+  "lean": "Gemma",
+  "reply_to": "Haiku",
+  "t": 14.1
+ },
+ {
+  "type": "clock",
+  "left": 24,
+  "total": 26,
+  "seconds": 10,
+  "t": 14.1
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "i'm the one the officer knows.",
+  "t": 15.8
+ },
+ {
+  "type": "memory",
+  "name": "Gemma",
+  "text": "Sol is asking questions too early.",
+  "level": 2,
+  "t": 15.8
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "nothing yet. just watching everyone.",
+  "why": "answers Sol",
+  "slot": "answers Sol",
+  "lean": "Sol",
+  "reply_to": "Sol",
+  "t": 15.8
+ },
+ {
+  "type": "clock",
+  "left": 23,
+  "total": 26,
+  "seconds": 10,
+  "t": 15.8
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma is too comfortable watching.",
+  "t": 21.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma said she is just watching everyone.",
+  "level": 1,
+  "t": 21.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "Gemma, watching for what exactly?",
+  "why": "answers Gemma",
+  "slot": "hasn't spoken yet",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 21.5
+ },
+ {
+  "type": "clock",
+  "left": 22,
+  "total": 26,
+  "seconds": 10,
+  "t": 21.5
+ },
+ {
+  "type": "thought",
+  "name": "Gemma",
+  "text": "terra is being too aggressive so early.",
+  "t": 23.0
+ },
+ {
+  "type": "say",
+  "name": "Gemma",
+  "text": "just looking for patterns. terra, why the pressure?",
+  "why": "answers Terra",
+  "slot": "answers Terra",
+  "lean": "Sol",
+  "reply_to": "Terra",
+  "t": 23.0
+ },
+ {
+  "type": "clock",
+  "left": 21,
+  "total": 26,
+  "seconds": 10,
+  "t": 23.0
+ },
+ {
+  "type": "thought",
+  "name": "Terra",
+  "text": "Gemma pushed back without giving a read.",
+  "t": 28.5
+ },
+ {
+  "type": "memory",
+  "name": "Terra",
+  "text": "Gemma says she is looking for patterns but gives no pattern.",
+  "level": 2,
+  "t": 28.5
+ },
+ {
+  "type": "say",
+  "name": "Terra",
+  "text": "You said you were watching. What pattern do you see?",
+  "why": "answers Gemma",
+  "slot": "answers Gemma",
+  "lean": "Gemma",
+  "reply_to": "Gemma",
+  "t": 28.5
+ },
+ {
+  "type": "clock",
+  "left": 20,
+  "total": 26,
+  "seconds": 10,
+  "t": 28.5
+ }
+]
