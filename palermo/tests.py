@@ -13,6 +13,8 @@ r2 = "**MONOLOGUE:** hmm\n\n**SAY:** Friends, no.\n**NOTE:** 2 - Terra pressed H
 assert game.field(r2, "SAY") == "Friends, no." and game.field(r2, "FORGET") == "Terra is quiet", game.field(r2, "FORGET")
 c = [{"name": "Vera"}, {"name": "Nikos"}]
 assert game.pick_name("I vote for Vera, not Nikos", c)["name"] == "Vera" and game.pick_name("nikos.", c)["name"] == "Nikos"
+assert game.pick_name("no idea", c, "Nikos")["name"] == "Nikos" and game.pick_name("no idea", c, "Nobody") in c   # stated lean, else random
+assert game.pick_name("Vera", c, "Nikos")["name"] == "Vera"   # a readable answer always wins over the fallback
 assert game.plurality([c[0], c[1]])[0] is None and game.plurality([c[0], c[0], c[1]])[0]["name"] == "Vera"
 
 # --- repetition guard (lines from real games)

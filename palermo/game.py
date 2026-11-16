@@ -414,15 +414,18 @@ def field(reply, name):
     return m.group(1).strip().strip("*").strip().strip('"') if m else ""
 
 
-def pick_name(text, candidates):
-    """Exact name, else the candidate mentioned first; random if none (bad answer = random)."""
+def pick_name(text, candidates, fallback=None):
+    """Exact name, else the candidate mentioned first. A reply that names nobody falls back to `fallback` (for a vote:
+    the lean the player last said aloud) when that is a candidate, else to a random candidate."""
     word = re.sub(r"[^a-z]", "", text.lower())
     for c in candidates:
         if word == c["name"].lower():
             return c
     hits = [(m.start(), c) for c in candidates
             for m in [re.search(rf"\b{c['name']}\b", text, re.I)] if m]
-    return min(hits, key=lambda h: h[0])[1] if hits else random.choice(candidates)
+    if hits:
+        return min(hits, key=lambda h: h[0])[1]
+    return next((c for c in candidates if c["name"] == fallback), None) or random.choice(candidates)
 
 
 def plurality(choices):
@@ -854,7 +857,7 @@ class Game:
         hist = p.get("history_last" if blind else "history")
         return f"{self.rules}\n\nYou are {p['name']}.\n{p['persona']}" + (f"\n\n{hist}" if hist else "")
 
-    def act(self, p, task, out, candidates=None, clock="", extra="", limit=None, kind="say", blind=False):
+    def act(self, p, task, out, candidates=None, clock="", extra="", limit=None, kind="say", blind=False, fallback=None):
         """Ask p to do `task`; returns {"thought", "text", "pick"}. Bad/empty answers degrade safely. `kind` (say, note,
         ghost) picks the junk filter for a SAY line; a dropped line is silence with r["junk"] set. `blind`: the line before
         the cards (2026-11-15) gets no role, no role knowledge and no notes, only who sits at the table."""
@@ -907,7 +910,7 @@ class Game:
         if p["alive"] and not blind:                     # the dead keep no notes
             self.remember(p, field(reply, "NOTE"), field(reply, "FORGET"))
         if candidates:
-            r["pick"] = pick_name(r["text"] or reply, candidates)
+            r["pick"] = pick_name(r["text"] or reply, candidates, fallback)
         return r
 
     # ---------------------------------------------------------------- memory: three context levels
@@ -1608,7 +1611,8 @@ class Game:
             said = [l.split(": ", 1)[1] for l in self.today if l.startswith(p["name"] + ": ") and re.search(r"\bvot", l, re.I)]
             return task + (f' You said today: "{said[-1][:120]}". If you change your mind now, say why in SAY.' if said else "")
         results = self.parallel([
-            lambda p=p: (p, self.act(p, vote_task(p), "VOTE", [c for c in cands if c is not p] or cands, extra=f"SAY: <one sentence why, at most {DAY_WORDS} words>\n"))
+            lambda p=p: (p, self.act(p, vote_task(p), "VOTE", [c for c in cands if c is not p] or cands, extra=f"SAY: <one sentence why, at most {DAY_WORDS} words>\n",
+                                    fallback=getattr(self, "leans", {}).get(p["name"])))   # an unreadable ballot counts as the stated lean
             for p in voters])
         votes = [(p, r["pick"], r.get("say") or re.sub(rf"^\W*{r['pick']['name']}\W*", "", r["text"], flags=re.I).strip())
                  for p, r in results]
